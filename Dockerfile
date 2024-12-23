@@ -7,10 +7,10 @@ RUN apt-get update && apt-get install -y \
     git
 
 
-COPY . /home/appuser/blueprint
-WORKDIR /home/appuser/blueprint
+COPY . /home/appuser/structured_qa
+WORKDIR /home/appuser/structured_qa
 
-RUN pip3 install /home/appuser/blueprint
+RUN pip3 install /home/appuser/structured_qa
 
 RUN groupadd --gid 1000 appuser \
     && useradd --uid 1000 --gid 1000 -ms /bin/bash appuser

@@ -3,13 +3,16 @@ requires = ["setuptools>=48", "setuptools_scm[toml]>=6.3.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "blueprint"
+name = "structured-qa"
 readme = "README.md"
 license = {text = "Apache-2.0"}
 requires-python = ">=3.10"
 dynamic = ["version"]
 dependencies = [
+  "docling",
+  "fire",
   "loguru",
+  "pyyaml",
   "streamlit",
 ]
 
@@ -26,9 +29,9 @@ tests = [
 ]
 
 [project.urls]
-Documentation = "https://mozilla-ai.github.io/Blueprint-template/"
-Issues = "https://github.com/mozilla-ai/Blueprint-template/issues"
-Source = "https://github.com/mozilla-ai/Blueprint-template"
+Documentation = "https://mozilla-ai.github.io/structured-qa/"
+Issues = "https://github.com/mozilla-ai/structured-qa/issues"
+Source = "https://github.com/mozilla-ai/structured-qa"
 
 [tool.setuptools.packages.find]
 exclude = ["tests", "tests.*"]
@@ -36,3 +39,6 @@ where = ["src"]
 namespaces = false
 
 [tool.setuptools_scm]
+
+[project.scripts]
+structured-qa = "structured_qa.cli:main"
