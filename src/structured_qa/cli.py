@@ -15,7 +15,23 @@ def structured_qa(
     output_dir: str | None = None,
     from_config: str | None = None,
 ):
-    """ """
+    """
+
+    Args:
+        input_file: Path to the input document.
+        output_dir: Path to the output directory.
+            Structure of the output directory:
+
+            ```
+            output_dir/
+                section_1.txt
+                section_2.txt
+                ...
+            ```
+        from_config: The path to the config file.
+
+            If provided, all other arguments will be ignored.
+    """
     if from_config:
         config = Config.model_validate(yaml.safe_load(Path(from_config).read_text()))
     else:
