@@ -11,14 +11,10 @@ from structured_qa.workflow import find_retrieve_answer
 @st.cache_resource
 def load_model():
     return Llama.from_pretrained(
-        repo_id="Qwen/Qwen2.5-7B-Instruct-GGUF",
-        filename="qwen2.5-7b-instruct-q8_0-00001-of-00003.gguf",
+        repo_id="MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF",
+        filename="SmolTulu-1.7b-Reinforced.fp16.gguf",
         n_ctx=0,
         verbose=False,
-        additional_files=[
-            "qwen2.5-7b-instruct-q8_0-00002-of-00003.gguf",
-            "qwen2.5-7b-instruct-q8_0-00003-of-00003.gguf",
-        ],
     )
 
 
