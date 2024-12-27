@@ -1,7 +1,9 @@
 from collections import defaultdict
 from pathlib import Path
 
-from docling.document_converter import DocumentConverter
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import PdfPipelineOptions
+from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling_core.types.doc.document import TextItem, SectionHeaderItem
 
 from loguru import logger
@@ -29,7 +31,14 @@ def document_to_sections_dir(input_file: str, output_dir: str) -> list[str]:
     Returns:
         List of section names.
     """
-    converter = DocumentConverter()
+    pipeline_options = PdfPipelineOptions()
+    pipeline_options.do_ocr = False
+    pipeline_options.do_table_structure = False
+    converter = DocumentConverter(
+        format_options={
+            InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
+        }
+    )
     logger.info(f"Converting {input_file}")
     converted = converter.convert(input_file)
     logger.success("Converted")
