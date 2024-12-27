@@ -12,9 +12,10 @@ Or provide values to the arguments directly:
 
 
 ```bash
-structured-aq \
---input_file "example_data/EU_AI_ACT_CHAPTER_V.pdf" \
---output_folder "example_outputs/EU_AI_ACT_CHAPTER_V"
+structured-qa \
+--question "What learning rate was used?" \
+--input_file "example_data/1706.03762v7.pdf" \
+--output_folder "example_outputs/1706.03762v7.pdf"
 ```
 
 ---
