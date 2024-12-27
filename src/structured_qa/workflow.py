@@ -50,7 +50,7 @@ def find_retrieve_answer(
     question: str,
     find_prompt: str = FIND_PROMPT,
     answer_prompt: str = ANSWER_PROMPT
-):
+) -> tuple[str, list[str]] | tuple[None, list[str]]:
     sections_dir = Path(sections_dir)
     sections_names = [
         section.stem for section in sections_dir.glob("*.txt")
@@ -58,6 +58,7 @@ def find_retrieve_answer(
     current_info = None
     current_section = None
 
+    sections_checked = []
     while True:
         logger.debug(f"Current information available: {current_info}")
         if not current_info:
@@ -93,12 +94,14 @@ def find_retrieve_answer(
                 ).read_text()
                 current_section = result
                 current_info = section_content
+                sections_checked.append(result)
             else:
                 logger.error(f"Unknown section: {result}")
-                return None
+                return None, sections_checked
         else:
             if result == "I need more info.":
                 current_info = None
                 sections_names.remove(current_section)
                 continue
-            return result
+            else:
+                return result, sections_checked
