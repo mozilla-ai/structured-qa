@@ -10,8 +10,11 @@ requires-python = ">=3.10"
 dynamic = ["version"]
 dependencies = [
   "fire",
+  "huggingface-hub",
+  "llama-cpp-python",
   "loguru",
   "langchain-text-splitters",
+  "pydantic",
   "pymupdf4llm",
   "pyyaml",
   "streamlit",
