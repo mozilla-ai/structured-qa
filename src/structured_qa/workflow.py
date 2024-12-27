@@ -1,4 +1,3 @@
-import re
 from pathlib import Path
 
 
@@ -27,7 +26,7 @@ The current information available is:
 {CURRENT_INFO}
 ```
 
-If the current information available not enough to answer the question, 
+If the current information available not enough to answer the question,
 you must return the following message and nothing else:
 
 ```
@@ -44,17 +43,17 @@ model = Llama.from_pretrained(
     verbose=False
 )
 """
+
+
 def find_retrieve_answer(
-    model: Llama, 
-    sections_dir: str, 
+    model: Llama,
+    sections_dir: str,
     question: str,
     find_prompt: str = FIND_PROMPT,
-    answer_prompt: str = ANSWER_PROMPT
+    answer_prompt: str = ANSWER_PROMPT,
 ) -> tuple[str, list[str]] | tuple[None, list[str]]:
     sections_dir = Path(sections_dir)
-    sections_names = [
-        section.stem for section in sections_dir.glob("*.txt")
-    ]
+    sections_names = [section.stem for section in sections_dir.glob("*.txt")]
     current_info = None
     current_section = None
 
@@ -65,19 +64,21 @@ def find_retrieve_answer(
             logger.debug("Finding section")
             finding_section = True
             messages = [
-                { "role": "system", "content": find_prompt.format(
-                    SECTIONS="\n".join(sections_names)) 
+                {
+                    "role": "system",
+                    "content": find_prompt.format(SECTIONS="\n".join(sections_names)),
                 },
-                { "role": "user", "content": question},
+                {"role": "user", "content": question},
             ]
         else:
             logger.debug("Answering question")
             finding_section = False
             messages = [
-                { "role": "system", "content": answer_prompt.format(
-                    CURRENT_INFO=current_info) 
+                {
+                    "role": "system",
+                    "content": answer_prompt.format(CURRENT_INFO=current_info),
                 },
-                { "role": "user", "content": question},
+                {"role": "user", "content": question},
             ]
 
         result = model.create_chat_completion(messages)
@@ -89,9 +90,7 @@ def find_retrieve_answer(
             result = result.strip()
             logger.info(f"Retrieving section: {result}")
             if result in sections_names:
-                section_content = (
-                    sections_dir / f"{result}.txt"
-                ).read_text()
+                section_content = (sections_dir / f"{result}.txt").read_text()
                 current_section = result
                 current_info = section_content
                 sections_checked.append(result)

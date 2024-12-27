@@ -17,18 +17,16 @@ def load_model():
         verbose=False,
         additional_files=[
             "qwen2.5-7b-instruct-q8_0-00002-of-00003.gguf",
-            "qwen2.5-7b-instruct-q8_0-00003-of-00003.gguf"
-        ]
+            "qwen2.5-7b-instruct-q8_0-00003-of-00003.gguf",
+        ],
     )
 
 
 @st.cache_resource
 def convert_to_sections(uploaded_file, output_dir):
     document_to_sections_dir(
-        DocumentStream(
-            name=uploaded_file.name, stream=BytesIO(uploaded_file.read())
-        ), 
-        output_dir
+        DocumentStream(name=uploaded_file.name, stream=BytesIO(uploaded_file.read())),
+        output_dir,
     )
 
 
@@ -58,7 +56,7 @@ if uploaded_file is not None:
             answer, sections_checked = find_retrieve_answer(
                 model=model,
                 sections_dir=f"example_outputs/{uploaded_file.name}",
-                question=question
+                question=question,
             )
             st.text("Sections checked:")
             st.json(sections_checked)
