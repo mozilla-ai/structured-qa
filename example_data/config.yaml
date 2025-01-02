@@ -1,5 +1,5 @@
-input_file: example_data/EU_AI_ACT_CHAPTER_V.pdf
-output_dir: example_outputs/EU_AI_ACT_CHAPTER_V
+input_file: example_data/1706.03762v7.pdf
+output_dir: example_outputs/1706.03762v7.pdf
 model: MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF/SmolTulu-1.7b-Reinforced.fp16.gguf
 find_prompt : |
   Given an input question, you need to pick a `section_name` from the following list
