@@ -12,8 +12,21 @@ def validate_model(value):
         raise ValueError("model must be a gguf file")
     return value
 
+def validate_find_prompt(value):
+    if "{SECTIONS}" not in value:
+        raise ValueError("find_prompt must contain `{SECTIONS}` placeholder")
+    return value
+
+def answer_prompt(value):
+    if "{CURRENT_INFO}" not in value:
+        raise ValueError("answer_prompt must contain `{CURRENT_INFO}` placeholder")
+    return value
+
 
 class Config(BaseModel):
     input_file: FilePath
     output_dir: DirectoryPath
     model: Annotated[str, AfterValidator(validate_model)]
+    model: Annotated[str, AfterValidator(validate_model)]
+    answer_prompt: Annotated[str, AfterValidator(answer_prompt)]
+    find_prompt: Annotated[str, AfterValidator(validate_find_prompt)]

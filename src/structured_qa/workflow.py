@@ -34,16 +34,6 @@ I need more info.
 ```
 """
 
-"""
-org, repo, filename = model_id.split("/")
-model = Llama.from_pretrained(
-    repo_id=f"{org}/{repo}",
-    filename=filename,
-    n_ctx=0,
-    verbose=False
-)
-"""
-
 
 def find_retrieve_answer(
     model: Llama,

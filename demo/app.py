@@ -2,8 +2,10 @@ from io import BytesIO
 from pathlib import Path
 
 import streamlit as st
+import torch
 from docling_core.types.io import DocumentStream
 from llama_cpp import Llama
+
 from structured_qa.preprocessing import document_to_sections_dir
 from structured_qa.workflow import find_retrieve_answer
 
@@ -14,6 +16,7 @@ def load_model():
         repo_id="MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF",
         filename="SmolTulu-1.7b-Reinforced.fp16.gguf",
         n_ctx=0,
+        n_gpu_layers=-1 if torch.cuda.is_available() else 0,
         verbose=False,
     )
 

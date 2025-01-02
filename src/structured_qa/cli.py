@@ -8,7 +8,7 @@ from loguru import logger
 
 from structured_qa.config import Config
 from structured_qa.preprocessing import document_to_sections_dir
-from structured_qa.workflow import find_retrieve_answer
+from structured_qa.workflow import find_retrieve_answer, ANSWER_PROMPT, FIND_PROMPT
 
 
 @logger.catch(reraise=True)
@@ -17,9 +17,14 @@ def structured_qa(
     input_file: str | None = None,
     output_dir: str | None = None,
     model: str | None = "MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF/SmolTulu-1.7b-Reinforced.fp16.gguf",
+    find_prompt: str = FIND_PROMPT,
+    answer_prompt: str = ANSWER_PROMPT,
     from_config: str | None = None,
 ):
     """
+    Structured Question Answering.
+
+    Split the input document into sections and answer the question based on the sections.
 
     Args:
         input_file: Path to the input document.
@@ -34,6 +39,9 @@ def structured_qa(
             ```
         model: Model identifier formatted as `owner/repo/file`.
             Must be hosted at the HuggingFace Hub in GGUF format.
+        question: The question to answer.
+        find_prompt: The prompt to find the section.
+        answer_prompt: The prompt to answer the question.
         from_config: The path to the config file.
 
             If provided, all other arguments will be ignored.
@@ -61,7 +69,8 @@ def structured_qa(
 
     logger.info("Answering")
     answer, sections_checked = find_retrieve_answer(
-        model=model, sections_dir=config.output_dir, question=question
+        model=model, sections_dir=config.output_dir, question=question,
+        find_prompt=find_prompt, answer_prompt=answer_prompt
     )
     logger.success("Done")
 
