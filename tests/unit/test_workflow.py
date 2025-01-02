@@ -7,45 +7,13 @@ def test_find_retrieve_answer_multi_sections(tmp_path, mocker):
     def side_effect(messages):
         if "Given an input question" in messages[0]["content"]:
             if "section_1" in messages[0]["content"]:
-                return {
-                    "choices": [
-                        {
-                            "message": {
-                                "content": "section_1"
-                            }
-                        }
-                    ]
-                }
+                return {"choices": [{"message": {"content": "section_1"}}]}
             else:
-                return {
-                    "choices": [
-                        {
-                            "message": {
-                                "content": "section_2"
-                            }
-                        }
-                    ]
-                }
+                return {"choices": [{"message": {"content": "section_2"}}]}
         elif "Section 1" in messages[0]["content"]:
-            return {
-                    "choices": [
-                        {
-                            "message": {
-                                "content": "I need more info."
-                            }
-                        }
-                    ]
-                }
+            return {"choices": [{"message": {"content": "I need more info."}}]}
         elif "Section 2" in messages[0]["content"]:
-            return {
-                    "choices": [
-                        {
-                            "message": {
-                                "content": "Answer in Section 2"
-                            }
-                        }
-                    ]
-                }
+            return {"choices": [{"message": {"content": "Answer in Section 2"}}]}
 
     model.create_chat_completion.side_effect = side_effect
 
@@ -68,15 +36,7 @@ def test_find_retrieve_answer_unkown_section(tmp_path, mocker):
 
     def side_effect(messages):
         if "Given an input question" in messages[0]["content"]:
-            return {
-                "choices": [
-                    {
-                        "message": {
-                            "content": "section_x"
-                        }
-                    }
-                ]
-            }
+            return {"choices": [{"message": {"content": "section_x"}}]}
 
     model.create_chat_completion.side_effect = side_effect
 

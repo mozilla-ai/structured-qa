@@ -12,10 +12,12 @@ def validate_model(value):
         raise ValueError("model must be a gguf file")
     return value
 
+
 def validate_find_prompt(value):
     if "{SECTIONS}" not in value:
         raise ValueError("find_prompt must contain `{SECTIONS}` placeholder")
     return value
+
 
 def answer_prompt(value):
     if "{CURRENT_INFO}" not in value:

@@ -16,7 +16,8 @@ def structured_qa(
     question: str,
     input_file: str | None = None,
     output_dir: str | None = None,
-    model: str | None = "MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF/SmolTulu-1.7b-Reinforced.fp16.gguf",
+    model: str
+    | None = "MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF/SmolTulu-1.7b-Reinforced.fp16.gguf",
     find_prompt: str = FIND_PROMPT,
     answer_prompt: str = ANSWER_PROMPT,
     from_config: str | None = None,
@@ -69,8 +70,11 @@ def structured_qa(
 
     logger.info("Answering")
     answer, sections_checked = find_retrieve_answer(
-        model=model, sections_dir=config.output_dir, question=question,
-        find_prompt=find_prompt, answer_prompt=answer_prompt
+        model=model,
+        sections_dir=config.output_dir,
+        question=question,
+        find_prompt=find_prompt,
+        answer_prompt=answer_prompt,
     )
     logger.success("Done")
 
