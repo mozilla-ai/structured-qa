@@ -1,2 +1,28 @@
 input_file: example_data/EU_AI_ACT_CHAPTER_V.pdf
 output_dir: example_outputs/EU_AI_ACT_CHAPTER_V
+model: MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF/SmolTulu-1.7b-Reinforced.fp16.gguf
+find_prompt : |
+  Given an input question, you need to pick a `section_name` from the following list
+  based on how related the name is to the question:
+
+  ```
+  {SECTIONS}
+  ```
+
+  You will return the `section_name` and no additional text.
+answer_prompt: |
+  You are a rigorous assistant answering questions.
+  You only answer based on the current information available.
+
+  The current information available is:
+
+  ```
+  {CURRENT_INFO}
+  ```
+
+  If the current information available not enough to answer the question,
+  you must return the following message and nothing else:
+
+  ```
+  I need more info.
+  ```
