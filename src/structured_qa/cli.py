@@ -48,7 +48,9 @@ def structured_qa(
             If provided, all other arguments will be ignored.
     """
     if from_config:
-        config = Config.model_validate(yaml.safe_load(Path(from_config).read_text()))
+        raw_config = yaml.safe_load(Path(from_config).read_text())
+        Path(raw_config["output_dir"]).mkdir(exist_ok=True, parents=True)
+        config = Config.model_validate(raw_config)
     else:
         Path(output_dir).mkdir(exist_ok=True, parents=True)
         config = Config(input_file=input_file, output_dir=output_dir)
