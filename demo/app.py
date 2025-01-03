@@ -1,9 +1,9 @@
 from io import BytesIO
 from pathlib import Path
 
+import pymupdf
 import streamlit as st
 import torch
-from docling_core.types.io import DocumentStream
 from llama_cpp import Llama
 
 from structured_qa.preprocessing import document_to_sections_dir
@@ -24,7 +24,7 @@ def load_model():
 @st.cache_resource
 def convert_to_sections(uploaded_file, output_dir):
     document_to_sections_dir(
-        DocumentStream(name=uploaded_file.name, stream=BytesIO(uploaded_file.read())),
+        pymupdf.open("type", BytesIO(uploaded_file.read())),
         output_dir,
     )
 
