@@ -46,7 +46,9 @@ def document_to_sections_dir(input_file: str, output_dir: str) -> list[str]:
     output_dir.mkdir(exist_ok=True, parents=True)
     section_names = []
     for section in sections:
-        section_name = list(section.metadata.values())[-1]
+        if not section.metadata:
+            continue
+        section_name = list(section.metadata.values())[-1].lower()
         section_names.append(section_name)
         (output_dir / f"{section_name.replace('/', '_')}.txt").write_text(
             section.page_content
