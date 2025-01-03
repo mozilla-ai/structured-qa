@@ -60,7 +60,7 @@ def structured_qa(
     logger.success("Done")
 
     logger.info("Loading Model")
-    org, repo, filename = model.split("/")
+    org, repo, filename = config.model.split("/")
     model = Llama.from_pretrained(
         repo_id=f"{org}/{repo}",
         filename=filename,
@@ -75,8 +75,8 @@ def structured_qa(
         model=model,
         sections_dir=config.output_dir,
         question=question,
-        find_prompt=find_prompt,
-        answer_prompt=answer_prompt,
+        find_prompt=config.find_prompt,
+        answer_prompt=config.answer_prompt,
     )
     logger.success("Done")
 
