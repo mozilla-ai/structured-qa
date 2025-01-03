@@ -1,10 +1,7 @@
-from collections import defaultdict
 from pathlib import Path
 
-from docling.datamodel.base_models import InputFormat
-from docling.datamodel.pipeline_options import PdfPipelineOptions
-from docling.document_converter import DocumentConverter, PdfFormatOption
-from docling_core.types.doc.document import TextItem, SectionHeaderItem
+import pymupdf4llm
+from langchain_text_splitters import MarkdownHeaderTextSplitter
 
 from loguru import logger
 
@@ -14,7 +11,8 @@ def document_to_sections_dir(input_file: str, output_dir: str) -> list[str]:
     """
     Convert a document to a directory of sections.
 
-    Uses [docling](https://ds4sd.github.io/docling/) to extract the list of sections from the input document.
+    Uses [pymupdf4llm](https://ds4sd.github.io/docling/) to convert input_file to markdown.
+    Then uses [langchain_text_splitters] to split the markdown into sections based on the headers.
 
     Args:
         input_file: Path to the input document.
@@ -31,36 +29,28 @@ def document_to_sections_dir(input_file: str, output_dir: str) -> list[str]:
     Returns:
         List of section names.
     """
-    pipeline_options = PdfPipelineOptions()
-    pipeline_options.do_ocr = False
-    pipeline_options.do_table_structure = False
-    converter = DocumentConverter(
-        format_options={
-            InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
-        }
-    )
+
     logger.info(f"Converting {input_file}")
-    converted = converter.convert(input_file)
+    md_text = pymupdf4llm.to_markdown("example_data/1706.03762v7.pdf")
     logger.success("Converted")
 
     logger.info("Extracting sections")
-    sections = defaultdict(list)
-    current_section = "discard"
-    for item, _ in converted.document.iterate_items():
-        if isinstance(item, SectionHeaderItem):
-            logger.info(f"Found section: {item.text}")
-            current_section = item.text.lower().strip()
-        elif isinstance(item, TextItem):
-            sections[current_section].append(item.text)
-    sections.pop("discard", None)
-
+    splitter = MarkdownHeaderTextSplitter(
+        headers_to_split_on=[("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
+    )
+    sections = splitter.split_text(md_text)
     logger.success(f"Found {len(sections)} sections")
 
     logger.info(f"Writing sections to {output_dir}")
     output_dir = Path(output_dir)
     output_dir.mkdir(exist_ok=True, parents=True)
-    for k, v in sections.items():
-        (output_dir / f"{k.replace('/', '_')}.txt").write_text("\n".join(v))
+    section_names = []
+    for section in sections:
+        section_name = list(section.metadata.values())[-1]
+        section_names.append(section_name)
+        (output_dir / f"{section_name.replace('/', '_')}.txt").write_text(
+            section.page_content
+        )
     logger.success("Done")
 
-    return list(sections.keys())
+    return section_names

@@ -9,9 +9,10 @@ license = {text = "Apache-2.0"}
 requires-python = ">=3.10"
 dynamic = ["version"]
 dependencies = [
-  "docling",
   "fire",
   "loguru",
+  "langchain-text-splitters",
+  "pymupdf4llm",
   "pyyaml",
   "streamlit",
 ]
