@@ -29,6 +29,5 @@ class Config(BaseModel):
     input_file: FilePath
     output_dir: DirectoryPath
     model: Annotated[str, AfterValidator(validate_model)]
-    model: Annotated[str, AfterValidator(validate_model)]
     answer_prompt: Annotated[str, AfterValidator(answer_prompt)]
     find_prompt: Annotated[str, AfterValidator(validate_find_prompt)]
