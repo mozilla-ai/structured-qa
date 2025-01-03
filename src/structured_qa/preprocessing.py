@@ -31,7 +31,7 @@ def document_to_sections_dir(input_file: str, output_dir: str) -> list[str]:
     """
 
     logger.info(f"Converting {input_file}")
-    md_text = pymupdf4llm.to_markdown("example_data/1706.03762v7.pdf")
+    md_text = pymupdf4llm.to_markdown(input_file)
     logger.success("Converted")
 
     logger.info("Extracting sections")
