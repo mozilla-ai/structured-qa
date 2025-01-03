@@ -11,8 +11,8 @@ def document_to_sections_dir(input_file: str, output_dir: str) -> list[str]:
     """
     Convert a document to a directory of sections.
 
-    Uses [pymupdf4llm](https://ds4sd.github.io/docling/) to convert input_file to markdown.
-    Then uses [langchain_text_splitters] to split the markdown into sections based on the headers.
+    Uses [pymupdf4llm](https://pypi.org/project/pymupdf4llm/) to convert input_file to markdown.
+    Then uses [langchain_text_splitters](https://pypi.org/project/langchain-text-splitters/) to split the markdown into sections based on the headers.
 
     Args:
         input_file: Path to the input document.
