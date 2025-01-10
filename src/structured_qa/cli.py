@@ -54,8 +54,11 @@ def structured_qa(
     else:
         Path(output_dir).mkdir(exist_ok=True, parents=True)
         config = Config(
-            input_file=input_file, output_dir=output_dir, model=model,
-            find_prompt=find_prompt, answer_prompt=answer_prompt
+            input_file=input_file,
+            output_dir=output_dir,
+            model=model,
+            find_prompt=find_prompt,
+            answer_prompt=answer_prompt,
         )
 
     logger.info("Loading and converting to sections")
