@@ -53,7 +53,10 @@ def structured_qa(
         config = Config.model_validate(raw_config)
     else:
         Path(output_dir).mkdir(exist_ok=True, parents=True)
-        config = Config(input_file=input_file, output_dir=output_dir)
+        config = Config(
+            input_file=input_file, output_dir=output_dir, model=model,
+            find_prompt=find_prompt, answer_prompt=answer_prompt
+        )
 
     logger.info("Loading and converting to sections")
     document_to_sections_dir(config.input_file, config.output_dir)
