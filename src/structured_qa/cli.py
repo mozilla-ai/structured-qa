@@ -16,8 +16,7 @@ def structured_qa(
     question: str,
     input_file: str | None = None,
     output_dir: str | None = None,
-    model: str
-    | None = "Qwen/Qwen2.5-3B-Instruct-GGUF/qwen2.5-3b-instruct-q8_0.gguf",
+    model: str | None = "Qwen/Qwen2.5-3B-Instruct-GGUF/Qwen2.5-3B-Instruct-f16.gguf",
     find_prompt: str = FIND_PROMPT,
     answer_prompt: str = ANSWER_PROMPT,
     from_config: str | None = None,
