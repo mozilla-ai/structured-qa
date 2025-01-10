@@ -6,14 +6,23 @@ from loguru import logger
 
 
 FIND_PROMPT = """
-Given an input question, you need to pick a `section_name` from the following list
-based on how related the name is to the question:
+You are given two pieces of information:
+1. A user question.
+2. A list of valid section names.
+
+Your task is to:
+- Identify exactly one `section_name` from the provided list that seems related to the user question.
+- Return the `section_name` exactly as it appears in the list.
+- Do NOT return any additional text, explanation, or formatting.
+- Do NOT combine multiple section names into a single response.
+
+Here is the list of valid `section_names`:
 
 ```
 {SECTIONS}
 ```
 
-You will return the `section_name` and no additional text.
+Now, based on the input question, return the single most relevant `section_name` from the list.
 """
 
 ANSWER_PROMPT = """
