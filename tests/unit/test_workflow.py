@@ -5,7 +5,7 @@ def test_find_retrieve_answer_multi_sections(tmp_path, mocker):
     model = mocker.MagicMock()
 
     def side_effect(messages):
-        if "Given an input question" in messages[0]["content"]:
+        if "You are given two pieces" in messages[0]["content"]:
             if "section_1" in messages[0]["content"]:
                 return {"choices": [{"message": {"content": "section_1"}}]}
             else:
