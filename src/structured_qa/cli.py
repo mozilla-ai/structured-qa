@@ -17,7 +17,7 @@ def structured_qa(
     input_file: str | None = None,
     output_dir: str | None = None,
     model: str
-    | None = "MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF/SmolTulu-1.7b-Reinforced.fp16.gguf",
+    | None = "Qwen/Qwen2.5-3B-Instruct-GGUF/qwen2.5-3b-instruct-q8_0.gguf",
     find_prompt: str = FIND_PROMPT,
     answer_prompt: str = ANSWER_PROMPT,
     from_config: str | None = None,
