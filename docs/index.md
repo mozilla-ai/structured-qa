@@ -1,4 +1,4 @@
-# **Document-to-Podcast Blueprint**
+# **Structured-Q-A Blueprint**
 
 <div style="text-align: center;">
   <img src="images/document-to-podcast-diagram.png" alt="Project Logo" style="width: 100%; margin-bottom: 1px; margin-top: 1px;">
@@ -6,16 +6,16 @@
 
 Blueprints empower developers to easily integrate AI capabilities into their projects using open-source models and tools.
 
-These docs are your companion to mastering the **Structured-Q&A Blueprint** a local-first approach for answering questions about your structured documents.
+These docs are your companion to mastering the **Structured-Q-A Blueprint** a local-first approach for answering questions about your structured documents.
 
 ### Built with
 - Python 3.10+
-- [Llama-cpp](https://github.com/abetlen/llama-cpp-python) (text-to-text, i.e question answering)
+- [Llama-cpp](https://github.com/abetlen/llama-cpp-python) (question answering)
 
 ---
 
 ### 🚀 **Get Started Quickly**
-#### _Start building your own Structured-Q&A pipeline in minutes:_
+#### _Start building your own Structured-Q-A pipeline in minutes:_
 - **[Getting Started](getting-started.md):** Quick setup and installation instructions.
 
 ### 🔍 **Understand the System**
@@ -33,6 +33,10 @@ These docs are your companion to mastering the **Structured-Q&A Blueprint** a lo
 
 
 Have more questions? Reach out to us on Discord and we'll see how we can help:
+
+<div style="text-align: center;">
+    <a target="_blank" href="https://discord.gg/c3Mxff4H"><img src="https://dcbadge.limes.pink/api/server/c3Mxff4H" alt="" /></a>
+</div>
 
 ---
 
