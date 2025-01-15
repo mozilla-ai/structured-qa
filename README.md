@@ -28,7 +28,7 @@ Get started with structured-q-a using one of the options below:
 Alternatively, you can install it from pypi:
 
 ```bash
-pip install structured-q-a
+pip install structured-qa
 ```
 
 ## License
