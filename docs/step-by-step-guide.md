@@ -29,8 +29,8 @@ In case the LLM can't find an answer to the question, the stages 2 to 4 run on a
 
 ## **Document Pre-Processing**
 
-The process begins with preparing the input document for AI processing. 
-The document is first converted to markdown and then splitted into sections based on the markdown headings.
+The process begins with preparing the input document for AI processing.
+The document is first converted to markdown and then split into sections based on the markdown headings.
 
  **Markdown Conversion**
 
