@@ -6,9 +6,9 @@ from fire import Fire
 from llama_cpp import Llama
 from loguru import logger
 
-from structured_qa.config import Config
+from structured_qa.config import Config, ANSWER_PROMPT, FIND_PROMPT
 from structured_qa.preprocessing import document_to_sections_dir
-from structured_qa.workflow import find_retrieve_answer, ANSWER_PROMPT, FIND_PROMPT
+from structured_qa.workflow import find_retrieve_answer
 
 
 @logger.catch(reraise=True)
@@ -40,8 +40,12 @@ def structured_qa(
         model: Model identifier formatted as `owner/repo/file`.
             Must be hosted at the HuggingFace Hub in GGUF format.
         question: The question to answer.
-        find_prompt: The prompt to find the section.
-        answer_prompt: The prompt to answer the question.
+        find_prompt: The prompt for finding the section.
+
+            See [`FIND_PROMPT`][structured_qa.config.FIND_PROMPT].
+        answer_prompt: The prompt for answering the question.
+
+            See [`ANSWER_PROMPT`][structured_qa.config.ANSWER_PROMPT].
         from_config: The path to the config file.
 
             If provided, all other arguments will be ignored.
