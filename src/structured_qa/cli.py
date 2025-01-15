@@ -1,12 +1,11 @@
 from pathlib import Path
 
 import yaml
-import torch
 from fire import Fire
-from llama_cpp import Llama
 from loguru import logger
 
 from structured_qa.config import Config, ANSWER_PROMPT, FIND_PROMPT
+from structured_qa.model_loaders import load_llama_cpp_model
 from structured_qa.preprocessing import document_to_sections_dir
 from structured_qa.workflow import find_retrieve_answer
 
@@ -69,14 +68,7 @@ def structured_qa(
     logger.success("Done")
 
     logger.info("Loading Model")
-    org, repo, filename = config.model.split("/")
-    model = Llama.from_pretrained(
-        repo_id=f"{org}/{repo}",
-        filename=filename,
-        n_ctx=0,
-        n_gpu_layers=-1 if torch.cuda.is_available() else 0,
-        verbose=False,
-    )
+    model = load_llama_cpp_model(config.model)
     logger.success("Done")
 
     logger.info("Answering")

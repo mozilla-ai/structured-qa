@@ -6,9 +6,9 @@ from loguru import logger
 
 
 def find_retrieve_answer(
+    question: str,
     model: Llama,
     sections_dir: str,
-    question: str,
     find_prompt: str,
     answer_prompt: str,
 ) -> tuple[str, list[str]] | tuple[None, list[str]]:
@@ -16,6 +16,7 @@ def find_retrieve_answer(
     Workflow to find the relevant section, retrieve the information, and answer the question.
 
     Args:
+        question (str): The question to answer.
         model (Llama): The Llama model to use for generating completions.
         sections_dir (str): The directory containing the sections.
             See [`document_to_sections_dir`][structured_qa.preprocessing.document_to_sections_dir].
@@ -27,11 +28,10 @@ def find_retrieve_answer(
                 section_2.txt
                 ...
             ```
-        question (str): The question to answer.
-        find_prompt (str, optional): The prompt for finding the section.
+        find_prompt (str): The prompt for finding the section.
 
             See [`FIND_PROMPT`][structured_qa.config.FIND_PROMPT].
-        answer_prompt (str, optional): The prompt for answering the question.
+        answer_prompt (str): The prompt for answering the question.
 
             See [`ANSWER_PROMPT`][structured_qa.config.ANSWER_PROMPT].
 
