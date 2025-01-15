@@ -1,15 +1,24 @@
 input_file: example_data/1706.03762v7.pdf
 output_dir: example_outputs/1706.03762v7.pdf
-model: MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF/SmolTulu-1.7b-Reinforced.fp16.gguf
+model: "bartowski/Qwen2.5-3B-Instruct-GGUF/Qwen2.5-3B-Instruct-f16.gguf"
 find_prompt : |
-  Given an input question, you need to pick a `section_name` from the following list
-  based on how related the name is to the question:
+  You are given two pieces of information:
+  1. A user question.
+  2. A list of valid section names.
+
+  Your task is to:
+  - Identify exactly one `section_name` from the provided list that seems related to the user question.
+  - Return the `section_name` exactly as it appears in the list.
+  - Do NOT return any additional text, explanation, or formatting.
+  - Do NOT combine multiple section names into a single response.
+
+  Here is the list of valid `section_names`:
 
   ```
   {SECTIONS}
   ```
 
-  You will return the `section_name` and no additional text.
+  Now, based on the input question, return the single most relevant `section_name` from the list.
 answer_prompt: |
   You are a rigorous assistant answering questions.
   You only answer based on the current information available.
