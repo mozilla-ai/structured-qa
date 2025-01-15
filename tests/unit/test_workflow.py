@@ -1,4 +1,4 @@
-from structured_qa.config import FIND_PROMPT
+from structured_qa.config import ANSWER_PROMPT, FIND_PROMPT
 from structured_qa.workflow import find_retrieve_answer
 
 
@@ -25,7 +25,11 @@ def test_find_retrieve_answer_multi_sections(tmp_path, mocker):
 
     question = "What is the answer?"
     answer, sections_checked = find_retrieve_answer(
-        model=model, sections_dir=sections_dir, question=question
+        model=model,
+        sections_dir=sections_dir,
+        question=question,
+        find_prompt=FIND_PROMPT,
+        answer_prompt=ANSWER_PROMPT,
     )
 
     assert answer == "Answer in Section 2"
@@ -47,7 +51,11 @@ def test_find_retrieve_answer_unkown_section(tmp_path, mocker):
 
     question = "What is the answer?"
     answer, sections_checked = find_retrieve_answer(
-        model=model, sections_dir=sections_dir, question=question
+        model=model,
+        sections_dir=sections_dir,
+        question=question,
+        find_prompt=FIND_PROMPT,
+        answer_prompt=ANSWER_PROMPT,
     )
 
     assert answer is None
