@@ -1,4 +1,5 @@
-from structured_qa.workflow import find_retrieve_answer, FIND_PROMPT
+from structured_qa.config import FIND_PROMPT
+from structured_qa.workflow import find_retrieve_answer
 
 
 def test_find_retrieve_answer_multi_sections(tmp_path, mocker):
