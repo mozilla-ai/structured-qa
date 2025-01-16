@@ -9,9 +9,9 @@
 [![Ruff](https://github.com/mozilla-ai/structured-q-a/actions/workflows/lint.yaml/badge.svg?label=Ruff)](https://github.com/mozilla-ai/structured-q-a/actions/workflows/lint.yaml/)
 
 
-This blueprint demonstrate how you can answer questions about structured documents using open-source models and a simple LLM workflow.
+This Blueprint demonstrates how to use open-source models and a simple LLM workflow to answer questions based on structured documents.
 
-It is designed to showcase a simpler alternative to more complex and/or resource demanding alternatives, like RAG systems and/or long-context models.
+It is designed to showcase a simpler alternative to more complex and/or resource demanding alternatives, such as RAG systems that rely on vectorDBs and/or long-context models with large token windows.
 
 
 ### 👉 📖 For more detailed guidance on using this project, please visit our [Docs here](https://mozilla-ai.github.io/structured-q-a/).
