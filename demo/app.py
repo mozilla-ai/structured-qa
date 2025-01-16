@@ -3,21 +3,16 @@ from pathlib import Path
 
 import pymupdf
 import streamlit as st
-import torch
-from llama_cpp import Llama
 
+from structured_qa.model_loaders import load_llama_cpp_model
 from structured_qa.preprocessing import document_to_sections_dir
 from structured_qa.workflow import find_retrieve_answer
 
 
 @st.cache_resource
 def load_model():
-    return Llama.from_pretrained(
-        repo_id="MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF",
-        filename="SmolTulu-1.7b-Reinforced.fp16.gguf",
-        n_ctx=0,
-        n_gpu_layers=-1 if torch.cuda.is_available() else 0,
-        verbose=False,
+    return load_llama_cpp_model(
+        "MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF/SmolTulu-1.7b-Reinforced.fp16.gguf"
     )
 
 

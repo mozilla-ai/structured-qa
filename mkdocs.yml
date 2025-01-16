@@ -1,14 +1,14 @@
-site_name: Blueprints Docs
-repo_url: https://github.com/mozilla-ai/structured-qa
-repo_name: structured-qa
+site_name: Structured Q&A
+repo_url: https://github.com/mozilla-ai/structured-q-a
+repo_name: structured-q-a
 
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - Step-by-Step Guide: step-by-step-guide.md
-  - Customization Guide: customization.md
   - Command Line Interface: cli.md
   - API Reference: api.md
+  - Customization Guide: customization.md
   - Future Features & Contributions: future-features-contributions.md
 
 theme:
@@ -37,7 +37,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-
+  - pymdownx.tabbed:
+      alternate_style: true
 plugins:
 - search
 - mkdocstrings:

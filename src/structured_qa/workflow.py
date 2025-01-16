@@ -5,52 +5,42 @@ from llama_cpp import Llama
 from loguru import logger
 
 
-FIND_PROMPT = """
-You are given two pieces of information:
-1. A user question.
-2. A list of valid section names.
-
-Your task is to:
-- Identify exactly one `section_name` from the provided list that seems related to the user question.
-- Return the `section_name` exactly as it appears in the list.
-- Do NOT return any additional text, explanation, or formatting.
-- Do NOT combine multiple section names into a single response.
-
-Here is the list of valid `section_names`:
-
-```
-{SECTIONS}
-```
-
-Now, based on the input question, return the single most relevant `section_name` from the list.
-"""
-
-ANSWER_PROMPT = """
-You are a rigorous assistant answering questions.
-You only answer based on the current information available.
-
-The current information available is:
-
-```
-{CURRENT_INFO}
-```
-
-If the current information available not enough to answer the question,
-you must return the following message and nothing else:
-
-```
-I need more info.
-```
-"""
-
-
 def find_retrieve_answer(
+    question: str,
     model: Llama,
     sections_dir: str,
-    question: str,
-    find_prompt: str = FIND_PROMPT,
-    answer_prompt: str = ANSWER_PROMPT,
+    find_prompt: str,
+    answer_prompt: str,
 ) -> tuple[str, list[str]] | tuple[None, list[str]]:
+    """
+    Workflow to find the relevant section, retrieve the information, and answer the question.
+
+    Args:
+        question (str): The question to answer.
+        model (Llama): The Llama model to use for generating completions.
+        sections_dir (str): The directory containing the sections.
+            See [`document_to_sections_dir`][structured_qa.preprocessing.document_to_sections_dir].
+            Structure of the sections directory:
+
+            ```
+            sections_dir/
+                section_1.txt
+                section_2.txt
+                ...
+            ```
+        find_prompt (str): The prompt for finding the section.
+
+            See [`FIND_PROMPT`][structured_qa.config.FIND_PROMPT].
+        answer_prompt (str): The prompt for answering the question.
+
+            See [`ANSWER_PROMPT`][structured_qa.config.ANSWER_PROMPT].
+
+    Returns:
+        tuple[str, list[str]] | tuple[None, list[str]]:
+
+            If the answer is found, the tuple contains the answer and the sections checked.
+            If the answer is not found, the tuple contains None and the sections checked
+    """
     sections_dir = Path(sections_dir)
     sections_names = [section.stem for section in sections_dir.glob("*.txt")]
     current_info = None

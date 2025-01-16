@@ -4,6 +4,45 @@ from pydantic import BaseModel, DirectoryPath, FilePath
 from pydantic.functional_validators import AfterValidator
 
 
+FIND_PROMPT = """
+You are given two pieces of information:
+1. A user question.
+2. A list of valid section names.
+
+Your task is to:
+- Identify exactly one `section_name` from the provided list that seems related to the user question.
+- Return the `section_name` exactly as it appears in the list.
+- Do NOT return any additional text, explanation, or formatting.
+- Do NOT combine multiple section names into a single response.
+
+Here is the list of valid `section_names`:
+
+```
+{SECTIONS}
+```
+
+Now, based on the input question, return the single most relevant `section_name` from the list.
+"""
+
+ANSWER_PROMPT = """
+You are a rigorous assistant answering questions.
+You only answer based on the current information available.
+
+The current information available is:
+
+```
+{CURRENT_INFO}
+```
+
+If the current information available not enough to answer the question,
+you must return the following message and nothing else:
+
+```
+I need more info.
+```
+"""
+
+
 def validate_model(value):
     parts = value.split("/")
     if len(parts) != 3:
