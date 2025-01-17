@@ -1,4 +1,4 @@
-Get started with Structured-Q-A using one of the options below:
+Get started with Structured-QA using one of the options below:
 
 ---
 
@@ -29,7 +29,7 @@ Get started with Structured-Q-A using one of the options below:
       You can install the project from Pypi:
 
       ```bash
-      pip install structured-q-a
+      pip install structured-qa
       ```
 
       Check the [Command Line Interface](./cli.md) guide.
@@ -41,8 +41,8 @@ Get started with Structured-Q-A using one of the options below:
       1. **Clone the Repository**
 
          ```bash
-         git clone https://github.com/mozilla-ai/structured-q-a.git
-         cd structured-q-a
+         git clone https://github.com/mozilla-ai/structured-qa.git
+         cd structured-qa
          ```
 
       2. **Install the project and its Dependencies**

@@ -1,8 +1,4 @@
-# **Step-by-Step Guide: How the Structured-Q-A Blueprint Works**
-
-Transforming static documents into engaging podcast episodes involves an integration of pre-processing, LLM-powered transcript generation, and text-to-speech generation. Here's how it all works under the hood:
-
----
+# **Step-by-Step Guide: How the Structured-QA Blueprint Works**
 
 ## **Overview**
 

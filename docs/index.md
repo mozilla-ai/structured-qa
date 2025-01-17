@@ -1,4 +1,4 @@
-# **Structured-Q-A Blueprint**
+# **Structured-QA Blueprint**
 
 <div style="text-align: center;">
   <img src="images/document-to-podcast-diagram.png" alt="Project Logo" style="width: 100%; margin-bottom: 1px; margin-top: 1px;">
@@ -6,7 +6,7 @@
 
 Blueprints empower developers to easily integrate AI capabilities into their projects using open-source models and tools.
 
-These docs are your companion to mastering the **Structured-Q-A Blueprint** a local-first approach for answering questions about your structured documents.
+These docs are your companion to mastering the **Structured-QA Blueprint** a local-first approach for answering questions about your structured documents.
 
 ### Built with
 - Python 3.10+
@@ -15,7 +15,7 @@ These docs are your companion to mastering the **Structured-Q-A Blueprint** a lo
 ---
 
 ### 🚀 **Get Started Quickly**
-#### _Start building your own Structured-Q-A pipeline in minutes:_
+#### _Start building your own Structured-QA pipeline in minutes:_
 - **[Getting Started](getting-started.md):** Quick setup and installation instructions.
 
 ### 🔍 **Understand the System**

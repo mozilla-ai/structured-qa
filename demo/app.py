@@ -24,7 +24,7 @@ def convert_to_sections(uploaded_file, output_dir):
     )
 
 
-st.title("Structured Q&A")
+st.title("Structured QA")
 
 st.header("Uploading Data")
 
