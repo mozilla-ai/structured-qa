@@ -3,6 +3,7 @@ name: Sync to Hugging Face Space
 on:
   release:
     types: [published]
+
   workflow_dispatch:
 
 jobs:
