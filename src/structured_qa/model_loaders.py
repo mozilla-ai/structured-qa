@@ -1,5 +1,13 @@
-import torch
+import subprocess
 from llama_cpp import Llama
+
+
+def gpu_available():
+    try:
+        subprocess.check_output("nvidia-smi")
+        return True
+    except Exception:
+        return False
 
 
 def load_llama_cpp_model(model_id: str) -> Llama:
@@ -22,6 +30,6 @@ def load_llama_cpp_model(model_id: str) -> Llama:
         filename=filename,
         n_ctx=0,  # 0 means that the model limit will be used, instead of the default (512) or other hardcoded value
         verbose=False,
-        n_gpu_layers=-1 if torch.cuda.is_available() else 0,
+        n_gpu_layers=-1 if gpu_available() else 0,
     )
     return model
