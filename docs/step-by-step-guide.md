@@ -1,4 +1,4 @@
-# **Step-by-Step Guide: How the Structured-Q-A Blueprint Works**
+# **Step-by-Step Guide: How the Structured-QA Blueprint Works**
 
 ## **Overview**
 

@@ -1,6 +1,6 @@
-site_name: Blueprints Docs
-repo_url: https://github.com/mozilla-ai/structured-q-a
-repo_name: structured-q-a
+site_name: Structured QA
+repo_url: https://github.com/mozilla-ai/structured-qa
+repo_name: structured-qa
 
 nav:
   - Home: index.md
