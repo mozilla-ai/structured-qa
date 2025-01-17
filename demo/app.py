@@ -4,6 +4,7 @@ from pathlib import Path
 import pymupdf
 import streamlit as st
 
+from structured_qa.config import ANSWER_PROMPT, FIND_PROMPT
 from structured_qa.model_loaders import load_llama_cpp_model
 from structured_qa.preprocessing import document_to_sections_dir
 from structured_qa.workflow import find_retrieve_answer
@@ -51,6 +52,8 @@ if uploaded_file is not None:
                 model=model,
                 sections_dir=f"example_outputs/{uploaded_file.name}",
                 question=question,
+                find_prompt=FIND_PROMPT,
+                answer_prompt=ANSWER_PROMPT,
             )
             st.text("Sections checked:")
             st.json(sections_checked)
