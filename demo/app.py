@@ -13,7 +13,7 @@ from structured_qa.workflow import find_retrieve_answer
 @st.cache_resource
 def load_model():
     return load_llama_cpp_model(
-        "MaziyarPanahi/SmolTulu-1.7b-Reinforced-GGUF/SmolTulu-1.7b-Reinforced.fp16.gguf"
+        "bartowski/Qwen2.5-3B-Instruct-GGUF/Qwen2.5-3B-Instruct-f16.gguf"
     )
 
 
