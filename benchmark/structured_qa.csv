@@ -52,7 +52,7 @@ https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_R
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CHAPTER OVERVIEW,Which player begins the game? -A: Sauron -B: The Fellowship -C: Other,A
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CHAPTER OVERVIEW,Can you take a Chapter card and a Landmark tile on your same turn?,NO
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CHAPTER OVERVIEW,How many goins does a player take when discarding a card during Chapter 3?,3
-https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CHAPTER OVERVIEW,After taking a landmark tile, do you reveal a new tile and the end of your turn?,NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CHAPTER OVERVIEW,"After taking a landmark tile, do you reveal a new tile and the end of your turn?",NO
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CARD AND TILE COSTS,Can a player pay coins to compensate for missing skill symbols in a Landmark Tile?,YES
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CARD AND TILE COSTS,If a player is missing 2 skill symbols, how many coins must they pay to the reserve?,2
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CARD AND TILE EFFECTS,Can you use a symbol more than once per turn?,NO
