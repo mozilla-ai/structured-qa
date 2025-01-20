@@ -12,7 +12,7 @@ You will return a JSON name with two keys: "section" and "answer".
 In `"section"`, you will return the name of the section where you found the answer.
 In `"answer"`, you will return the answer one of the following JSON:
 - Yes/No (for boolean questions)
-Is the model an LLM? 
+Is the model an LLM?
 {
   "section": "1. Introduction",
   "answer": "No"
@@ -47,7 +47,7 @@ def gemini_process_document(document_file, document_data):
 
     logger.info("Creating model")
     model = genai.GenerativeModel(
-    model_name="gemini-2.0-flash-exp",
+        model_name="gemini-2.0-flash-exp",
         generation_config={
             "temperature": 1,
             "top_p": 0.95,

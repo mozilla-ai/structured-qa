@@ -3,8 +3,8 @@ https://arxiv.org/pdf/1706.03762,3 Model Architecture,What type of architecture 
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many layers compose the encoder,,6,
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many layers compose the decoder,,6,
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many parallel attention heads are used,,8,
-https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use learned embeddings for the input and output tokens,1,,
-https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use learned positional embeddings,0,,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the final model use learned embeddings for the input and output tokens,1,,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the final model use learned positional embeddings,0,,
 https://arxiv.org/pdf/1706.03762,5 Training,How many GPUs were used for training,,8,
 https://arxiv.org/pdf/1706.03762,5 Training,Was type of GPUs were used for training? -A: NVIDIA A100 -B: NVIDIA P100 -C: NVIDIA T4,,,B
 https://arxiv.org/pdf/1706.03762,5 Training,Was optimizer was used? -A: AdamW -B: Adam -C: SGD,,,A
