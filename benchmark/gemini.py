@@ -63,7 +63,7 @@ def gemini_process_document(document_file, document_data):
     answers = {}
     sections = {}
     for index, row in document_data.iterrows():
-        if n > 0 and n % 13 == 0:
+        if n > 0 and n % 9 == 0:
             logger.info("Waiting for 60 seconds")
             time.sleep(60)
         question = row["question"]
