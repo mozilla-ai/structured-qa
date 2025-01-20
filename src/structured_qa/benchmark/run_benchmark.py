@@ -24,20 +24,22 @@ def run_benchmark(input_data: str, output_file: str, model: str):
     data["pred_answer"] = [None] * len(data)
     data["pred_section"] = [None] * len(data)
 
-
     for document_link, document_data in data.groupby("document"):
         logger.info(f"Downloading document {document_link}")
         downloaded_document = Path(f"example_data/{Path(document_link).name}.pdf")
         download_document(document_link, downloaded_document)
 
         if model == "gemini":
-            answers, sections = gemini_process_document(downloaded_document, document_data)
+            answers, sections = gemini_process_document(
+                downloaded_document, document_data
+            )
 
         for index in document_data.index:
             data.loc[index, "pred_answer"] = answers[index]
             data.loc[index, "pred_section"] = sections[index]
-    
+
     data.to_csv(output_file)
 
-if __name__ == "__main__":
+
+def main():
     Fire(run_benchmark)

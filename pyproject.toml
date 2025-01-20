@@ -46,3 +46,4 @@ namespaces = false
 
 [project.scripts]
 structured-qa = "structured_qa.cli:main"
+structured-qa-benchmark = "structured_qa.benchmark.run_benchmark:main"

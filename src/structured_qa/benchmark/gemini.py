@@ -21,19 +21,19 @@ Example response:
 
 
 def gemini_process_document(document_file, document_data):
-    genai.configure(api_key=os.environ["GEMINI_API_KEY"])    
+    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
     logger.info("Uploading file")
     file = genai.upload_file(document_file, mime_type="application/pdf")
-    while file.state.name == 'PROCESSING':
-        logger.debug('Waiting for file to be processed.')
+    while file.state.name == "PROCESSING":
+        logger.debug("Waiting for file to be processed.")
         time.sleep(2)
         file = genai.get_file(file.name)
 
     logger.info("Creating cache")
-    cache =genai.caching.CachedContent.create(
+    cache = genai.caching.CachedContent.create(
         model="models/gemini-1.5-flash-8b-latest",
-        display_name='cached file', # used to identify the cache
+        display_name="cached file",  # used to identify the cache
         system_instruction=SYSTEM_PROMPT,
         contents=[file],
         ttl=datetime.timedelta(minutes=15),
@@ -48,7 +48,7 @@ def gemini_process_document(document_file, document_data):
             "top_k": 40,
             "max_output_tokens": 8192,
             "response_mime_type": "application/json",
-        }
+        },
     )
 
     logger.info("Predicting")
