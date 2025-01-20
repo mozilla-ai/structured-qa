@@ -10,18 +10,26 @@ You are given an input document and a question.
 You can only answer the question based on the information in the document.
 You will return a JSON name with two keys: "section" and "answer".
 In `"section"`, you will return the name of the section where you found the answer.
-In `"answer"`, you will return the answer either as Yes/No (for boolean questions) or as a single number (for numeric questions) or as a single letter (for multi-choice questions).
-Example responses:
+In `"answer"`, you will return the answer one of the following JSON:
+- Yes/No (for boolean questions)
+Is the model an LLM? 
 {
   "section": "1. Introduction",
   "answer": "No"
 }
+- Single number (for numeric questions)
+How many layers does the model have?
 {
-  "section": "1. Introduction",
-  "answer": 2
+  "section": "2. Architecture",
+  "answer": 12
 }
+- Single letter (for multiple-choice questions)
+What is the activation function used in the model?
+-A: ReLU
+-B: Sigmoid
+-C: Tanh
 {
-  "section": "1. Introduction",
+  "section": "2. Architecture",
   "answer": "C"
 }
 """

@@ -1,5 +1,5 @@
 document,section,question,bool_answer,num_answer,multi_choice_answer
-https://arxiv.org/pdf/1706.03762,3 Model Architecture,What type of architecture does the model use?-A: decoder only -B: encoder only -C: encoder-decoder,,,C
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,"What type of architecture does the model use? -A: decoder only -B: encoder only -C: encoder-decoder,,,C
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many layers compose the encoder,,6,
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many layers compose the decoder,,6,
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many parallel attention heads are used,,8,
