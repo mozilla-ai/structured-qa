@@ -26,7 +26,7 @@ def run_benchmark(input_data: str, output_file: str, model: str):
 
     for document_link, document_data in data.groupby("document"):
         logger.info(f"Downloading document {document_link}")
-        downloaded_document = Path(f"{Path(document_link).stem}.pdf")
+        downloaded_document = Path(f"{Path(document_link).name}.pdf")
         download_document(document_link, downloaded_document)
 
         if model == "gemini":
