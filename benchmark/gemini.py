@@ -1,4 +1,3 @@
-import datetime
 import json
 import os
 import time
@@ -11,7 +10,7 @@ You are given an input document and a question.
 You can only answer the question based on the information in the document.
 You will return a JSON name with two keys: "section" and "answer".
 In `"section"`, you will return the name of the section where you found the answer.
-In `"answer"`, you will return the answer either as Yes/No (for boolean questions) or as a single number (for numeric questions).
+In `"answer"`, you will return the answer either as Yes/No (for boolean questions) or as a single number (for numeric questions) or as a single letter (for multi-choice questions).
 Example response:
 {
   "section": "1. Introduction",
@@ -30,18 +29,9 @@ def gemini_process_document(document_file, document_data):
         time.sleep(2)
         file = genai.get_file(file.name)
 
-    logger.info("Creating cache")
-    cache = genai.caching.CachedContent.create(
-        model="models/gemini-1.5-flash-8b-latest",
-        display_name="cached file",  # used to identify the cache
-        system_instruction=SYSTEM_PROMPT,
-        contents=[file],
-        ttl=datetime.timedelta(minutes=15),
-    )
-
     logger.info("Creating model")
-    model = genai.GenerativeModel.from_cached_content(
-        cached_content=cache,
+    model = genai.GenerativeModel(
+    model_name="gemini-2.0-flash-exp",
         generation_config={
             "temperature": 1,
             "top_p": 0.95,
@@ -66,6 +56,7 @@ def gemini_process_document(document_file, document_data):
                 {
                     "role": "user",
                     "parts": [
+                        file,
                         question,
                     ],
                 }
