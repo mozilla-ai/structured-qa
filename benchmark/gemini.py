@@ -64,8 +64,8 @@ def gemini_process_document(document_file, document_data):
     sections = {}
     for index, row in document_data.iterrows():
         if n > 0 and n % 9 == 0:
-            logger.info("Waiting for 60 seconds")
-            time.sleep(60)
+            logger.info("Waiting for 90 seconds")
+            time.sleep(90)
         question = row["question"]
         logger.debug(f"Question: {question}")
         chat_session = model.start_chat(
