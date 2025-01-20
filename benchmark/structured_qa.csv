@@ -1,0 +1,61 @@
+document,section,question,bool_answer,num_answer,multi_choice_answer
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use a encoder only architecture,0,,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use a decoder only architecture,0,,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use a encoder-decoder architecture,1,,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many layers compose the encoder,,6,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many layers compose the decoder,,6,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many parallel attention heads are used,,8,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use learned embeddings for the input and output tokens,1,,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use learned positional embeddings,0,,
+https://arxiv.org/pdf/1706.03762,5 Training,How many GPUs were used for training,,8,
+https://arxiv.org/pdf/1706.03762,5 Training,Was the model trained on NVIDIA A100 GPUs,0,,
+https://arxiv.org/pdf/1706.03762,5 Training,Was the model trained on NVIDIA P100 GPUs,1,,
+https://arxiv.org/pdf/1706.03762,5 Training,Was the SGD optimizer used,0,,
+https://arxiv.org/pdf/1706.03762,5 Training,Was the AdamW optimizer used,0,,
+https://arxiv.org/pdf/1706.03762,5 Training,Was the Adam optimizer used,1,,
+https://arxiv.org/pdf/1706.03762,5 Training,Was a fixed learning rate used,0,,
+https://arxiv.org/pdf/1706.03762,5 Training,Was a varied learning rate used,1,,
+https://arxiv.org/pdf/1706.03762,5 Training,How many warmup steps were used,,4000,
+https://arxiv.org/pdf/1706.03762,5 Training,Was the label dropout regularization used during training,1,,
+https://arxiv.org/pdf/1706.03762,5 Training,What was the dropout rate used for the base model,,0.1,
+https://arxiv.org/pdf/1706.03762,5 Training,Was the label smoothing regularization used during training,1,,
+https://arxiv.org/pdf/2210.05189,2.1 Fully Connected Networks,How many layers are in the toy model (y = x^2)?,,3,
+https://arxiv.org/pdf/2210.05190,2.1 Fully Connected Networks,Does the model use Sigmoid activation function?,0,,
+https://arxiv.org/pdf/2210.05191,3 Experimental Results,How many parameters are in the y = x^2 toy model tree?,,14,
+https://arxiv.org/pdf/2210.05192,2.4 Recurrent Networks,Can recurrent networks also be converted to decision trees?,1,,
+https://arxiv.org/pdf/2210.05193,3 Experimental Results,How many layers are in the half-moon neural network?,,3,
+https://arxiv.org/pdf/2210.05194,3 Experimental Results,"What is the main computational advantage of decision trees? A: Less storage memory, B: Fewer operations, C: Lower accuracy",,,B
+https://arxiv.org/pdf/2106.09685v2.pdf,4 Our Method,Does LoRA work with any neural network containing dense layers?,1,,
+https://arxiv.org/pdf/2106.09685v2.pdf,5.5 Scaling Up to GPT-3,"How much memory is saved when training GPT-3 175B with LoRA compared to full fine-tuning? A: 850GB, B: 100GB, C: 5GB",,,A
+https://arxiv.org/pdf/2106.09685v2.pdf,Abstract,"By how much can LoRA reduce GPU memory requirements during training? A: 10x, B: 5x, C: 3x",,,C
+https://arxiv.org/pdf/2106.09685v2.pdf,1. Introduction,"In billions, how many trainable parameters does GPT-3 have?",,175,
+https://arxiv.org/pdf/2106.09685v2.pdf,1. Introduction,Does LoRA introduce additional inference latency compared to full fine-tuning?,0,,
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689,Prohibited AI Practices (Article 5),"Which type of AI systems are banned by the AI Act? (A) High-risk systems, (B) Manipulative systems, (C) Real-time biometric systems in public spaces",,,C
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401690,Requirements for High-Risk AI Systems (Article 10),"what is a requirement for datasets used in high-risk AI systems? (A) Exclusively open-source datasets, (B) Datasets ensuring quality and diversity, (C) Datasets not exceeding 1 GB in size",,,B
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401691,Classification rules (article 51),"What is the threshold, measured in floating point operations, that leads to a presumption that a general-purpose AI model has systemic risk?
+A) 10^15, B) 10^20, C) 10^25",,,C
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401692,"TRANSPARENCY OBLIGATIONS FOR PROVIDERS AND DEPLOYERS OF CERTAIN AI SYSTEMS
+(Article 50)","What should providers of AI systems that generate synthetic content ensure?
+A) That the content is not marked in any way. B) That the outputs are marked in a machine-readable format and detectable as artificially generated or manipulated. C) That there is no way to detect that the content is synthetic.",,,B
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401693,Sharing of information on serious incidents (article 73),How long does a market surveillance authority have to take appropriate measures after receiving notification of a serious incident? A) 3 days B) 7 days C) 14 days,,,B
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401694,Testing of high-risk AI systems in real world conditions outside AI regulatory sandboxes (Article 60),"What is the maximum duration of testing in real-world conditions? a) 3 months b) 6 months, with a possible extension of an additional 6 months. c) 12 months",,,B
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401695,Penalties (Article 99),"What is the maximum fine for supplying incorrect, incomplete, or misleading information to notified bodies or national competent authorities? A) 7,500,000 EUR or 1% of annual turnover, whichever is higher. B) 5,000,000 EUR or 0.5 % of annual turnover, whichever is higher C) 10,000,000 EUR or 5% of annual turnover, whichever is higher",,,A
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401696,Code of practice (article 56),By what date should codes of practice be ready? a) 2 May 2025 b) 2 May 2024 c) 2 August 2025,,,A
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401697,"Compliant AI systems which present a risk (article 82)
+",What is the time period for a market surveillance authority to inform the Commission of a finding related to a non-compliant AI system? a) 1 month b) 2 months c) Immediately,,,C
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401698,EU declaration of conformity (article 47),"How long after a high-risk AI system has been placed on the market or put into service must the authorized representative keep the technical documentation, EU declaration of conformity and certificates available for competent authorities? a) 5 years b) 10 years c) 15 years",,,B
+https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401699,Establishment and structure of the European Artificial Intelligence Board (article 65),"How long is the term of office for a Member State representative on the European Artificial Intelligence Board? a) 2 years, renewable once b) 3 years, renewable once c) 4 years, renewable once",,,B
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Introduction,"According to the guide, what is the typical license used to grant reuse rights with libre open access? a) GNU General Public License b) Creative Commons license c) MIT license",,,B
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chapter 5 Where do you want to make your work available?,"how many peer-reviewed open access journals are indexed by the Directory of Open Access Journals (DOAJ)? a) Over 10,000 b) Over 20,000 c) Exactly 30,000",,,A
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chapter 2 Benefits of Open Access,what is the term of office for members of the advisory board of the Authors Alliance? a) The source does not specify a term of office for the advisory board. b) 2 years c) 4 years,,,A
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Introduction,Does open access eliminate price barriers?,1,,
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chatper 1 What is this guide and who is it for,Are publication fees required for all open access journals?,0,,
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chapter 3 Open Access Policies,In what year did the Bull and Melinda Gates foundation implement an open access policy?,,2015,
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chapter 5 Where do you want to make your work available?,Are Gold Open Access and Green Open Access mutually exclusive.,0,,
+https://arxiv.org/pdf/2201.11903,3 Arithmetic Reasoning,Is Arithmetic reasoning is a task that language models often find very easy?,0,,
+https://arxiv.org/pdf/2201.11904,3.1 Experimental Setup,How many large language models were evaluated?,,5,
+https://arxiv.org/pdf/2201.11905,3.1 Experimental Setup,How many benchmarks were used to evaluate arithmetic reasoning?,,5,
+https://arxiv.org/pdf/2201.11906,5 Symbolic Reasoning,Is symbolic reasoning usually simple for humans but challenging for language models?,1,,
+https://arxiv.org/pdf/2201.11907,3.4 Robustness of Chain of Thought,How many annotators provided independent chains of thought?,,3,
+https://arxiv.org/pdf/2201.11908,3.2 Results,How many random samples for examined to understand model errors?,,50,
+https://arxiv.org/pdf/2201.11909,5 Symbolic Reasoning,"Which symbolic reasoning task is used as an out-of-domain evaluation? A: Coin Flip, B: Tower of Hanoi, C: Chess puzzles",,,A
