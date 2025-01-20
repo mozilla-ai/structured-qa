@@ -11,10 +11,18 @@ You can only answer the question based on the information in the document.
 You will return a JSON name with two keys: "section" and "answer".
 In `"section"`, you will return the name of the section where you found the answer.
 In `"answer"`, you will return the answer either as Yes/No (for boolean questions) or as a single number (for numeric questions) or as a single letter (for multi-choice questions).
-Example response:
+Example responses:
 {
   "section": "1. Introduction",
   "answer": "No"
+}
+{
+  "section": "1. Introduction",
+  "answer": 2
+}
+{
+  "section": "1. Introduction",
+  "answer": "C"
 }
 """
 
