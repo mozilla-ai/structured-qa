@@ -55,6 +55,7 @@ def gemini_process_document(document_file, document_data):
             "max_output_tokens": 8192,
             "response_mime_type": "application/json",
         },
+        system_instruction=SYSTEM_PROMPT,
     )
 
     logger.info("Predicting")
