@@ -41,5 +41,5 @@ def run_benchmark(input_data: str, output_file: str, model: str):
     data.to_csv(output_file)
 
 
-def main():
+if __name__ == "__main__":
     Fire(run_benchmark)
