@@ -1,24 +1,15 @@
 document,section,question,bool_answer,num_answer,multi_choice_answer
-https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use a encoder only architecture,0,,
-https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use a decoder only architecture,0,,
-https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use a encoder-decoder architecture,1,,
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,What type of architecture does the model use?-A: decoder only -B: encoder only -C: encoder-decoder,,,C
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many layers compose the encoder,,6,
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many layers compose the decoder,,6,
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,How many parallel attention heads are used,,8,
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use learned embeddings for the input and output tokens,1,,
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,Does the model use learned positional embeddings,0,,
 https://arxiv.org/pdf/1706.03762,5 Training,How many GPUs were used for training,,8,
-https://arxiv.org/pdf/1706.03762,5 Training,Was the model trained on NVIDIA A100 GPUs,0,,
-https://arxiv.org/pdf/1706.03762,5 Training,Was the model trained on NVIDIA P100 GPUs,1,,
-https://arxiv.org/pdf/1706.03762,5 Training,Was the SGD optimizer used,0,,
-https://arxiv.org/pdf/1706.03762,5 Training,Was the AdamW optimizer used,0,,
-https://arxiv.org/pdf/1706.03762,5 Training,Was the Adam optimizer used,1,,
-https://arxiv.org/pdf/1706.03762,5 Training,Was a fixed learning rate used,0,,
-https://arxiv.org/pdf/1706.03762,5 Training,Was a varied learning rate used,1,,
+https://arxiv.org/pdf/1706.03762,5 Training,Was type of GPUs were used for training? -A: NVIDIA A100 -B: NVIDIA P100 -C: NVIDIA T4,,,B
+https://arxiv.org/pdf/1706.03762,5 Training,Was optimizer was used? -A: AdamW -B: Adam -C: SGD,,,A
 https://arxiv.org/pdf/1706.03762,5 Training,How many warmup steps were used,,4000,
-https://arxiv.org/pdf/1706.03762,5 Training,Was the label dropout regularization used during training,1,,
 https://arxiv.org/pdf/1706.03762,5 Training,What was the dropout rate used for the base model,,0.1,
-https://arxiv.org/pdf/1706.03762,5 Training,Was the label smoothing regularization used during training,1,,
 https://arxiv.org/pdf/2210.05189,2.1 Fully Connected Networks,How many layers are in the toy model (y = x^2)?,,3,
 https://arxiv.org/pdf/2210.05190,2.1 Fully Connected Networks,Does the model use Sigmoid activation function?,0,,
 https://arxiv.org/pdf/2210.05191,3 Experimental Results,How many parameters are in the y = x^2 toy model tree?,,14,
