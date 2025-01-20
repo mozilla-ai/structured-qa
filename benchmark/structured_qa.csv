@@ -7,7 +7,7 @@ https://arxiv.org/pdf/1706.03762,3 Model Architecture,"Does the final model use 
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,"Does the final model use learned positional embeddings?",NO
 https://arxiv.org/pdf/1706.03762,5 Training,"How many GPUs were used for training?",8
 https://arxiv.org/pdf/1706.03762,5 Training,"What type of GPUs were used for training? -A: NVIDIA A100 -B: NVIDIA P100 -C: NVIDIA T4",B
-https://arxiv.org/pdf/1706.03762,5 Training,"What optimizer was used for training? -A: AdamW -B: Adam -C: SGD",A
+https://arxiv.org/pdf/1706.03762,5 Training,"What optimizer was used for training? -A: AdamW -B: Adam -C: SGD",B
 https://arxiv.org/pdf/1706.03762,5 Training,"How many warmup steps were used?",4000
 https://arxiv.org/pdf/1706.03762,5 Training,"What was the dropout rate used for the base model?",0.1
 https://arxiv.org/pdf/2210.05189,2.1 Fully Connected Networks,"How many layers are in the toy model (y = x^2)?",3
@@ -46,3 +46,18 @@ https://arxiv.org/pdf/2201.11903,5 Symbolic Reasoning,Is symbolic reasoning usua
 https://arxiv.org/pdf/2201.11903,3.4 Robustness of Chain of Thought,How many annotators provided independent chains of thought?,3
 https://arxiv.org/pdf/2201.11903,3.2 Results,How many random samples for examined to understand model errors?,50
 https://arxiv.org/pdf/2201.11903,5 Symbolic Reasoning,"Which symbolic reasoning task is used as an out-of-domain evaluation? -A: Coin Flip -B: Tower of Hanoi -C: Chess puzzles",A
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,OVERVIEW AND GOAL,How many chapters does the game last?,3
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,OVERVIEW AND GOAL,How many victory conditions are there?,3
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,OVERVIEW AND GOAL<OR>END OF THE GAME,How many different races are there?,6
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CHAPTER OVERVIEW,Which player begins the game? -A: Sauron -B: The Fellowship -C: Other,A
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CHAPTER OVERVIEW,Can you take a Chapter card and a Landmark tile on your same turn?,NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CHAPTER OVERVIEW,How many goins does a player take when discarding a card during Chapter 3?,3
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CHAPTER OVERVIEW,After taking a landmark tile, do you reveal a new tile and the end of your turn?,NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CARD AND TILE COSTS,Can a player pay coins to compensate for missing skill symbols in a Landmark Tile?,YES
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CARD AND TILE COSTS,If a player is missing 2 skill symbols, how many coins must they pay to the reserve?,2
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CARD AND TILE EFFECTS,Can you use a symbol more than once per turn?,NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CARD AND TILE EFFECTS,Which type of cards provide coins? -A: Gray -B: Yellow -C: Blue,B
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CARD AND TILE EFFECTS,During which chapter the purple cards become available? -A: Chapter 1 -B: Chapter 2 -C: Chapter 3,C
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CONQUERING MIDDLE-EARTH,If you place or move an unit and an enemy fortress is present, does it trigger a conflict?,NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,END OF THE GAME,Can the game end in a tie?,YES
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,END OF THE GAME,In how many regions do you need to be present to win the game?,7
