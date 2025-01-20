@@ -3,24 +3,24 @@ https://arxiv.org/pdf/1706.03762,3 Model Architecture,"What type of architecture
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,"How many layers compose the encoder?",6
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,"How many layers compose the decoder?",6
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,"How many parallel attention heads are used?",8
-https://arxiv.org/pdf/1706.03762,3 Model Architecture,"Does the final model use learned embeddings for the input and output tokens?",Yes
-https://arxiv.org/pdf/1706.03762,3 Model Architecture,"Does the final model use learned positional embeddings?",No
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,"Does the final model use learned embeddings for the input and output tokens?",YES
+https://arxiv.org/pdf/1706.03762,3 Model Architecture,"Does the final model use learned positional embeddings?",NO
 https://arxiv.org/pdf/1706.03762,5 Training,"How many GPUs were used for training?",8
 https://arxiv.org/pdf/1706.03762,5 Training,"What type of GPUs were used for training? -A: NVIDIA A100 -B: NVIDIA P100 -C: NVIDIA T4",B
-https://arxiv.org/pdf/1706.03762,5 Training,"What optimizer was used for trainin? -A: AdamW -B: Adam -C: SGD",A
+https://arxiv.org/pdf/1706.03762,5 Training,"What optimizer was used for training? -A: AdamW -B: Adam -C: SGD",A
 https://arxiv.org/pdf/1706.03762,5 Training,"How many warmup steps were used?",4000
 https://arxiv.org/pdf/1706.03762,5 Training,"What was the dropout rate used for the base model?",0.1
 https://arxiv.org/pdf/2210.05189,2.1 Fully Connected Networks,"How many layers are in the toy model (y = x^2)?",3
-https://arxiv.org/pdf/2210.05189,2.1 Fully Connected Networks,"Does the model use Sigmoid activation function?",No
+https://arxiv.org/pdf/2210.05189,2.1 Fully Connected Networks,"Does the model use Sigmoid activation function?",NO
 https://arxiv.org/pdf/2210.05189,3 Experimental Results,"How many parameters are in the y = x^2 toy model tree?",14
-https://arxiv.org/pdf/2210.05189,2.4 Recurrent Networks,"Can recurrent networks also be converted to decision trees?",Yes
+https://arxiv.org/pdf/2210.05189,2.4 Recurrent Networks,"Can recurrent networks also be converted to decision trees?",YES
 https://arxiv.org/pdf/2210.05189,3 Experimental Results,"How many layers are in the half-moon neural network?",3
 https://arxiv.org/pdf/2210.05189,3 Experimental Results,"What is the main computational advantage of decision trees? -A: Less storage memory, -B: Fewer operations, -C: Lower accuracy",B
-https://arxiv.org/pdf/2106.09685v2.pdf,4 Our Method,Does LoRA work with any neural network containing dense layers?,Yes
-https://arxiv.org/pdf/2106.09685v2.pdf,5.5 Scaling Up to GPT-3,"How much memory is saved when training GPT-3 175B with LoRA compared to full fine-tuning? -A: 850GB, -B: 100GB, -C: 5GB",A
+https://arxiv.org/pdf/2106.09685v2.pdf,4 Our Method,Does LoRA work with any neural network containing dense layers?,YES
+https://arxiv.org/pdf/2106.09685v2.pdf,5.5 Scaling Up to GPT-3,"How much memory is saved (in GB) when training GPT-3 175B with LoRA compared to full fine-tuning?",850
 https://arxiv.org/pdf/2106.09685v2.pdf,Abstract,"By how much can LoRA reduce GPU memory requirements during training? -A: 10x, -B: 5x, -C: 3x",C
 https://arxiv.org/pdf/2106.09685v2.pdf,1. Introduction,"In billions, how many trainable parameters does GPT-3 have?",175
-https://arxiv.org/pdf/2106.09685v2.pdf,1. Introduction,Does LoRA introduce additional inference latency compared to full fine-tuning?,No
+https://arxiv.org/pdf/2106.09685v2.pdf,1. Introduction,Does LoRA introduce additional inference latency compared to full fine-tuning?,NO
 https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689,Prohibited AI Practices (Article 5),"Which type of AI systems are banned by the AI Act? -A: High-risk systems, -B: Manipulative systems, -C: Real-time biometric systems in public spaces",C
 https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689,Requirements for High-Risk AI Systems (Article 10),"what is a requirement for datasets used in high-risk AI systems? -A: Exclusively open-source datasets -B: Datasets ensuring quality and diversity -C: Datasets not exceeding 1 GB in size",B
 https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689,Classification rules (article 51),"What is the threshold, measured in floating point operations, that leads to a presumption that a general-purpose AI model has systemic risk? -A: 10^1 -B: 10^20 -C: 10^25",C
@@ -35,14 +35,14 @@ https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689,Establish
 https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Introduction,"According to the guide, what is the typical license used to grant reuse rights with libre open access? -A: GNU General Public License -B: Creative Commons license -C: MIT license",B
 https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chapter 5 Where do you want to make your work available?,"how many peer-reviewed open access journals are indexed by the Directory of Open Access Journals (DOAJ)? -A: Over 10,000 -B: Over 20,000 -C: Exactly 30,000",A
 https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chapter 2 Benefits of Open Access,what is the term of office for members of the advisory board of the Authors Alliance? -A: The source does not specify a term of office for the advisory board. -B: 2 years -C: 4 years,A
-https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Introduction,Does open access eliminate price barriers?,Yes
-https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chatper 1 What is this guide and who is it for,Are publication fees required for all open access journals?,No
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Introduction,Does open access eliminate price barriers?,YES
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chatper 1 What is this guide and who is it for,Are publication fees required for all open access journals?,NO
 https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chapter 3 Open Access Policies,In what year did the Bull and Melinda Gates foundation implement an open access policy?,2015
-https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chapter 5 Where do you want to make your work available?,Are Gold Open Access and Green Open Access mutually exclusive.,No
-https://arxiv.org/pdf/2201.11903,3 Arithmetic Reasoning,Is Arithmetic reasoning is a task that language models often find very easy?,No
+https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf,Chapter 5 Where do you want to make your work available?,Are Gold Open Access and Green Open Access mutually exclusive.,NO
+https://arxiv.org/pdf/2201.11903,3 Arithmetic Reasoning,Is Arithmetic reasoning is a task that language models often find very easy?,NO
 https://arxiv.org/pdf/2201.11903,3.1 Experimental Setup,How many large language models were evaluated?,5
 https://arxiv.org/pdf/2201.11903,3.1 Experimental Setup,How many benchmarks were used to evaluate arithmetic reasoning?,5
-https://arxiv.org/pdf/2201.11903,5 Symbolic Reasoning,Is symbolic reasoning usually simple for humans but challenging for language models?,Yes
+https://arxiv.org/pdf/2201.11903,5 Symbolic Reasoning,Is symbolic reasoning usually simple for humans but challenging for language models?,YES
 https://arxiv.org/pdf/2201.11903,3.4 Robustness of Chain of Thought,How many annotators provided independent chains of thought?,3
 https://arxiv.org/pdf/2201.11903,3.2 Results,How many random samples for examined to understand model errors?,50
 https://arxiv.org/pdf/2201.11903,5 Symbolic Reasoning,"Which symbolic reasoning task is used as an out-of-domain evaluation? -A: Coin Flip -B: Tower of Hanoi -C: Chess puzzles",A
