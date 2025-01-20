@@ -35,7 +35,7 @@ def run_benchmark(input_data: str, output_file: str, model: str):
             )
 
         for index in document_data.index:
-            data.loc[index, "pred_answer"] = answers[index].upper()
+            data.loc[index, "pred_answer"] = str(answers[index]).upper()
             data.loc[index, "pred_section"] = sections[index]
 
     data.to_csv(output_file)
