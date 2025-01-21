@@ -31,6 +31,6 @@ def workflow_process_document(
         )
 
         answers[index] = answer
-        sections[index] = sections_checked[-1]
+        sections[index] = sections_checked[-1] if sections_checked else None
 
     return answers, sections
