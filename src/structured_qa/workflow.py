@@ -75,7 +75,7 @@ def find_retrieve_answer(
             result = result["choices"][0]["message"]["content"]
         except ValueError:
             logger.error("Failed to generate completion")
-            return None, sections_checked
+            return "Generation Error", sections_checked
 
         logger.debug(f"Result: {result}")
 
@@ -89,7 +89,7 @@ def find_retrieve_answer(
                 sections_checked.append(result)
             else:
                 logger.error(f"Unknown section: {result}")
-                return None, sections_checked
+                return "Unknown section", sections_checked
         else:
             if result == "I need more info.":
                 current_info = None

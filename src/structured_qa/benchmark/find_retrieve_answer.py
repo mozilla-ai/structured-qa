@@ -48,7 +48,7 @@ def fra_process_document(
         question = row["question"]
         try:
             float(row["answer"])
-            answer_type = "a single number"
+            answer_type = "a number"
         except ValueError:
             if row["answer"] in ("YES", "NO"):
                 answer_type = "YES or NO"
