@@ -92,7 +92,6 @@ def document_to_sections_dir(input_file: str, output_dir: str) -> list[str]:
         md_text,
     )
     logger.success(f"Found {len(sections)} sections")
-
     logger.info(f"Writing sections to {output_dir}")
     output_dir = Path(output_dir)
     output_dir.mkdir(exist_ok=True, parents=True)
