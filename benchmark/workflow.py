@@ -9,7 +9,7 @@ from structured_qa.workflow import find_retrieve_answer
 def workflow_process_document(
     document_file,
     document_data,
-    model_id: str = "bartowski/Qwen2.5-3B-Instruct-GGUF/Qwen2.5-3B-Instruct-f16.gguf",
+    model_id: str = "bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q8_0.gguf",
     find_prompt: str = FIND_PROMPT,
     answer_prompt: str = ANSWER_PROMPT,
 ):
