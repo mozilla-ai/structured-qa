@@ -35,7 +35,12 @@ What is the activation function used in the model?
 """
 
 
-def gemini_process_document(document_file, document_data):
+def gemini_process_document(
+    document_file,
+    document_data,
+    model_name: str = "gemini-2.0-flash-exp",
+    system_prompt: str = SYSTEM_PROMPT,
+):
     genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
     logger.info("Uploading file")
@@ -47,7 +52,7 @@ def gemini_process_document(document_file, document_data):
 
     logger.info("Creating model")
     model = genai.GenerativeModel(
-        model_name="gemini-2.0-flash-exp",
+        model_name=model_name,
         generation_config={
             "temperature": 1,
             "top_p": 0.95,
@@ -55,7 +60,7 @@ def gemini_process_document(document_file, document_data):
             "max_output_tokens": 8192,
             "response_mime_type": "application/json",
         },
-        system_instruction=SYSTEM_PROMPT,
+        system_instruction=system_prompt,
     )
 
     logger.info("Predicting")

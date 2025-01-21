@@ -61,3 +61,12 @@ https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_R
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CONQUERING MIDDLE-EARTH,"If you place or move an unit and an enemy fortress is present, does it trigger a conflict?",NO
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,END OF THE GAME,Can the game end in a tie?,YES
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,END OF THE GAME,In how many regions do you need to be present to win the game?,7
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,LOOKOUT PHASE,What is the maximum number of cards a player may acquire during the lookout phase?,4
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,LOOKOUT PHASE,Is there a limit to the number of cards a player may have in their hand?,NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,ACTION PHASE,"Can you raid the locations of a player that has passed during the action phase?",NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,EXPEDITION PHASE,Can players conquer and pillage the same island during the expedition phase?,NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,ACTION PHASE<OR>GAME END,How many points in the scoreboard must be reached during the Action phase to trigger the final round?,25
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,CLEANUP PHASE,Is there a cleanup phase in the final round?,NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,BUILD A LOCATION,How many victory points are granted by a built Field Location card that work as an upgrade?,1
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,ACTIONS,Can you use the raid action without a Raze token?,NO
+https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,GAME END,Can the game end in a tie?,YES
