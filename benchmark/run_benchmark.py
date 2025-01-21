@@ -7,6 +7,7 @@ from loguru import logger
 
 
 from gemini import gemini_process_document
+from workflow import workflow_process_document
 
 
 def download_document(url, output_file):
@@ -31,6 +32,10 @@ def run_benchmark(input_data: str, output_file: str, model: str):
 
         if model == "gemini":
             answers, sections = gemini_process_document(
+                downloaded_document, document_data
+            )
+        elif model == "workflow":
+            answers, sections = workflow_process_document(
                 downloaded_document, document_data
             )
 
