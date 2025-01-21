@@ -25,7 +25,7 @@ def workflow_process_document(
     sections = {}
     for index, row in document_data.iterrows():
         question = row["question"]
-        logger.debug(f"Question: {question}")
+        logger.info(f"Question: {question}")
         answer, sections_checked = find_retrieve_answer(
             question, model, sections_dir, find_prompt, answer_prompt
         )
