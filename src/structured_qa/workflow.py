@@ -70,8 +70,12 @@ def find_retrieve_answer(
                 {"role": "user", "content": question},
             ]
 
-        result = model.create_chat_completion(messages)
-        result = result["choices"][0]["message"]["content"]
+        try:
+            result = model.create_chat_completion(messages)
+            result = result["choices"][0]["message"]["content"]
+        except ValueError:
+            logger.error("Failed to generate completion")
+            return None, sections_checked
 
         logger.debug(f"Result: {result}")
 
