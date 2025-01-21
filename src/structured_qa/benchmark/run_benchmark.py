@@ -1,13 +1,10 @@
 from pathlib import Path
 from urllib.request import urlretrieve
+from typing import Callable
 
 import pandas as pd
 from fire import Fire
 from loguru import logger
-
-
-from gemini import gemini_process_document
-from workflow import workflow_process_document
 
 
 def download_document(url, output_file):
@@ -19,7 +16,9 @@ def download_document(url, output_file):
 
 
 @logger.catch(reraise=True)
-def run_benchmark(input_data: str, output_file: str, model: str):
+def run_benchmark(
+    input_data: str, output_file: str, process_document: Callable, **kwargs
+):
     logger.info("Loading input data")
     data = pd.read_csv(input_data)
     data["pred_answer"] = [None] * len(data)
@@ -30,14 +29,9 @@ def run_benchmark(input_data: str, output_file: str, model: str):
         downloaded_document = Path(f"{Path(document_link).name}.pdf")
         download_document(document_link, downloaded_document)
 
-        if model == "gemini":
-            answers, sections = gemini_process_document(
-                downloaded_document, document_data
-            )
-        elif model == "workflow":
-            answers, sections = workflow_process_document(
-                downloaded_document, document_data
-            )
+        answers, sections = process_document(
+            downloaded_document, document_data, **kwargs
+        )
 
         for index in document_data.index:
             data.loc[index, "pred_answer"] = str(answers[index]).upper()

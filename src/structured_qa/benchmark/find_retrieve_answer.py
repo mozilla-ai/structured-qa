@@ -1,3 +1,4 @@
+from pathlib import Path
 from loguru import logger
 
 from structured_qa.config import FIND_PROMPT
@@ -26,7 +27,7 @@ I need more info.
 """
 
 
-def workflow_process_document(
+def fra_process_document(
     document_file,
     document_data,
     model_id: str = "bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q8_0.gguf",
@@ -37,7 +38,7 @@ def workflow_process_document(
     model = load_llama_cpp_model(model_id)
 
     logger.info("Splitting document into sections")
-    sections_dir = "sections"
+    sections_dir = Path("sections") / Path(document_file).stem
     document_to_sections_dir(document_file, sections_dir)
 
     logger.info("Predicting")
