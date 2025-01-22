@@ -1,4 +1,4 @@
-from pathlib import Path
+import pymupdf4llm
 from loguru import logger
 
 
@@ -15,13 +15,13 @@ The current information available is:
 """
 
 
-def fra_process_document(
+def full_context_process_document(
     document_file,
     document_data,
     model,
     answer_prompt: str = ANSWER_WITH_TYPE_PROMPT,
 ):
-    document = Path(document_file).read_text().strip()
+    md_text = pymupdf4llm.to_markdown(document_file)
 
     logger.info("Predicting")
     answers = {}
@@ -43,7 +43,7 @@ def fra_process_document(
         messages = [
             {
                 "role": "system",
-                "content": answer_prompt.format(CURRENT_INFO="\n".join(document)),
+                "content": answer_prompt.format(CURRENT_INFO="\n".join(md_text)),
             },
             {"role": "user", "content": question},
         ]
