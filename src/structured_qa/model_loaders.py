@@ -1,4 +1,8 @@
 import subprocess
+import time
+
+
+from loguru import logger
 
 
 def gpu_available():
@@ -86,6 +90,7 @@ def load_unsloth_model(
 class GeminiModel:
     def __init__(self, model):
         self.model = model
+        self.current_calls = 0
 
     def get_response(self, messages):
         messages = []
@@ -100,8 +105,13 @@ class GeminiModel:
                     ],
                 }
             )
+        if self.current_calls >= 10:
+            logger.info("Waiting for 60 seconds")
+            time.sleep(60)
+            self.current_calls = 0
         chat_session = self.model.start_chat(history=messages)
         response = chat_session.send_message("INSERT_INPUT_HERE")
+        self.current_calls += 1
         return response.text
 
 
