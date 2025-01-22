@@ -94,23 +94,14 @@ class GeminiModel:
 
     def get_response(self, messages):
         messages = []
-        for message in messages:
-            messages.append(
-                {
-                    "role": "user",
-                    "parts": [
-                        message["content"]
-                        if "content" in message
-                        else message["parts"],
-                    ],
-                }
-            )
+        stacked_message = "\n".join(
+            message["content"] for message in messages
+        )
         if self.current_calls >= 10:
             logger.info("Waiting for 60 seconds")
             time.sleep(60)
             self.current_calls = 0
-        chat_session = self.model.start_chat(history=messages)
-        response = chat_session.send_message("INSERT_INPUT_HERE")
+        response = self.model.generate_content(stacked_message)
         self.current_calls += 1
         return response.text
 
