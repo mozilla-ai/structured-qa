@@ -1,9 +1,5 @@
 import subprocess
 
-from llama_cpp import Llama
-from unsloth import FastLanguageModel
-from unsloth.chat_templates import get_chat_template
-
 
 def gpu_available():
     try:
@@ -13,7 +9,16 @@ def gpu_available():
         return False
 
 
-def load_llama_cpp_model(model_id: str) -> Llama:
+class LlamaModel:
+    def __init__(self, model):
+        self.model = model
+
+    def get_response(self, messages):
+        result = self.model.create_chat_completion(messages)
+        return result["choices"][0]["message"]["content"]
+
+
+def load_llama_cpp_model(model_id: str) -> LlamaModel:
     """
     Loads the given model_id using Llama.from_pretrained.
 
@@ -27,6 +32,8 @@ def load_llama_cpp_model(model_id: str) -> Llama:
     Returns:
         Llama: The loaded model.
     """
+    from llama_cpp import Llama
+
     org, repo, filename = model_id.split("/")
     model = Llama.from_pretrained(
         repo_id=f"{org}/{repo}",
@@ -35,7 +42,7 @@ def load_llama_cpp_model(model_id: str) -> Llama:
         verbose=False,
         n_gpu_layers=-1 if gpu_available() else 0,
     )
-    return model
+    return LlamaModel(model=model)
 
 
 class UnslothModel:
@@ -43,7 +50,7 @@ class UnslothModel:
         self.model = model
         self.tokenizer = tokenizer
 
-    def create_chat_completion(self, messages):
+    def get_response(self, messages):
         inputs = self.tokenizer.apply_chat_template(
             messages,
             tokenize=True,
@@ -60,6 +67,9 @@ class UnslothModel:
 def load_unsloth_model(
     model_id: str, chat_template: str, load_in_4bit: bool = True, **kwargs
 ) -> UnslothModel:
+    from unsloth import FastLanguageModel
+    from unsloth.chat_templates import get_chat_template
+
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=model_id,
         load_in_4bit=load_in_4bit,

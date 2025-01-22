@@ -71,29 +71,28 @@ def find_retrieve_answer(
             ]
 
         try:
-            result = model.create_chat_completion(messages)
-            result = result["choices"][0]["message"]["content"]
+            response = model.get_response(messages)
         except ValueError:
             logger.error("Failed to generate completion")
             return "Generation Error", sections_checked
 
-        logger.debug(f"Result: {result}")
+        logger.debug(f"Result: {response}")
 
         if finding_section:
-            result = result.strip()
-            logger.info(f"Retrieving section: {result}")
-            if result in sections_names:
-                section_content = (sections_dir / f"{result}.txt").read_text()
-                current_section = result
+            response = response.strip()
+            logger.info(f"Retrieving section: {response}")
+            if response in sections_names:
+                section_content = (sections_dir / f"{response}.txt").read_text()
+                current_section = response
                 current_info = section_content
-                sections_checked.append(result)
+                sections_checked.append(response)
             else:
-                logger.error(f"Unknown section: {result}")
+                logger.error(f"Unknown section: {response}")
                 return "Unknown section", sections_checked
         else:
-            if result == "I need more info.":
+            if response == "I need more info.":
                 current_info = None
                 sections_names.remove(current_section)
                 continue
             else:
-                return result, sections_checked
+                return response, sections_checked
