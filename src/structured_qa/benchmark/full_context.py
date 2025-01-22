@@ -1,4 +1,6 @@
-import pymupdf4llm
+import re
+
+import PyPDF2
 from loguru import logger
 
 
@@ -15,13 +17,34 @@ The current information available is:
 """
 
 
+def load_pdf(pdf_file: str) -> str | None:
+    try:
+        pdf_reader = PyPDF2.PdfReader(pdf_file)
+        return "\n".join(page.extract_text() for page in pdf_reader.pages)
+    except Exception as e:
+        logger.exception(e)
+        return None
+
+
+def clean_with_regex(text: str) -> str:
+    text = re.sub(
+        r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+",
+        "",
+        text,
+    )
+    text = re.sub(r"[\w\.-]+@[\w\.-]+\.[\w]+", "", text)
+    text = re.sub(r'[^a-zA-Z0-9\s.,!?;:"\']', "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
 def full_context_process_document(
     document_file,
     document_data,
     model,
     answer_prompt: str = ANSWER_WITH_TYPE_PROMPT,
 ):
-    md_text = pymupdf4llm.to_markdown(document_file)
+    document = clean_with_regex(load_pdf(document_file))
 
     logger.info("Predicting")
     answers = {}
@@ -43,7 +66,7 @@ def full_context_process_document(
         messages = [
             {
                 "role": "system",
-                "content": answer_prompt.format(CURRENT_INFO="\n".join(md_text)),
+                "content": answer_prompt.format(CURRENT_INFO="\n".join(document)),
             },
             {"role": "user", "content": question},
         ]
