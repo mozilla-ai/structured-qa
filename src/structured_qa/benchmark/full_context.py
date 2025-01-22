@@ -46,7 +46,7 @@ def full_context_process_document(
 ):
     document = clean_with_regex(load_pdf(document_file))
 
-    max_characters = model.n_ctx() * 4
+    max_characters = model.model.n_ctx() * 4
     if len(document) > max_characters:
         logger.warning(
             f"Input text is too big ({len(document)})."
