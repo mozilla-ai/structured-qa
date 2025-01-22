@@ -46,6 +46,7 @@ def full_context_process_document(
 ):
     document = clean_with_regex(load_pdf(document_file))
 
+    logger.info(f"Length of the document: {len(document)}")
     max_characters = model.model.n_ctx() * 4
     if len(document) > max_characters:
         logger.warning(
