@@ -1,5 +1,8 @@
 import subprocess
+
 from llama_cpp import Llama
+from unsloth import FastLanguageModel
+from unsloth.chat_templates import get_chat_template
 
 
 def gpu_available():
@@ -33,3 +36,36 @@ def load_llama_cpp_model(model_id: str) -> Llama:
         n_gpu_layers=-1 if gpu_available() else 0,
     )
     return model
+
+
+class UnslothModel:
+    def __init__(self, model, tokenizer):
+        self.model = model
+        self.tokenizer = tokenizer
+
+    def create_chat_completion(self, messages):
+        inputs = self.tokenizer.apply_chat_template(
+            messages,
+            tokenize=True,
+            add_generation_prompt=True,
+            return_tensors="pt",
+        ).to("cuda")
+        outputs = self.model.generate(input_ids=inputs)
+        response = self.tokenizer.batch_decode(outputs[:, len(inputs[0]) :])[0]
+        return response
+
+
+def load_unsloth_model(
+    model_id: str, chat_template: str, load_in_4bit: bool = True, **kwargs
+) -> UnslothModel:
+    model, tokenizer = FastLanguageModel.from_pretrained(
+        model_name=model_id,
+        load_in_4bit=load_in_4bit,
+        **kwargs,
+    )
+    tokenizer = get_chat_template(
+        tokenizer,
+        chat_template=chat_template,
+    )
+    FastLanguageModel.for_inference(model)
+    return UnslothModel(model=model, tokenizer=tokenizer)

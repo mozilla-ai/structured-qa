@@ -2,7 +2,6 @@ from pathlib import Path
 from loguru import logger
 
 from structured_qa.config import FIND_PROMPT
-from structured_qa.model_loaders import load_llama_cpp_model
 from structured_qa.preprocessing import document_to_sections_dir
 from structured_qa.workflow import find_retrieve_answer
 
@@ -30,13 +29,10 @@ I need more info.
 def fra_process_document(
     document_file,
     document_data,
-    model_id: str = "bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q8_0.gguf",
+    model,
     find_prompt: str = FIND_PROMPT,
     answer_prompt: str = ANSWER_WITH_TYPE_PROMPT,
 ):
-    logger.info("Creating model")
-    model = load_llama_cpp_model(model_id)
-
     logger.info("Splitting document into sections")
     sections_dir = Path("sections") / Path(document_file).stem
     document_to_sections_dir(document_file, sections_dir)

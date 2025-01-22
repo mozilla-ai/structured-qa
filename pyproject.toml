@@ -17,6 +17,7 @@ dependencies = [
   "pymupdf4llm",
   "pyyaml",
   "streamlit",
+  "unsloth",
 ]
 
 [project.optional-dependencies]
