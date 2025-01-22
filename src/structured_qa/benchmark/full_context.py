@@ -49,9 +49,10 @@ def full_context_process_document(
         ]
         try:
             response = model.get_response(messages)
-        except Exception:
+        except Exception as e:
+            logger.exception(e)
             logger.error("Failed to generate completion")
-            return "Generation Error", []
+            return "Generation Error", [None]
         answers[index] = response
         sections[index] = None
 
