@@ -94,9 +94,7 @@ class GeminiModel:
 
     def get_response(self, messages):
         messages = []
-        stacked_message = "\n".join(
-            message["content"] for message in messages
-        )
+        stacked_message = "\n".join(message["content"] for message in messages)
         if self.current_calls >= 10:
             logger.info("Waiting for 60 seconds")
             time.sleep(60)
