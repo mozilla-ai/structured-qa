@@ -6,22 +6,23 @@ from pydantic.functional_validators import AfterValidator
 
 FIND_PROMPT = """
 You are given two pieces of information:
-1. A user question.
-2. A list of valid section names.
+1. A list of valid section names.
+2. A user question.
 
 Your task is to:
 - Identify exactly one `section_name` from the provided list that seems related to the user question.
 - Return the `section_name` exactly as it appears in the list.
+- Do NOT answer the question.
 - Do NOT return any additional text, explanation, or formatting.
 - Do NOT combine multiple section names into a single response.
 
-Here is the list of valid `section_names`:
+Here is the list of valid section names:
 
 ```
 {SECTIONS}
 ```
 
-Now, based on the input question, return the single most relevant `section_name` from the list.
+Now, based on the following question, return the single most relevant `section_name` from the list.
 """
 
 ANSWER_PROMPT = """

@@ -33,9 +33,10 @@ def fra_process_document(
     find_prompt: str = FIND_PROMPT,
     answer_prompt: str = ANSWER_WITH_TYPE_PROMPT,
 ):
-    logger.info("Splitting document into sections")
     sections_dir = Path("sections") / Path(document_file).stem
-    document_to_sections_dir(document_file, sections_dir)
+    if not sections_dir.exists():
+        logger.info("Splitting document into sections")
+        document_to_sections_dir(document_file, sections_dir)
 
     logger.info("Predicting")
     answers = {}

@@ -72,7 +72,7 @@ def find_retrieve_answer(
 
         try:
             response = model.get_response(messages)
-        except ValueError:
+        except Exception:
             logger.error("Failed to generate completion")
             return "Generation Error", sections_checked
 
