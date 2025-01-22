@@ -46,6 +46,14 @@ def full_context_process_document(
 ):
     document = clean_with_regex(load_pdf(document_file))
 
+    max_characters = model.n_ctx() * 4
+    if len(document) > max_characters:
+        logger.warning(
+            f"Input text is too big ({len(document)})."
+            f" Using only a subset of it ({max_characters})."
+        )
+    document = document[:max_characters]
+
     logger.info("Predicting")
     answers = {}
     sections = {}
@@ -75,7 +83,7 @@ def full_context_process_document(
         except Exception as e:
             logger.exception(e)
             logger.error("Failed to generate completion")
-            return "Generation Error", [None]
+            response = "Generation Error"
         answers[index] = response
         sections[index] = None
 
