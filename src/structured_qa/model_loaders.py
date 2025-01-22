@@ -81,3 +81,36 @@ def load_unsloth_model(
     )
     FastLanguageModel.for_inference(model)
     return UnslothModel(model=model, tokenizer=tokenizer)
+
+
+class GeminiModel:
+    def __init__(self, model):
+        self.model = model
+
+    def get_response(self, messages):
+        messages = []
+        for message in messages:
+            messages.append(
+                {
+                    "role": "user",
+                    "parts": [
+                        message["content"]
+                        if "content" in message
+                        else message["parts"],
+                    ],
+                }
+            )
+        chat_session = self.model.start_chat(history=messages)
+        response = chat_session.send_message("INSERT_INPUT_HERE")
+        return response.text
+
+
+def load_gemini_model(model_id: str, system_prompt: str, **kwargs) -> GeminiModel:
+    import google.generativeai as genai
+
+    model = genai.GenerativeModel(
+        model_name=model_id,
+        system_instruction=system_prompt,
+        **kwargs,
+    )
+    return GeminiModel(model=model)

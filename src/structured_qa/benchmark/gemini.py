@@ -5,7 +5,8 @@ import time
 import google.generativeai as genai
 from loguru import logger
 
-SYSTEM_PROMPT = """
+
+FULL_CONTEXT_PROMPT = """
 You are given an input document and a question.
 You can only answer the question based on the information in the document.
 You will return a JSON name with two keys: "section" and "answer".
@@ -35,11 +36,10 @@ What is the activation function used in the model?
 """
 
 
-def gemini_process_document(
+def gemini_full_context_process_document(
     document_file,
     document_data,
-    model_name: str = "gemini-2.0-flash-exp",
-    system_prompt: str = SYSTEM_PROMPT,
+    model,
 ):
     genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
@@ -49,19 +49,6 @@ def gemini_process_document(
         logger.debug("Waiting for file to be processed.")
         time.sleep(2)
         file = genai.get_file(file.name)
-
-    logger.info("Creating model")
-    model = genai.GenerativeModel(
-        model_name=model_name,
-        generation_config={
-            "temperature": 1,
-            "top_p": 0.95,
-            "top_k": 40,
-            "max_output_tokens": 8192,
-            "response_mime_type": "application/json",
-        },
-        system_instruction=system_prompt,
-    )
 
     logger.info("Predicting")
     n = 0
@@ -73,21 +60,18 @@ def gemini_process_document(
             time.sleep(60)
         question = row["question"]
         logger.debug(f"Question: {question}")
-        chat_session = model.start_chat(
-            history=[
-                {
-                    "role": "user",
-                    "parts": [
-                        file,
-                        question,
-                    ],
-                }
-            ]
-        )
-
-        response = chat_session.send_message("INSERT_INPUT_HERE")
-        logger.debug(response.text)
-        response_json = json.loads(response.text)
+        messages = [
+            {
+                "role": "user",
+                "parts": [
+                    file,
+                    question,
+                ],
+            }
+        ]
+        response = model.get_response(messages)
+        logger.debug(response)
+        response_json = json.loads(response)
         answers[index] = response_json["answer"]
         sections[index] = response_json["section"]
         n += 1
