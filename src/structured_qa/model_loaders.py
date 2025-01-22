@@ -51,7 +51,9 @@ class UnslothModel:
             return_tensors="pt",
         ).to("cuda")
         outputs = self.model.generate(input_ids=inputs)
-        response = self.tokenizer.batch_decode(outputs[:, len(inputs[0]) :])[0]
+        response = self.tokenizer.batch_decode(
+            outputs[:, len(inputs[0]) :], skip_special_tokens=True
+        )[0]
         return response
 
 
