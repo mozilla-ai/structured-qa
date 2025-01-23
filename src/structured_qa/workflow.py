@@ -90,7 +90,7 @@ def find_retrieve_answer(
                 logger.error(f"Unknown section: {response}")
                 return "Unknown section", sections_checked
         else:
-            if response == "I need more info.":
+            if "MORE INFO" in response.upper():
                 current_info = None
                 sections_names.remove(current_section)
                 continue
