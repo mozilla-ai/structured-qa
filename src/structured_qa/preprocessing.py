@@ -1,9 +1,61 @@
+import re
+from collections import defaultdict
 from pathlib import Path
 
 import pymupdf4llm
-from langchain_text_splitters import MarkdownHeaderTextSplitter
 
 from loguru import logger
+
+
+def split_markdown_by_headings(
+    markdown_text, heading_patterns: list[str] | None = None
+) -> dict[str, str]:
+    """Splits a markdown document into sections based on specified heading patterns.
+
+    Args:
+        markdown_text (str): The markdown document as a single string.
+        heading_patterns (str, optional): A list of regex patterns representing heading markers
+            in the markdown document.
+            Defaults to None.
+            If None, the default patterns are used:
+
+            ```python
+            [
+                r"^#\s+(.+)$",
+                r"^##\s+(.+)$",
+                r"^###\s+(.+)$",
+                r"^\*\*[\d\.]+\.\*\*\s*\*\*(.+)\*\*$",
+                r"^\*\*[\d\.]+\.\*\*\s+(.+)$"
+            ]
+            ```
+
+    Returns:
+        dict[str, str]: A dictionary where the keys are the section names and the values are the section contents.
+    """
+    if heading_patterns is None:
+        heading_patterns = [
+            r"^#\s+(.+)$",
+            r"^##\s+(.+)$",
+            r"^###\s+(.+)$",
+            r"^####\s+(.+)$",
+            r"^\*\*[\d\.]+\.\*\*\s*\*\*(.+)\*\*$",
+        ]
+
+    sections = defaultdict(str)
+
+    heading_text = "INTRO"
+    for line in markdown_text.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        for pattern in heading_patterns:
+            match = re.match(pattern, line)
+            if match:
+                heading_text = match.group(1)[:100]
+                break
+        sections[heading_text] += f"{line}\n"
+
+    return sections
 
 
 @logger.catch(reraise=True)
@@ -12,7 +64,7 @@ def document_to_sections_dir(input_file: str, output_dir: str) -> list[str]:
     Convert a document to a directory of sections.
 
     Uses [pymupdf4llm](https://pypi.org/project/pymupdf4llm/) to convert input_file to markdown.
-    Then uses [langchain_text_splitters](https://pypi.org/project/langchain-text-splitters/) to split the markdown into sections based on the headers.
+    Then uses [`split_markdown_by_headings`][structured_qa.preprocessing.split_markdown_by_headings] to split the markdown into sections based on the headers.
 
     Args:
         input_file: Path to the input document.
@@ -32,27 +84,23 @@ def document_to_sections_dir(input_file: str, output_dir: str) -> list[str]:
 
     logger.info(f"Converting {input_file}")
     md_text = pymupdf4llm.to_markdown(input_file)
+    Path("debug.md").write_text(md_text)
     logger.success("Converted")
 
     logger.info("Extracting sections")
-    splitter = MarkdownHeaderTextSplitter(
-        headers_to_split_on=[("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
+    sections = split_markdown_by_headings(
+        md_text,
     )
-    sections = splitter.split_text(md_text)
     logger.success(f"Found {len(sections)} sections")
 
     logger.info(f"Writing sections to {output_dir}")
     output_dir = Path(output_dir)
     output_dir.mkdir(exist_ok=True, parents=True)
-    section_names = []
-    for section in sections:
-        if not section.metadata:
-            continue
-        section_name = list(section.metadata.values())[-1].lower()
-        section_names.append(section_name)
+
+    for section_name, section_content in sections.items():
         (output_dir / f"{section_name.replace('/', '_')}.txt").write_text(
-            section.page_content
+            section_content
         )
     logger.success("Done")
 
-    return section_names
+    return sections.keys()

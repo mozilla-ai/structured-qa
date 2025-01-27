@@ -13,7 +13,6 @@ dependencies = [
   "huggingface-hub",
   "llama-cpp-python",
   "loguru",
-  "langchain-text-splitters",
   "pydantic",
   "pymupdf4llm",
   "pyyaml",

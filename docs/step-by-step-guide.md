@@ -34,9 +34,7 @@ The document is first converted to markdown and then split into sections based o
 
  **Section Splitting**
 
-   - Uses [langchain-text-splitters](https://pypi.org/project/langchain-text-splitters/)
-
-   - Splits on `("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")`
+   - Uses [split_markdown_by_headings](api.md/#structured_qa.preprocessing.split_markdown_by_headings)
 
    - Each section is saved to a separate file.
 
