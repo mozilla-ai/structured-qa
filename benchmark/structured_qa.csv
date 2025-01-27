@@ -11,7 +11,7 @@ https://arxiv.org/pdf/1706.03762,5.3 Optimizer,"What optimizer was used for trai
 https://arxiv.org/pdf/1706.03762,5.3 Optimizer,"How many warmup steps were used?",4000
 https://arxiv.org/pdf/1706.03762,5.4 Regularization,"What was the dropout rate used for the base model?",0.1
 https://arxiv.org/pdf/2210.05189,2.4 Recurrent Networks,"Can recurrent networks also be converted to decision trees?",YES
-https://arxiv.org/pdf/2210.05189,3 Experimental Results"How many layers are in the toy model (y = x^2)?",3
+https://arxiv.org/pdf/2210.05189,3 Experimental Results,"How many layers are in the toy model (y = x^2)?",3
 https://arxiv.org/pdf/2210.05189,3 Experimental Results,"Does the toy model (y = x^2) use Sigmoid activation function?",NO
 https://arxiv.org/pdf/2210.05189,3 Experimental Results,"How many parameters are in the toy model (y = x^2) tree?",14
 https://arxiv.org/pdf/2210.05189,3 Experimental Results,"How many layers are in the half-moon neural network?",3
