@@ -11,13 +11,11 @@ dynamic = ["version"]
 dependencies = [
   "fire",
   "huggingface-hub",
-  "llama-cpp-python",
   "loguru",
   "pydantic",
   "pymupdf4llm",
   "pyyaml",
   "streamlit",
-  "unsloth",
 ]
 
 [project.optional-dependencies]
