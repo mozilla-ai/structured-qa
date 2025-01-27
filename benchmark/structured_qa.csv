@@ -1,7 +1,7 @@
 document,section,question,answer
 https://arxiv.org/pdf/1706.03762,3 Model Architecture,"What type of architecture does the model use? -A: decoder only -B: encoder only -C: encoder-decoder",C
 https://arxiv.org/pdf/1706.03762,3.1 Encoder and Decoder Stacks,"How many layers compose the encoder?",6
-https://arxiv.org/pdf/1706.03762,3.1 Encoder and Decoder Stacks"How many layers compose the decoder?",6
+https://arxiv.org/pdf/1706.03762,3.1 Encoder and Decoder Stacks,"How many layers compose the decoder?",6
 https://arxiv.org/pdf/1706.03762,3.2.2 Multi-Head Attention,"How many parallel attention heads are used?",8
 https://arxiv.org/pdf/1706.03762,3.4 Embeddings and Softmax,"Does the final model use learned embeddings for the input and output tokens?",YES
 https://arxiv.org/pdf/1706.03762,3.5 Positional Encoding,"Does the final model use learned positional embeddings?",NO
