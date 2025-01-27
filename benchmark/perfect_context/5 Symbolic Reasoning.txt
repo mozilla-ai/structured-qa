@@ -1,0 +1,43 @@
+Our final experimental evaluation considers symbolic rea-
+soning, which is simple for humans but potentially chal-
+lenging for language models. We show that chain-of-
+thought prompting not only enables language models to
+perform symbolic reasoning tasks that are challenging in
+the standard prompting setting, but also facilitates length
+generalization to inference-time inputs longer than those
+seen in the few-shot exemplars.
+Tasks. We use the following two toy tasks.
+• Last letter concatenation. This task asks the model
+to concatenate the last letters of words in a name (e.g.,
+“Amy Brown” → “yn”). It is a more challenging version
+of first letter concatenation, which language models can
+already perform without chain of thought.3 We generate
+full names by randomly concatenating names from the
+top one-thousand first and last names from name census
+data (https://namecensus.com/).
+• Coin flip. This task asks the model to answer whether a
+coin is still heads up after people either flip or don’t flip
+the coin (e.g., “A coin is heads up. Phoebe flips the coin.
+Osvaldo does not flip the coin. Is the coin still heads up?”
+→ “no”).
+As the construction of these symbolic reasoning tasks is
+well-defined, for each task we consider an in-domain test
+set for which examples had the same number of steps as
+the training/few-shot exemplars, as well as an out-of-domain (OOD) test set, for which evaluation
+examples had more steps than those in the exemplars. For last letter concatenation, the model only
+sees exemplars of names with two words, and then performs last letter concatenation on names with 3
+and 4 words.4 We do the same for the number of potential flips in the coin flip task. Our experimental
+setup uses the same methods and models as in the prior two sections. We again manually compose
+chains of thought for the few-shot exemplars for each task, which are given in Figure 3
+Results. The results of these in-domain and OOD evaluations are shown in Figure 8 for PaLM,
+with results for LaMDA shown in Appendix Table 5. With PaLM 540B, chain-of-thought prompting
+leads to almost 100% solve rates (note that standard prompting already solves coin flip with PaLM
+540, though not for LaMDA 137B). Note that these in-domain evaluations are “toy tasks” in the
+sense that perfect solution structures are already provided by the chains of thought in the few-shot
+exemplars; all the model has to do is repeat the same steps with the new symbols in the test-time
+example. And yet, small models still fail—the ability to perform abstract manipulations on unseen
+symbols for these three tasks only arises at the scale of 100B model parameters.
+As for the OOD evaluations, standard prompting fails for both tasks. With chain-of-thought prompting,
+language models achieve upward scaling curves (though performance is lower than in the in-domain
+setting). Hence, chain-of-thought prompting facilitates length generalization beyond seen chains of
+thought for language models of sufficient scale.

@@ -1,0 +1,50 @@
+The strongest results of chain-of-thought prompting are summarized in Figure 4, with all experimental
+outputs for each model collection, model size, and benchmark shown in Table 2 in the Appendix.
+There are three key takeaways. First, Figure 4 shows that chain-of-thought prompting is an emergent
+ability of model scale (Wei et al., 2022b). That is, chain-of-thought prompting does not positively
+impact performance for small models, and only yields performance gains when used with models of
+∼100B parameters. We qualitatively found that models of smaller scale produced fluent but illogical
+chains of thought, leading to lower performance than standard prompting.
+Second, chain-of-thought prompting has larger
+performance gains for more-complicated prob-
+lems. For instance, for GSM8K (the dataset
+with the lowest baseline performance), perfor-
+mance more than doubled for the largest GPT
+and PaLM models. On the other hand, for Sin-
+gleOp, the easiest subset of MAWPS which only
+requires a single step to solve, performance im-
+provements were either negative or very small
+(see Appendix Table 3).
+Third, chain-of-thought prompting via GPT-3
+175B and PaLM 540B compares favorably to
+prior state of the art, which typically finetunes a
+task-specific model on a labeled training dataset.
+Figure 4 shows how PaLM 540B uses chain-of-
+thought prompting to achieve new state of the art
+on GSM8K, SVAMP, and MAWPS (though note
+that standard prompting already passed the prior
+best for SVAMP). On the other two datasets,
+AQuA and ASDiv, PaLM with chain-of-thought
+prompting reaches within 2% of the state of the
+art (Appendix Table 2).
+To better understand why chain-of-thought
+prompting works, we manually examined model-
+generated chains of thought by LaMDA 137B
+for GSM8K. Of 50 random examples where the
+model returned the correct final answer, all of
+the generated chains of thought were also log-
+ically and mathematically correct except two
+that coincidentally arrived at the correct answer
+(see Appendix D.1, and Table 8 for examples
+of correct model-generated chains of thought).
+We also randomly examined 50 random sam-
+ples for which the model gave the wrong answer.
+The summary of this analysis is that 46% of the
+chains of thought were almost correct, barring
+minor mistakes (calculator error, symbol map-
+ping error, or one reasoning step missing), and that the other 54% of the chains of thought had major
+errors in semantic understanding or coherence (see Appendix D.2). To provide a small insight into
+why scaling improves chain-of-thought reasoning ability, we performed a similar analysis of errors
+made by PaLM 62B and whether those errors were fixed by scaling to PaLM 540B. The summary
+is that scaling PaLM to 540B fixes a large portion of one-step missing and semantic understanding
+errors in the 62B model (see Appendix A.1).

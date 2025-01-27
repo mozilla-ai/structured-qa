@@ -1,0 +1,31 @@
+Grey cards provide Skills that let you play other cards and tiles in your play area.
+You gain 1 Skill per symbol shown. Each symbol may only be used once per turn, on each of your turns.
+Ruse Strength Courage Knowledge Leadership
+When multiple Skills are separated by a , you may only use one of them per turn (you choose).
+
+Yellow cards immediately provide Coins that you will be able to spend to play other cards and tiles
+in your play area.
+Take, from the reserve, the number of Coins shown in the symbol.
+
+Blue cards immediately let you advance on the Quest of the Ring track.
+Move your character along the Quest of the Ring track, one space per Ring symbol.
+
+Green cards represent the Races of Middle-earth with whom you may ally:
+Elves Ents Hobbits Humans Dwarves Wizards
+
+Red cards immediately let you place Units in the regions of Middle-earth (see page 7).
+Choose one of the two regions shown by the banners and place all Units in the chosen region.
+Number of Units to place
+Choice of regions where you may place Units
+
+Purple cards (only available in chapter 3) immediately let you complete various maneuvers.
+Move 1 of your Units
+to an adjacent region.
+Your opponent loses
+1 Coin.
+Remove 1 enemy Unit
+from any region
+
+Landmark tiles immediately let you place Fortresses in regions of Middle-earth (see page 7) and benefit
+from unique effects (see the Player Aid).
+Region where you may place a Fortress

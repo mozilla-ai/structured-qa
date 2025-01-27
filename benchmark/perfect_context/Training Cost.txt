@@ -1,0 +1,44 @@
+A prominent topic in discussions about foundation
+models is their speculated costs. While AI
+companies seldom reveal the expenses involved
+in training their models, it is widely believed that
+these costs run into millions of dollars and are
+rising. For instance, OpenAI’s CEO, Sam Altman,
+mentioned that the training cost for GPT-4 was over
+$100 million. This escalation in training expenses
+has effectively excluded universities, traditionally
+centers of AI research, from developing their own
+leading-edge foundation models. In response, policy
+initiatives, such as President Biden’s Executive Order
+on AI, have sought to level the playing field between
+industry and academia by creating a National AI
+Research Resource, which would grant nonindustry
+actors the compute and data needed to do higher
+level AI-research.
+Understanding the cost of training AI models is
+important, yet detailed information on these costs
+remains scarce. The AI Index was among the first to
+offer estimates on the training costs of foundation
+models in last year’s publication. This year, the AI
+Index has collaborated with Epoch AI, an AI research
+institute, to substantially enhance and solidify the
+robustness of its AI training cost estimates.9 To
+estimate the cost of cutting-edge models, the Epoch
+team analyzed training duration, as well as the type,
+quantity, and utilization rate of the training hardware,
+using information from publications, press releases, or
+technical reports related to the models.10
+Figure 1.3.21 visualizes the estimated training cost
+associated with select AI models, based on cloud
+compute rental prices. AI Index estimates validate
+suspicions that in recent years model training costs
+have significantly increased. For example, in 2017,
+the original Transformer model, which introduced the
+architecture that underpins virtually every modern
+LLM, cost around $900 to train.11 RoBERTa Large,
+released in 2019, which achieved state-of-the-art
+results on many canonical comprehension benchmarks
+like SQuAD and GLUE, cost around $160,000 to train.
+Fast-forward to 2023, and training costs for OpenAI’s
+GPT-4 and Google’s Gemini Ultra are estimated to be
+around $78 million and $191 million, respectively.

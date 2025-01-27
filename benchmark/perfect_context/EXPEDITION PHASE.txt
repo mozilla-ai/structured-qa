@@ -1,0 +1,24 @@
+One after another, starting from the first Ship token placed on the arrow,
+players choose a single Island to either Pillage or Conquer for each one of
+their Ships.
+A player with just a Ship on the Expedition board (no Raze token or Fish
+assigned) can choose any face-up Nearby Island, or draw from the top of the
+Nearby Island deck. To be able to take any Distant Island card, either face-
+up or from the top of the deck, the Ship performing that expedition must have
+had a fish assigned to it. Rations are needed for the long journey!
+A player can choose to Pillage a selected Island card without any additional
+cost to gain the Goods presented on the Pillage space. They then put the
+Pillaged card on the appropriate discard pile (for Nearby and Distant Islands).
+If a player has assigned a Ship with a Raze token, they can choose to Conquer
+an Island and add it to their Empire to gain access to its action and/or ability.
+Each Conquered Island also provides 1 VP at the end of the game, just like any
+other Location.
+Once a player has chosen an Island card to either Pillage or Conquer, they
+return the used Ship to their supply and discard any Raze token and/or Fish
+assigned to that Ship, even if they didn’t use them. Now, if there is another
+Ship in the queue, it is their turn to choose an Island card.
+NOTE 1: Some cards Feature effects are triggered when a card is Conquered.
+This happens when you move the Island card to your Empire, not when you
+assign a Ship during a Sail action (see page 10).
+NOTE 2: If there are no cards left in the Island deck, shuffle the discarded
+cards to make up the new deck.

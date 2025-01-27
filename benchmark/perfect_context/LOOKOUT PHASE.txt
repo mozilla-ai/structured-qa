@@ -1,0 +1,36 @@
+In this phase each player may decide to acquire up to 4 new cards
+and add them to their hand.
+To execute the Lookout phase follow these steps:
+1. Each player should set aside any cards in their hand for the
+time being.
+2. Each player draws 4 cards from the top of their Clan deck and
+decides which of these cards to keep.
+3. For each card that they wish to keep, they have to Spend 1 of
+their by putting it on their Clan tile.
+4. Any cards they do not want to keep should be placed in the
+Clan’s discard pile.
+5. Players retrieve the cards they had set aside.
+
+Example:
+2 cards
+placed
+in the
+discard
+pile
+2 Workers spent to keep 2 cards
+
+IMPORTANT: Some cards have a Storage effect that may provide
+players with extra Goods if enough of the required Resources are
+assigned to them. A player gains those Goods at the end of each
+Lookout phase, before starting the Action phase (more about this
+effect on page 12).
+NOTE 1: There’s no limit to the number of cards a player may have
+in their hand.
+NOTE 2: If there are no cards left in your Clan deck, shuffle the
+discard pile to create a new deck.
+> Cards in a player’s hand are kept secret from other players
+
+No production phase!
+A reminder, especially to all the fans of Imperial Settlers,
+there is no production phase; players will have to use
+Harvest action to gain Goods shown on the Field cards.

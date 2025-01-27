@@ -1,0 +1,29 @@
+In collaboration with Accenture, this year a team of
+Stanford researchers ran a global survey with respondents
+from more than 1,000 organizations to assess the global
+state of responsible AI. The organizations, with total
+revenues of at least $500 million each, were taken
+from 20 countries and 19 industries and responded in
+February–March 2024.3 The objective of the Global State
+of Responsible AI survey was to gain an understanding of
+the challenges of adopting responsible AI practices and to
+allow for a comparison of responsible AI activities across
+10 dimensions and across surveyed industries and regions.
+Respondents were asked which risks were relevant to
+them, given their AI adoption strategy; i.e., depending
+on whether they develop, deploy, or use generative or
+nongenerative AI. They were presented with a list
+of 14 risks and could select all that apply to them,
+given their AI adoption strategies.4 The researchers
+found that privacy and data governance risks, e.g.,
+the use of data without the owner’s consent or data
+leaks, are the leading concerns across the globe.
+Notably, they observe that these concerns are
+significantly higher in Asia and Europe compared to
+North America. Fairness risks were only selected by
+20% of North American respondents, significantly
+less than respondents in Asia (31%) and Europe
+(34%) (Figure 3.1.5). Respondents in Asia selected,
+on average, the highest number of relevant risks
+(4.99), while Latin American respondents selected,
+on average, the fewest (3.64).

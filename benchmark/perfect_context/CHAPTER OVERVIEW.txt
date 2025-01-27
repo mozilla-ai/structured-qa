@@ -1,0 +1,43 @@
+Preparing a chapter
+At the start of each chapter (1, 2, then 3), place cards from the corresponding chapter in the central play area,
+following the diagram below (reminder on the sides of the box). Be careful, since certain cards are placed faceup
+and others facedown. Place the 3 remaining cards, facedown, in the discard.
+
+Turn overview
+The Sauron player begins the game, then both players take turns, until the end of the game.
+On your turn, you may either take a Chapter card or take a Landmark tile.
+
+A. Take a Chapter card
+From the central play area, choose an available card,
+meaning one that is not partially covered by any other cards.
+Then, play it in front of you or discard it.
+
+Play the card in front of you
+Pay the card cost, if any (see page 4), and place it
+in your play area. You may immediately benefit
+from its effect (see page 5).
+Note: Stack cards in front of you by color, making sure
+you can still see their effects.
+Discard the card
+Place the card, facedown, in the discard
+and take as many Coins from the reserve
+as the current chapter:
+Chapter 1: 1 Coin
+Chapter 2: 2 Coins
+Chapter 3: 3 Coins
+
+Finally, end your turn by revealing any cards that are now available.
+
+B. Take a Landmark tile
+Choose one of the faceup tiles. Pay its cost (see page 4) and place it in your play area.
+Immediately place a Fortress pawn on the corresponding region of the central board and benefit
+from its other effects (see the Player Aid).
+Finally, end your turn without revealing a new tile.
+
+End of a chapter
+A chapter ends once the final card of this chapter has been taken.
+Set up the cards for the next chapter according to the corresponding diagram and reveal new Landmark tiles
+until there are, if possible, 3 faceup.
+Then continue the game as normal.
+Note: Since you alternate taking turns, the player who ends a chapter does not begin the next one, unless they are using
+a “Take another turn” effect (see the Player Aid).

@@ -1,0 +1,34 @@
+Data on diversity trends about European CS graduates
+comes from Informatics Europe. 3
+Informatics, CS, CE, and IT Bachelor’s
+Graduates
+In the majority of surveyed European nations, there
+is a persistent gender disparity among bachelor’s-
+level graduates in informatics, computer science,
+computer engineering, and information technology.
+Despite some narrowing since 2011, men continue to
+dominate. For example, France (14.8%), the United
+Kingdom (17.8%), and Germany (21.5%) show relatively
+low proportions of female graduates in these fields
+(Figure 8.1.15). Bulgaria stands out among the surveyed
+countries with the highest proportion of female
+graduates (35.2%).
+Informatics, CS, CE, and IT Master’s Graduates
+Similar gender disparities are observed among
+European informatics, CS, CE, and IT master’s
+graduates, with a significantly greater proportion of
+males than females in most surveyed countries. As of
+2022, Estonia (42.0%), Romania (41.9%), and Bulgaria
+(40.4%) reported the greatest proportion of female
+master’s graduates (Figure 8.1.16). In contrast, Belgium
+(13.7%), Italy (14.1%), and Switzerland (15.8%) reported
+the smallest proportion of female master’s graduates.
+Informatics, CS, CE, and IT PhD Graduates
+In all surveyed European countries, informatics,
+CS, CE, and IT PhD graduates are predominantly
+male. However, in nations such as the United
+Kingdom, Germany, and Switzerland, the gender
+gap has narrowed over the last decade, with women
+constituting a growing share of PhD graduates (Figure
+8.1.17).4 In contrast, countries like Finland and Spain
+have seen the gap slightly widen.

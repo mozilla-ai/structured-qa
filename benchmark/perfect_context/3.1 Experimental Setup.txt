@@ -1,0 +1,32 @@
+We explore chain-of-thought prompting for various language models on multiple benchmarks.
+Benchmarks. We consider the following five math word problem benchmarks: (1) the GSM8K
+benchmark of math word problems (Cobbe et al., 2021), (2) the SVAMP dataset of math word
+problems with varying structures (Patel et al., 2021), (3) the ASDiv dataset of diverse math word
+problems (Miao et al., 2020), (4) the AQuA dataset of algebraic word problems, and (5) the MAWPS
+benchmark (Koncel-Kedziorski et al., 2016). Example problems are given in Appendix Table 12
+Standard prompting. For the baseline, we consider standard few-shot prompting, popularized by
+Brown et al. (2020), in which a language model is given in-context exemplars of input–output pairs
+before outputting a prediction for a test-time example. Exemplars are formatted as questions and
+answers. The model gives the answer directly, as shown in Figure 1 (left).
+Chain-of-thought prompting. Our proposed approach is to augment each exemplar in few-shot
+prompting with a chain of thought for an associated answer, as illustrated in Figure 1 (right). As most
+of the datasets only have an evaluation split, we manually composed a set of eight few-shot exemplars
+with chains of thought for prompting—Figure 1 (right) shows one chain of thought exemplar, and the
+full set of exemplars is given in Appendix Table 20. (These particular exemplars did not undergo
+prompt engineering; robustness is studied in Section 3.4 and Appendix A.2.) To investigate whether
+chain-of-thought prompting in this form can successfully elicit successful reasoning across a range of
+math word problems, we used this single set of eight chain of thought exemplars for all benchmarks
+except AQuA, which is multiple choice instead of free response. For AQuA, we used four exemplars
+and solutions from the training set, as given in Appendix Table 21.
+Language models. We evaluate five large language models. The first is GPT-3 (Brown et al.,
+2020), for which we use text-ada-001, text-babbage-001, text-curie-001, and text-davinci-002, which
+presumably correspond to InstructGPT models of 350M, 1.3B, 6.7B, and 175B parameters (Ouyang
+et al., 2022).The second is LaMDA (Thoppilan et al., 2022), which has models of 422M, 2B, 8B,
+68B, and 137B parameters. The third is PaLM, which has models of 8B, 62B, and 540B parameters.
+The fourth is UL2 20B (Tay et al., 2022), and the fifth is Codex (Chen et al., 2021, code-davinci-002
+in the OpenAI API). We sample from the models via greedy decoding (though follow-up work shows
+chain-of-thought prompting can be improved by taking the majority final answer over many sampled
+generations (Wang et al., 2022a)). For LaMDA, we report averaged results over five random seeds,
+where each seed had a different randomly shuffled order of exemplars. As LaMDA experiments
+did not show large variance among different seeds, to save compute we report results for a single
+exemplar order for all other models.

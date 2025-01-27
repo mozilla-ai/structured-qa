@@ -1,0 +1,39 @@
+Coins
+In order to play them, certain cards have a Coin cost that you must pay to the reserve.
+
+Skills
+In order to play them, tiles and the majority of cards require you to have one
+or more Skills (see page 5) in your play area.
+If you do not have the required Skills, you may pay 1 Coin to the reserve
+per missing Skill symbol.
+
+Notes:
+• There is no limit to the number of Skills you may pay for, to the reserve, on your turn.
+• If a card does not require a Skill or a Coin, it has no cost, so you may play it for free.
+
+Landmark tiles have an additional Coin cost equal to the number
+of your Fortress pawns already on the central board.
+Therefore, the additional cost of your first tile is 0 Coins.
+
+Chaining
+Starting in chapter 2, certain cards may be played for free through their chaining symbol.
+If you have, in your play area, a card with a matching symbol in its top-right corner, you may play the card for free,
+without having the required Skills.
+Note: If you do not have the matching chaining symbol for a card, you may still play it normally by paying its Skill
+and/or Coin cost.
+
+Example:
+In chapter 1, you play
+this card for free 1 .
+In addition to its effect
+(see page 5), it has a chaining
+symbol 2 .
+
+n chapter 2, you may play this
+card for free since you have
+the matching chaining symbol 3
+on one of your played cards.
+Otherwise, you would need
+to have the required Skills
+(or pay 1 Coin per missing Skill
+symbol) 4 .

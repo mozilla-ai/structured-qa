@@ -76,7 +76,7 @@ def find_retrieve_answer(
             logger.error(f"Failed to generate completion: {e}")
             return "Generation Error", sections_checked
 
-        logger.debug(f"Result: {response}")
+        logger.info(f"Result: {response}")
 
         if finding_section:
             response = response.strip()

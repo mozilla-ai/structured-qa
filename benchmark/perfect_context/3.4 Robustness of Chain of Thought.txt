@@ -1,0 +1,33 @@
+Sensitivity to exemplars is a key consideration of prompt-
+ing approaches—for instance, varying the permutation of
+few-shot exemplars can cause the accuracy of GPT-3 on
+SST-2 to range from near chance (54.3%) to near state of
+the art (93.4%) (Zhao et al., 2021). In this final subsec-
+tion, we evaluate robustness to chains of thought written
+by different annotators. In addition to the results above,
+which used chains of thought written by an Annotator
+A, two other co-authors of this paper (Annotators B and
+C) independently wrote chains of thought for the same
+few-shot exemplars (shown in Appendix H). Annotator A
+also wrote another chain of thought that was more concise
+than the original, following the style of solutions given in
+Cobbe et al. (2021).1
+Figure 6 shows these results for LaMDA 137B on GSM8K
+and MAWPS (ablation results for other datasets are given
+in Appendix Table 6 / Table 7). Although there is variance
+among different chain of thought annotations, as would be
+expected when using exemplar-based prompting (Le Scao
+and Rush, 2021; Reynolds and McDonell, 2021; Zhao
+et al., 2021), all sets of chain of thought prompts outper-
+form the standard baseline by a large margin. This result
+implies that successful use of chain of thought does not
+depend on a particular linguistic style.
+To confirm that successful chain-of-thought prompting
+works for other sets of exemplars, we also run experiments
+with three sets of eight exemplars randomly sampled from the GSM8K training set, an independent
+source (examples in this dataset already included reasoning steps like a chain of thought).2 Fig-
+ure 6 shows that these prompts performed comparably with our manually written exemplars, also
+substantially outperforming standard prompting.
+In addition to robustness to annotators, independently-written chains of thought, different exemplars,
+and various language models, we also find that chain-of-thought prompting for arithmetic reasoning
+is robust to different exemplar orders and varying numbers of exemplars (see Appendix A.2).

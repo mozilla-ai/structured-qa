@@ -1,0 +1,20 @@
+The game continues until a player reaches or passes the 25 space
+on the scoreboard during the Action phase. Once that happens,
+the final round is triggered and the game will end at the end of the
+current round.
+To calculate the final score, each player should:
+> add 1 Victory Point for each card within their Empire to their
+current score (including Basic Fields, Field upgrades, and
+Conquered Islands),
+> add 1 Victory Point for every 2 Resources remaining in their
+supply (Resources assigned to cards are not counted towards
+this scoring).
+> add 1 Victory Point for every 1 Gold remaining in their supply
+(Gold tokens assigned to cards are not counted).
+The player with the most Victory Points is the winner.
+TIES
+In case of a tie, the player with the most Locations in their Empire
+wins. If the players are still tied, the winner is the player with the
+most Workers. If still tied, the winner is the player with the most
+cards left in their hand. If there is still a tie, the tied players share
+the victory!

@@ -1,0 +1,152 @@
+Some authors who see the potential of open access may
+still have reservations about whether open access is
+right for them. Some of these reservations are based
+on myths about open access and can be resolved by
+clearing up misunderstandings. Other reservations
+reflect the current limitations of open access options
+available to some authors. Fortunately, open access
+opportunities are growing as the open access move-
+ment spreads through more author communities.
+Existing solutions and encouraging developments are
+detailed below to address authors’ common reserva-
+tions about open access.
+Open access is compatible
+with peer review and prestige
+Peer review, selective submission standards, and other
+attributes of prestigious publication are indepen-
+dent of the openness of the publication. Some open
+access publications apply the highest standards of
+quality control, some proprietary publications publish
+low-quality works, and vice versa.
+Introduction 11
+It is true, however, that some new open access
+publications do not yet command the same level of
+prestige as the best-established, conventional pub-
+lications. The prestige of publishing a work with a
+leading conventional publisher may dissuade some
+authors from publishing with an open access publisher.
+This is particularly true of junior faculty whose tenure
+prospects may depend on a publication record in top
+proprietary outlets.
+We expect this will lessen as open access pub-
+lishers establish their reputations and proliferate
+across disciplines, as existing publishers adopt more
+open practices, as more research funders require open
+access to the works they fund, and as senior scholars
+signal the value of open access. Encouragingly, an
+increasing number of open access journals have already
+achieved high regard in their disciplines, as described
+in Chapter 5.
+In the meantime, conventional publication and
+open access are not mutually exclusive. For example,
+many conventional publishers allow authors who
+publish with them to also upload the authors’ final
+versions of their works to open access repositories. In
+such cases, authors can benefit from the imprint of
+a well-established print publisher while still making
+their works openly accessible. (For more information,
+please see Chapter 7.)
+Authors do not always have to pay to
+make their works openly accessible
+Some authors have reservations about open access
+because they think they will need to pay to make
+their works openly accessible. This is not always true.
+Although some open access publishers do charge a fee
+to cover the cost of publishing a work, many authors
+make their works openly accessible without incurring
+any costs. In fact, the majority of open access journals
+charge no author-side fees at all.7 Even where pub-
+lishers charge publication fees, there are many ways
+that authors can mitigate those costs, as discussed in
+Chapter 5. Moreover, depositing a work in an institu-
+tional open access repository is always free for authors.
+Open access options are available
+for book authors
+The traditional practice in book publishing has been
+for authors to work with conventional publishers,
+typically assigning their copyrights in exchange for
+royalty streams from the sales of their books. Publish-
+ers may be reluctant to agree to open access because
+they believe that it will undermine books sales. Authors
+who depend on royalties likely share this concern.
+Moreover, this book publishing convention still works
+well for many authors.
+However, some authors are excited by the
+potential of open access book publishing to increase the
+audience for their works. Open access book publishing
+options are increasing for these authors.
+Many publishers are developing programs to
+make books openly accessible.8 For example, the
+University of California Press recently launched Luminos,
+an open access publishing program for monographs.9
+Authors who publish with Luminos can make digital
+editions of their books openly accessible under the Uni-
+versity of California Press imprint. Open Humanities Press
+has also launched an open access program for mono-
+graphs, making the books it publishes in print available
+as full-text digital editions published under open
+licenses.
+10 Additionally, many university presses make
+academic books openly available in the Open Access Pub-
+lishing in European Networks (“OAPEN”) Library. 14
+Authors can also make their self-published books
+openly accessible by uploading electronic versions to
+open access repositories or personal websites. Institu-
+tions that host repositories will sometimes also offer
+book-formatting resources for authors who deposit
+book-length works in their repositories. For example,
+eScholarship, the University of California’s institutional
+repository, provides authors tools to create digital
+versions of their books and also provides University of
+California authors print-on-demand services.12 (For
+more information on open access repositories, please
+see Chapter 5.)
+Additionally, book authors who are interested
+in open access may choose to negotiate with conven-
+tional publishers to publish their books in print but
+also retain the rights to openly license their books,
+as described in Chapter 7. Authors who have already
+assigned their rights to conventional publishers may be
+able to exercise or negotiate for rights reversions that
+would allow them to make their books openly accessi-
+ble. For more on this possibility, please see the
+Authors who make their works openly accessible
+can require attribution
+Some authors are concerned that open access neces-
+sarily means others will be allowed to use their works
+without giving them credit. This is not true. Although
+some authors opt to allow others to use their openly
+accessible work without retaining a legal right to insist
+on credit, the vast majority of authors select license
+terms that require others to give them credit for their
+works. (Please see Chapter 4 to learn more about open
+access licensing.) Furthermore, even if unattributed
+copying of an open access work does not amount to
+copyright infringement, it may still amount to plagia-
+rism—thus running afoul of longstanding norms within
+scholarly and publishing communities.
+Authors who make their works openly accessible
+can still preserve the integrity of their works
+Some authors are concerned that the integrity of their
+works will be compromised if they make their works
+openly accessible. An author might worry, for example,
+that her work will be modified in a way that distorts
+its meaning and discredits her. However, authors can
+use license terms to control how others are allowed
+to use their works (subject to some limitations, such
+as fair use). Open access licenses often include pro-
+visions that protect against misuse, prevent loss of
+integrity, and protect author reputation. For example,
+Creative Commons licenses require attribution, unless
+the author does not want to be attributed; include an
+obligation to indicate whether an author’s work has
+been modified or not, even if those modifications are
+trivial; and require users to link back to the original
+if a link is provided. In addition, authors who do not
+want to permit others to modify their works can select
+license terms that allow free access and distribution of
+verbatim copies but not adaptations. More information
+on open access licenses can be found in Chapter 4.
+Finally, scholarly norms for citation and regarding pla-
+giarism are not supplanted when authors openly license
+their works.

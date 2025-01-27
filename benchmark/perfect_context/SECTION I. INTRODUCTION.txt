@@ -1,0 +1,65 @@
+UNTIL VERY RECENTLY, AUTHORS WHO
+wanted their works to be widely available had little
+choice but to submit their works to publishers who
+took assignments of the authors’ copyrights and
+exercised them according to a proprietary “all rights
+reserved” model.1 The advent of global digital networks
+now provides authors who write to be read with excit-
+ing new options for communicating their ideas broadly.
+One of these options is open access.
+The basic idea of open access is that it makes
+copyrightable works available without all of the access
+barriers associated with the “all rights reserved”
+model. These can take the form of price barriers and
+permission barriers. 2 Open access typically comes in
+two forms. What has come to be known as gratis open
+access is the practice of making a work available online
+ree of charge (also called public access). The term
+libre open access (also called full open access) refers to
+the practice of making a work available online free of
+charge and with some additional reuse rights, typically
+granted through a Creative Commons license. Gratis
+open access removes price barriers, whereas libre open
+access additionally removes at least some permission
+barriers, allowing users to copy, redistribute, and/or
+adapt a work. Open access contrasts with more tradi-
+tional models of restricted-access publishing in which
+copies of works are made directly available only to
+paying customers.
+Authors who are interested in increasing access to
+their works may want to understand whether elimi-
+nating cost and permissions barriers is a good option
+for them and, if so, how they might release their
+works under open access terms. Other authors may
+be required by their employer or funding agency to
+comply with an open access policy. Still other authors
+may be skeptical about whether open access is compat-
+ible with their publication goals—including rigorous
+peer review, prestige, or monetary compensation—and
+want to learn more.
+A note on terminology: Many open access proponents and some
+research funders
+3 do not consider a work truly openly accessible
+if it only meets gratis open access requirements. Indeed, only
+libre open access is compliant with most major international
+statements that define open access.4 For readability, we use the
+term open access in this guide to describe the practice of making
+a work available to readers free of charge on the Internet, regard-
+less of whether subsequent reuse is permitted. The distinction is
+important, however, and we try to make clear in our discussion
+below whether we are referring to removal of only price, or both
+price and permission barriers. Another way to think about open
+access is along a continuum that considers variables including
+both price and permissions barriers. If you would like to learn
+more about the spectrum of open access, we recommend the
+guide How Open Is It?.
+Authors Alliance is a nonprofit organization that
+promotes authorship for the public good by supporting
+authors who write to be read.6 Pursuant to this mission,
+Authors Alliance created this guide to help authors
+understand and evaluate opportunities to make their
+works openly accessible. In this way, Authors Alliance
+seeks to help authors further their interest in
+disseminating knowledge and products of the
+imagination broadly and to enhance the public’s
+access to and reuse of these works.

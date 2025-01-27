@@ -1,0 +1,11 @@
+As a final stress test for LoRA, we scale up to GPT-3 with 175 billion parameters. Due to the high
+training cost, we only report the typical standard deviation for a given task over random seeds, as
+opposed to providing one for every entry. See Section D.4 for details on the hyperparameters used.
+As shown in Table 4, LoRA matches or exceeds the fine-tuning baseline on all three datasets. Note
+that not all methods benefit monotonically from having more trainable parameters, as shown in Fig-
+ure 2. We observe a significant performance drop when we use more than 256 special tokens for
+prefix-embedding tuning or more than 32 special tokens for prefix-layer tuning. This corroborates
+similar observations in Li & Liang (2021). While a thorough investigation into this phenomenon
+is out-of-scope for this work, we suspect that having more special tokens causes the input distri-
+bution to shift further away from the pre-training data distribution. Separately, we investigate the
+performance of different adaptation approaches in the low-data regime in Section F.3

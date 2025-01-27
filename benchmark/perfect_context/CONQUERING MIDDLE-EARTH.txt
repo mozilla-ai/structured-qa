@@ -1,0 +1,14 @@
+When you place or move one or more Units, two situations are possible:
+If no enemy Unit is present: nothing happens.
+If one or more enemy Units are present: trigger a conflict. Each player removes one of their Units
+and places it back in front of them. Repeat this until at least one player has no more Units in the region.
+Note: An enemy Fortress does not trigger conflicts and does not prevent you from placing your Units in its region.
+Therefore, it is possible for both players to be present in the same region.
+
+When you complete multiple movements, you may move the same Unit multiple times, or split your movement
+between multiple Units. For each movement, move a Unit to an adjacent region (one with a connection).
+You must complete each movement independently, resolving any conflict triggered, one at a time.
+
+Example: You play a Purple card that provides 3 movements 1 . The first lets you move a Unit from Enedwaith to Rohan 2 .
+Since there is an enemy Unit present, you trigger a conflict and each player removes their Unit. You then use
+your second and third movements to send another Unit from Enedwaith to Mordor, passing through Rohan 3

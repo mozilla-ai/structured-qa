@@ -1,0 +1,34 @@
+Research from the University of Oxford highlights
+how inequality in AI originates at the tokenization
+stage. Tokenization, the process of breaking down
+text into smaller units for processing and analysis,
+exhibits significant variability across languages.
+The number of tokens used for the same sentence
+can vary up to 15 times between languages. For
+instance, Portuguese closely matches English in the
+efficiency of the GPT-4 tokenizer, yet it still requires
+approximately 50% more tokens to convey the
+same content. The Shan language is the furthest
+from English, needing 15 times more tokens. Figure
+3.5.9 visualizes the concept of a context window
+while figure 3.5.10 illustrates the token consumption
+of the same sentence across different languages.
+The authors identify three major inequalities that
+result from variable tokenization. First, users of
+languages that require more tokens than English
+for the same content face up to four times higher
+inference costs and longer processing times, as
+both are dependent on the number of tokens.
+Figure 3.5.11 illustrates the variation in token
+length and execution time for the same sentence
+across different languages or language families.
+Second, these users may also experience increased
+processing times because models take longer
+to process a greater number of tokens. Lastly,
+given that models operate within a fixed context
+window—a limit on the amount of text or content
+that can be input—languages that require more
+tokens proportionally use up more of this window.
+This can reduce the available context for the model,
+potentially diminishing the quality of service for
+those users.

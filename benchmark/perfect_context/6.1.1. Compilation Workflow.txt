@@ -1,0 +1,30 @@
+6.1.1.1 Offline Compilation
+Source files compiled with nvcc can include a mix of host code (i.e., code that executes on the host)
+and device code (i.e., code that executes on the device). nvcc’s basic workflow consists in separating
+device code from host code and then:
+▶ compiling the device code into an assembly form (PTX code) and/or binary form (cubin object),
+▶ and modifying the host code by replacing the <<<...>>> syntax introduced in Kernels (and de-
+scribed in more details in Execution Configuration) by the necessary CUDA runtime function calls
+to load and launch each compiled kernel from the PTX code and/or cubin object.
+The modified host code is output either as C++ code that is left to be compiled using another tool or
+as object code directly by letting nvcc invoke the host compiler during the last compilation stage.
+Applications can then:
+▶ Either link to the compiled host code (this is the most common case),
+▶ Or ignore the modified host code (if any) and use the CUDA driver API (see Driver API) to load and
+execute the PTX code or cubin object.
+6.1.1.2 Just-in-Time Compilation
+Any PTX code loaded by an application at runtime is compiled further to binary code by the device
+driver. This is called just-in-time compilation. Just-in-time compilation increases application load time,
+but allows the application to benefit from any new compiler improvements coming with each new
+device driver. It is also the only way for applications to run on devices that did not exist at the time the
+application was compiled, as detailed in Application Compatibility.
+When the device driver just-in-time compiles some PTX code for some application, it automatically
+caches a copy of the generated binary code in order to avoid repeating the compilation in subsequent
+invocations of the application. The cache - referred to as compute cache - is automatically invalidated
+when the device driver is upgraded, so that applications can benefit from the improvements in the
+new just-in-time compiler built into the device driver.
+Environment variables are available to control just-in-time compilation as described in CUDA Environ-
+ment Variables
+As an alternative to using nvcc to compile CUDA C++ device code, NVRTC can be used to compile
+CUDA C++ device code to PTX at runtime. NVRTC is a runtime compilation library for CUDA C++; more
+information can be found in the NVRTC User guide.
