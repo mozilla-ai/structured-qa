@@ -1,13 +1,11 @@
 from pathlib import Path
 
-
-from llama_cpp import Llama
 from loguru import logger
 
 
 def find_retrieve_answer(
     question: str,
-    model: Llama,
+    model,
     sections_dir: str,
     find_prompt: str,
     answer_prompt: str,
@@ -17,7 +15,7 @@ def find_retrieve_answer(
 
     Args:
         question (str): The question to answer.
-        model (Llama): The Llama model to use for generating completions.
+        model: The model to use for generating completions.
         sections_dir (str): The directory containing the sections.
             See [`document_to_sections_dir`][structured_qa.preprocessing.document_to_sections_dir].
             Structure of the sections directory:
