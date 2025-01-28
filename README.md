@@ -13,6 +13,10 @@ This Blueprint demonstrates how to use open-source models and a simple LLM workf
 
 It is designed to showcase a simpler alternative to more complex and/or resource demanding alternatives, such as RAG systems that rely on vectorDBs and/or long-context models with large token windows.
 
+<img src="./images/structured-qa-diagram.png" width="1200" alt="structure-qa Diagram" />
+
+📘 To explore this project further and discover other Blueprints, visit the [**Blueprints Hub**](https://developer-hub.mozilla.ai/blueprints/query-structured-documents-using-a-lightweight-llm-workflow).
+
 
 ### 👉 📖 For more detailed guidance on using this project, please visit our [Docs here](https://mozilla-ai.github.io/structured-qa/).
 
