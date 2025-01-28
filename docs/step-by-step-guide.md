@@ -9,17 +9,14 @@ This system has the following core stages:
    Prepare the input document by extracting the different sections that compose the structure of the document.
    Split the sections and save them to separate files.
 
-🔎 **2. Find Relevant Section**
-   Given a list of sections and the input question, use the LLM to identify the section that looks more relevant.
+🔎 **2. Find Relevant and Retrieve Section**
+   Given a list of sections and the input question, use the LLM to identify the section that looks more relevant. Load the individual section to be passed to the next step.
 
-📄 **3. Retrieve Section**
-    Load the individual section to be passed to the next step.
-
-📗 **4. Answer Question**
+📗 **3. Answer Question**
    Use the LLM to answer the question based on the information available in the retrieved section.
 
 
-In case the LLM can't find an answer to the question, the stages 2 to 4 run on a loop until the LLM finds the answer.
+In case the LLM can't find an answer to the question, the stages 2 to 3 run on a loop until the LLM finds the answer.
 
 ---
 
