@@ -43,7 +43,7 @@ https://arxiv.org/pdf/2201.11903,5 Symbolic Reasoning,Is symbolic reasoning usua
 https://arxiv.org/pdf/2201.11903,5 Symbolic Reasoning,How many words have the example names that the model has seen for letter concatenation? -A: 3 -B: 2 -C: 4,B
 https://arxiv.org/pdf/2201.11903,5 Symbolic Reasoning,"Which symbolic reasoning task is used as an out-of-domain evaluation? -A: Coin Flip -B: Tower of Hanoi -C: Chess puzzles",A
 https://arxiv.org/pdf/2201.11903,3.4 Robustness of Chain of Thought,How many annotators provided independent chains of thought?,3
-https://arxiv.org/pdf/2201.11903,3.2 Results,How many random samples for examined to understand model errors?,50
+https://arxiv.org/pdf/2201.11903,3.2 Results,How many random samples were examined to understand model performance?,100
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,OVERVIEW AND GOAL,How many chapters does the game last?,3
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,OVERVIEW AND GOAL,How many victory conditions are there?,3
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/7DUME_EN01_Rules.pdf,CARD AND TILE EFFECTS,How many different races are there?,6
@@ -74,7 +74,7 @@ https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rule
 https://github.com/mozilla-ai/structured-qa/releases/download/0.3.2/is_eotn_rulebook.pdf,GAME END,"If player 1 has 30 Victory points and 4 workers and player 2 has 30 Victory points and 3 workers, who wins the game? -A: Player 1 -B: Player 2 -C: It's a tie",A
 https://commission.europa.eu/document/download/1654ca52-ec72-4bae-ba40-d2fc0f3d71ae_en?filename=mit-1-performance-and-technical-performance-specification-v1-2_en.pdf,2.1. Toilets,"Which type of water must be supplied in a toilet sink? -A: hot -B: cold -C: hot and cold",B
 https://commission.europa.eu/document/download/1654ca52-ec72-4bae-ba40-d2fc0f3d71ae_en?filename=mit-1-performance-and-technical-performance-specification-v1-2_en.pdf,CARBON MONOXIDE DETECTION AND VENTING,"In which type of parkings must a carbon monoxide detector be installed? -A: indoor -B: underground -C: indoor or underground",C
-https://commission.europa.eu/document/download/1654ca52-ec72-4bae-ba40-d2fc0f3d71ae_en?filename=mit-1-performance-and-technical-performance-specification-v1-2_en.pdf,4.1. Natural lighting,"What percentage is the daylight factor required for façades with exterior obstructions?",0.7
+https://commission.europa.eu/document/download/1654ca52-ec72-4bae-ba40-d2fc0f3d71ae_en?filename=mit-1-performance-and-technical-performance-specification-v1-2_en.pdf,4.1. Natural lighting,"What percentage is the daylight factor required for façades with exterior obstructions? -A: 0.7% -B: 80% -C: 0.77%",A
 https://commission.europa.eu/document/download/1654ca52-ec72-4bae-ba40-d2fc0f3d71ae_en?filename=mit-1-performance-and-technical-performance-specification-v1-2_en.pdf,1.2.1. Internal partitions and doors,"What fire resistance must vertical partitions have? -A: EI30 -B: EI60 -C: EI90",A
 https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf,5.2. Thread Hierarchy,"What is the maximum number of threads within a thread block?",1024
 https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf,5.2. Thread Hierarchy,"Can you identify a thread with a four-dimensional index?",NO
