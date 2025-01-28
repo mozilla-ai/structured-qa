@@ -626,13 +626,11 @@
 <p>📑 <strong>1. Document Pre-Processing</strong>
    Prepare the input document by extracting the different sections that compose the structure of the document.
    Split the sections and save them to separate files.</p>
-<p>🔎 <strong>2. Find Relevant Section</strong>
-   Given a list of sections and the input question, use the LLM to identify the section that looks more relevant.</p>
-<p>📄 <strong>3. Retrieve Section</strong>
-    Load the individual section to be passed to the next step.</p>
-<p>📗 <strong>4. Answer Question</strong>
+<p>🔎 <strong>2. Find Relevant and Retrieve Section</strong>
+   Given a list of sections and the input question, use the LLM to identify the section that looks more relevant. Load the individual section to be passed to the next step.</p>
+<p>📗 <strong>3. Answer Question</strong>
    Use the LLM to answer the question based on the information available in the retrieved section.</p>
-<p>In case the LLM can't find an answer to the question, the stages 2 to 4 run on a loop until the LLM finds the answer.</p>
+<p>In case the LLM can't find an answer to the question, the stages 2 to 3 run on a loop until the LLM finds the answer.</p>
 <hr />
 <h2 id="document-pre-processing"><strong>Document Pre-Processing</strong></h2>
 <p>The process begins with preparing the input document for AI processing.
