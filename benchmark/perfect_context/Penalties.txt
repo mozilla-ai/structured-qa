@@ -1,0 +1,57 @@
+1. In accordance with the terms and conditions laid down in this Regulation, Member States shall lay down the rules on
+penalties and other enforcement measures, which may also include warnings and non-monetary measures, applicable to
+infringements of this Regulation by operators, and shall take all measures necessary to ensure that they are properly and
+effectively implemented, thereby taking into account the guidelines issued by the Commission pursuant to Article 96. The
+penalties provided for shall be effective, proportionate and dissuasive. They shall take into account the interests of SMEs,
+including start-ups, and their economic viability.
+2. The Member States shall, without delay and at the latest by the date of entry into application, notify the Commission
+of the rules on penalties and of other enforcement measures referred to in paragraph 1, and shall notify it, without delay, of
+any subsequent amendment to them.
+3. Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative
+fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the
+preceding financial year, whichever is higher.
+4. Non-compliance with any of the following provisions related to operators or notified bodies, other than those laid
+down in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up
+to 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher:
+(a) obligations of providers pursuant to Article 16;
+(b) obligations of authorised representatives pursuant to Article 22;
+(c) obligations of importers pursuant to Article 23;
+(d) obligations of distributors pursuant to Article 24;
+(e) obligations of deployers pursuant to Article 26;
+(f) requirements and obligations of notified bodies pursuant to Article 31, Article 33(1), (3) and (4) or Article 34;
+(g) transparency obligations for providers and deployers pursuant to Article 50.
+5. The supply of incorrect, incomplete or misleading information to notified bodies or national competent authorities in
+reply to a request shall be subject to administrative fines of up to EUR 7 500 000 or, if the offender is an undertaking, up to
+1 % of its total worldwide annual turnover for the preceding financial year, whichever is higher.
+6. In the case of SMEs, including start-ups, each fine referred to in this Article shall be up to the percentages or amount
+referred to in paragraphs 3, 4 and 5, whichever thereof is lower.
+7. When deciding whether to impose an administrative fine and when deciding on the amount of the administrative fine
+in each individual case, all relevant circumstances of the specific situation shall be taken into account and, as appropriate,
+regard shall be given to the following:
+(a) the nature, gravity and duration of the infringement and of its consequences, taking into account the purpose of the AI
+system, as well as, where appropriate, the number of affected persons and the level of damage suffered by them;
+(b) whether administrative fines have already been applied by other market surveillance authorities to the same operator for
+the same infringement;
+(c) whether administrative fines have already been applied by other authorities to the same operator for infringements of
+other Union or national law, when such infringements result from the same activity or omission constituting a relevant
+infringement of this Regulation;
+(d) the size, the annual turnover and market share of the operator committing the infringement;
+(e) any other aggravating or mitigating factor applicable to the circumstances of the case, such as financial benefits gained,
+or losses avoided, directly or indirectly, from the infringement;
+(f) the degree of cooperation with the national competent authorities, in order to remedy the infringement and mitigate the
+possible adverse effects of the infringement;
+(g) the degree of responsibility of the operator taking into account the technical and organisational measures implemented
+by it;
+(h) the manner in which the infringement became known to the national competent authorities, in particular whether, and
+if so to what extent, the operator notified the infringement;
+(i) the intentional or negligent character of the infringement;
+(j) any action taken by the operator to mitigate the harm suffered by the affected persons.
+8. Each Member State shall lay down rules on to what extent administrative fines may be imposed on public authorities
+and bodies established in that Member State.
+9. Depending on the legal system of the Member States, the rules on administrative fines may be applied in such
+a manner that the fines are imposed by competent national courts or by other bodies, as applicable in those Member States.
+The application of such rules in those Member States shall have an equivalent effect.
+10. The exercise of powers under this Article shall be subject to appropriate procedural safeguards in accordance with
+Union and national law, including effective judicial remedies and due process.
+11. Member States shall, on an annual basis, report to the Commission about the administrative fines they have issued
+during that year, in accordance with this Article, and about any related litigation or judicial proceedings
