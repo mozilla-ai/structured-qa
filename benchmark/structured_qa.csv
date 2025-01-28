@@ -17,7 +17,6 @@ https://arxiv.org/pdf/2210.05189,3 Experimental Results,"How many parameters are
 https://arxiv.org/pdf/2210.05189,3 Experimental Results,"How many layers are in the half-moon neural network?",3
 https://arxiv.org/pdf/2210.05189,3 Experimental Results,"What is the main computational advantage of decision trees? -A: Less storage memory, -B: Fewer operations, -C: Lower accuracy",B
 https://arxiv.org/pdf/2106.09685.pdf,4 OUR METHOD,Does LoRA work with any neural network containing dense layers?,YES
-https://arxiv.org/pdf/2106.09685.pdf,5.5 SCALING UP TO GPT-3 175B,"How much memory is saved (in GB) when training GPT-3 175B with LoRA compared to full fine-tuning?",850
 https://arxiv.org/pdf/2106.09685.pdf,LORA ABSTRACT,"By how much can LoRA reduce GPU memory requirements during training? -A: 10x, -B: 5x, -C: 3x",C
 https://arxiv.org/pdf/2106.09685.pdf,1 INTRODUCTION,"In billions, how many trainable parameters does GPT-3 have?",175
 https://arxiv.org/pdf/2106.09685.pdf,1 INTRODUCTION,Does LoRA introduce additional inference latency compared to full fine-tuning?,NO
