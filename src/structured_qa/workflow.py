@@ -76,7 +76,7 @@ def find_retrieve_answer(
 
         if finding_section:
             response = response.strip()
-            logger.info(f"Retrieving section: {response}")
+            logger.debug(f"Retrieving section: {response}")
             if response in sections_names:
                 section_content = (sections_dir / f"{response}.txt").read_text()
                 current_section = response
