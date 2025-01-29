@@ -58,12 +58,13 @@ def find_retrieve_answer(
         if not current_info:
             logger.debug("Finding section")
             finding_section = True
+            question_part, *options = question.split("?")
             messages = [
                 {
                     "role": "system",
                     "content": find_prompt.format(SECTIONS="\n".join(sections_names)),
                 },
-                {"role": "user", "content": question},
+                {"role": "user", "content": question_part},
             ]
         else:
             logger.debug("Answering question")
