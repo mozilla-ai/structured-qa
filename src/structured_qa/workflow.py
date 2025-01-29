@@ -88,9 +88,9 @@ def find_retrieve_answer(
             section_name = get_matching_section(response, sections_names)
             logger.debug(f"Retrieving section: {section_name}")
             section_content = (sections_dir / f"{section_name}.txt").read_text()
-            current_section = response
+            current_section = section_name
             current_info = section_content
-            sections_checked.append(response)
+            sections_checked.append(section_name)
 
         else:
             if "MORE INFO" in response.upper():
