@@ -53,7 +53,7 @@ def find_retrieve_answer(
     current_section = None
 
     sections_checked = []
-    while True:
+    while sections_names:
         logger.debug(f"Current information available: {current_info}")
         if not current_info:
             logger.debug("Finding section")
@@ -85,6 +85,8 @@ def find_retrieve_answer(
 
         if finding_section:
             response = response.strip()
+            if not sections_names:
+                return "NOT FOUND", sections_checked
             section_name = get_matching_section(response, sections_names)
             logger.debug(f"Retrieving section: {section_name}")
             section_content = (sections_dir / f"{section_name}.txt").read_text()
@@ -99,3 +101,5 @@ def find_retrieve_answer(
                 continue
             else:
                 return response, sections_checked
+
+    return "NOT FOUND", sections_checked
