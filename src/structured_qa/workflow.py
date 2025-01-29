@@ -1,6 +1,14 @@
 from pathlib import Path
 
 from loguru import logger
+from rapidfuzz import process
+
+
+def get_matching_section(response, section_names):
+    """
+    Use string similarity to find the most similar section_name.
+    """
+    return process.extractOne(response, section_names)[0]
 
 
 def find_retrieve_answer(
@@ -76,15 +84,13 @@ def find_retrieve_answer(
 
         if finding_section:
             response = response.strip()
-            logger.debug(f"Retrieving section: {response}")
-            if response in sections_names:
-                section_content = (sections_dir / f"{response}.txt").read_text()
-                current_section = response
-                current_info = section_content
-                sections_checked.append(response)
-            else:
-                logger.error(f"Unknown section: {response}")
-                return "Unknown section", sections_checked
+            section_name = get_matching_section(response, sections_names)
+            logger.debug(f"Retrieving section: {section_name}")
+            section_content = (sections_dir / f"{section_name}.txt").read_text()
+            current_section = response
+            current_info = section_content
+            sections_checked.append(response)
+
         else:
             if "MORE INFO" in response.upper():
                 current_info = None
