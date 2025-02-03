@@ -17,6 +17,7 @@ def find_retrieve_answer(
     sections_dir: str,
     find_prompt: str,
     answer_prompt: str,
+    max_sections_to_check: int = 10,
 ) -> tuple[str, list[str]] | tuple[None, list[str]]:
     """
     Workflow to find the relevant section, retrieve the information, and answer the question.
@@ -40,7 +41,7 @@ def find_retrieve_answer(
         answer_prompt (str): The prompt for answering the question.
 
             See [`ANSWER_PROMPT`][structured_qa.config.ANSWER_PROMPT].
-
+        max_sections_to_check (int, optional): The maximum number of sections to check before giving up.
     Returns:
         tuple[str, list[str]] | tuple[None, list[str]]:
 
@@ -53,7 +54,7 @@ def find_retrieve_answer(
     current_section = None
 
     sections_checked = []
-    while sections_names:
+    while len(sections_checked) < max_sections_to_check:
         logger.debug(f"Current information available: {current_info}")
         if not current_info:
             logger.debug("Finding section")
