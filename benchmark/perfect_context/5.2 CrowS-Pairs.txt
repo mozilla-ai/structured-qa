@@ -1,0 +1,32 @@
+LLaMA GPT3 OPT
+Gender 70.6 62.6 65.7
+Religion 79.0 73.3 68.6
+Race/Color 57.0 64.7 68.6
+Sexual orientation 81.0 76.2 78.6
+Age 70.1 64.4 67.8
+Nationality 64.2 61.6 62.9
+Disability 66.7 76.7 76.7
+Physical appearance 77.8 74.6 76.2
+Socioeconomic status 71.5 73.8 76.2
+Average 66.6 67.2 69.5
+Table 12: CrowS-Pairs. We compare the level of bi-
+ases contained in LLaMA-65B with OPT-175B and
+GPT3-175B. Higher score indicates higher bias.
+5.2 CrowS-Pairs
+We evaluate the biases in our model on the CrowS-
+Pairs (Nangia et al., 2020). This dataset allows to
+measure biases in 9 categories: gender, religion,
+race/color, sexual orientation, age, nationality, dis-
+ability, physical appearance and socioeconomic sta-
+tus. Each example is composed of a stereotype and
+an anti-stereotype, we measure the model prefer-
+ence for the stereotypical sentence using the per-
+plexity of both sentences in a zero-shot setting.
+Higher scores thus indicate higher bias. We com-
+pare with GPT-3 and OPT-175B in Table 12.
+LLaMA compares slightly favorably to both
+models on average. Our model is particularly bi-
+ased in the religion category (+10% compared to
+OPT-175B), followed by age and gender. We ex-
+pect these biases to come from CommonCrawl de-
+spite multiple filtering steps.

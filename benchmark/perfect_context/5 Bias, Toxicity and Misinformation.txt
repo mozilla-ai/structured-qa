@@ -1,0 +1,16 @@
+Large language models have been showed to re-
+produce and amplify biases that are existing in
+the training data (Sheng et al., 2019; Kurita et al.,
+2019), and to generate toxic or offensive con-
+tent (Gehman et al., 2020). As our training dataset
+contains a large proportion of data from the Web,
+we believe that it is crucial to determine the po-
+tential for our models to generate such content.
+To understand the potential harm of LLaMA-65B,
+we evaluate on different benchmarks that measure
+toxic content production and stereotypes detection.
+While we have selected some of the standard bench-
+marks that are used by the language model com-
+munity to indicate some of the issues with these
+models, these evaluations are not sufficient to fully
+understand the risks associated with these models.

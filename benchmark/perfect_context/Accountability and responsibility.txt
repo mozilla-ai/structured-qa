@@ -1,0 +1,54 @@
+Accountability and responsibility
+Ensuring accountability for generative AI means that individuals and organisations can be
+held accountable for the AI systems they develop, deploy, or use, and that human oversight
+is maintained. To establish accountable practices across the AI lifecycle, you should
+consider three key elements.
+• Answerability: you should establish a chain of human responsibility across the generative
+AI project lifecycle, including responsibility throughout the supply chain. In cases of
+harm or errors caused by generative AI, recourse and feedback mechanisms need to be
+established for affected individuals. Identifying the specific actors involved in generative AI
+systems is vital to answerability. This includes model developers, application developers,
+policymakers, regulators, system operators and end-users. The roles and responsibilities
+of each must be clearly defined and aligned with legal and ethical standards.
+• Auditability: you should demonstrate the responsibility and trustworthiness of
+the development and deployment practices by upholding robust reporting and
+documentation protocols, and retaining traceability throughout the AI lifecycle. This refers
+to the process by which all stages of the generative AI innovation lifecycle from data
+collection and base model training to implementation, fine-tuning, system deployment,
+updating, and retirement are documented in a way that is accessible to relevant
+stakeholders and easily understood.
+• Liability: you should make sure that all parties involved in the generative AI project
+lifecycle, from vendors and technical teams to system users, are acting lawfully and
+understand their respective legal obligations.
+As an end-user, being accountable means taking responsibility for a system’s outputs and
+generated content and its potential consequences. This includes checking that these are
+factual, truthful, non-discriminatory, non-harmful, and do not violate existing legal provisions,
+guidelines, policies or the providers’ terms of use. It entails putting the necessary oversight
+and human-in-the-loop processes in place to validate output in situations with high impact
+or risk. Where these risks are too high, you must consider if generative AI should be used.
+Ultimately, responsibility for any output or decision made or supported by an AI system
+always rests with the public organisation. Where generative AI is bought commercially,
+ensure that vendors understand their responsibilities and liabilities, put the required risk
+mitigations in place and share all relevant information. Refer to the Buying generative AI
+section for further guidance.
+Practical recommendations
+Follow existing legal provisions, guidelines and policies as well as the provider’s
+terms of use when developing, deploying or using generative AI.
+As an end-user, assume responsibility for output produced by generative AI tools
+when used to support everyday tasks, such as drafting emails and reports.
+Clearly define responsibilities, accountability, and liability across all actors involved
+in the AI lifecycle. Where the generative AI is bought commercially, define detailed
+responsibilities and liability contractually.
+Nominate a Senior Responsible Owner who will be accountable for the use of
+generative AI in a specific project.
+Where generative AI is used in situations of high impact or risk, establish a
+human-in-the-loop to oversee and validate outputs.
+Adopt a risk-based approach to the use of AI-generated content and put
+strategies in place to minimise the risk of inaccurate or harmful outputs. Where
+the potential risks and harmful impacts are too high, consider whether human-in-
+the-loop approaches offer sufficient mitigation or if generative AI should be used.
+Provide routes for appeal and actionable redress and put feedback
+channels into place.
+Use assurance techniques to evaluate the performance of generative AI systems.
+The CDEI AI assurance guide provides a useful starting point, and the CDEI
+portfolio of AI assurance techniques offers real-world examples.

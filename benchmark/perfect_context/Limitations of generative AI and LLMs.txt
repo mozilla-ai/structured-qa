@@ -1,0 +1,40 @@
+LLMs predict the next word in a sequence. They don’t understand the content or meaning
+of the words beyond how likely they are to be used in response to a particular question.
+This means that even though LLMs can produce plausible responses to requests, there are
+limitations on what they can reliably do.
+You need to be aware of these limitations and have checks and assurance in place when
+using generative AI in your organisation.
+• Hallucination (also called confabulation): LLMs are primarily designed to prioritise the
+appearance of being plausible rather than focusing on ensuring absolute accuracy,
+frequently resulting in the creation of content that appears plausible but may actually be
+factually incorrect.
+• Critical thinking and judgement: although LLMs can give the appearance of reasoning,
+they are simply predicting the next most plausible word in their output, and may produce
+inaccurate or poorly-reasoned conclusions.
+• Sensitive or ethical context: LLMs can generate offensive, biased, or inappropriate
+content if not properly guided, as they will replicate any bias present in the data they
+were trained on.
+• Domain expertise: unless specifically trained on specialist data, LLMs are not true
+domain experts. On their own, they are not a substitute for professional advice,
+especially in legal, medical, or other critical areas where precise and contextually relevant
+information is essential.
+ersonal experience and context: LLMs lack personal experiences and emotions.
+Although their outputs may appear as if they come from a person, they do not have true
+understanding or a consciousness.
+• Dynamic real-time information retrieval: LLMs do not always have real-time access to
+the internet or data outside their training set. However, this feature of LLM products is
+changing. As of October 2023, ChatGPT, Bard and Bing have been modified to include
+access to real-time internet data in their results.
+• Short-term memory: LLMs have a limited context window. They might lose track of the
+context of a conversation if it’s too long, leading to incoherent responses.
+• Explainability: generative AI is based on neural networks, which are so-called ‘black
+boxes’. This makes it difficult or impossible to explain the inner workings of the model
+which has potential implications if in the future you are challenged to justify decisioning
+or guidance based on the model.
+These limitations mean that there are types of use cases where you should currently avoid
+using generative AI, such as safety-of-life systems or those involving fully automated
+decision-making which affects individuals.
+However, the capabilities and limitations of generative AI solutions are rapidly changing,
+and solution providers are continuously striving to overcome these limitations. This means
+that you should make sure that you understand the features of the products and services
+you are using and how they are expected to change.
