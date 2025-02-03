@@ -43,7 +43,7 @@ def find_retrieve_answer(
             See [`ANSWER_PROMPT`][structured_qa.config.ANSWER_PROMPT].
         max_sections_to_check (int, optional): The maximum number of sections to check before giving up.
             Defaults to None.
-            If None, it will check half of the sections until it finds the answer.
+            If None, it will check  up to a maximum of 20 sections until it finds the answer.
 
     Returns:
         tuple[str, list[str]] | tuple[None, list[str]]:
@@ -57,7 +57,7 @@ def find_retrieve_answer(
     current_section = None
 
     if max_sections_to_check is None:
-        max_sections_to_check = len(sections_names) // 2
+        max_sections_to_check = min(20, len(sections_names))
 
     sections_checked = []
     while len(sections_checked) < max_sections_to_check:
