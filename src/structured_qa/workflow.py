@@ -17,7 +17,7 @@ def find_retrieve_answer(
     sections_dir: str,
     find_prompt: str,
     answer_prompt: str,
-    max_sections_to_check: int = 10,
+    max_sections_to_check: int | None = None,
 ) -> tuple[str, list[str]] | tuple[None, list[str]]:
     """
     Workflow to find the relevant section, retrieve the information, and answer the question.
@@ -42,6 +42,9 @@ def find_retrieve_answer(
 
             See [`ANSWER_PROMPT`][structured_qa.config.ANSWER_PROMPT].
         max_sections_to_check (int, optional): The maximum number of sections to check before giving up.
+            Defaults to None.
+            If None, it will check all sections until it finds the answer.
+
     Returns:
         tuple[str, list[str]] | tuple[None, list[str]]:
 
@@ -52,6 +55,9 @@ def find_retrieve_answer(
     sections_names = [section.stem for section in sections_dir.glob("*.txt")]
     current_info = None
     current_section = None
+
+    if max_sections_to_check is None:
+        max_sections_to_check = len(sections_names)
 
     sections_checked = []
     while len(sections_checked) < max_sections_to_check:
