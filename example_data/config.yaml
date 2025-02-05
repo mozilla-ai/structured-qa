@@ -30,8 +30,3 @@ answer_prompt: |
 
   If the current information available not enough to answer the question,
   you must return "I need more info" and nothing else.
-
-  If the current information is enough to answer, you must return one of the following formats:
-  - YES/NO (for boolean questions)
-  - Number (for numeric questions)
-  - Single letter (for multiple-choice questions)

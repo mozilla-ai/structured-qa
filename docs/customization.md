@@ -14,7 +14,6 @@ This Blueprint is designed to be flexible and easily adaptable to your specific 
 
 ## 💡 Other Customization Ideas
 
-- other ideas..
 
 
 ## 🤝 **Contributing to the Blueprint**
