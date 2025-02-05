@@ -1,0 +1,16 @@
+Fire resistance of partitions:
+- Copy rooms must have vertical partitions with a fire resistance of EI 30 and doors must have
+a fire resistance of EI1 30 and close automatically (linked to the fire detection system).
+Door retaining devices:
+- Certain fire doors for rooms which are accessed or traversed very frequently are kept open
+using magnetic retainers linked to the fire detection system (e.g. entrance halls and lift
+lobbies, corridor compartment doors, kitchenette doors and doors of copy rooms).
+- As a minimum, rooms accommodating kitchenettes must have doors which close
+automatically (linked to the fire detection system).
+Door closers:
+- In addition to the requirements set out in the applicable legislation, access doors to
+toilets/washrooms, kitchenettes, copy rooms, etc. must also be fitted with door closers.
+Horizontal communication between two buildings:
+- In the case of doors forming an airlock between two buildings, an intermittent red light
+signal should be placed above or beside the door frames. This signal should light up on the
+non-dangerous side to indicate the danger when the alarm is raised.

@@ -1,0 +1,36 @@
+Following previous work (Brown et al., 2020), we
+consider zero-shot and few-shot tasks, and report
+results on a total of 20 benchmarks:
+• Zero-shot. We provide a textual description
+of the task and a test example. The model
+either provides an answer using open-ended
+generation, or ranks the proposed answers.
+• Few-shot. We provide a few examples of the
+task (between 1 and 64) and a test example.
+The model takes this text as input and gener-
+ates the answer or ranks different options.
+We compare LLaMA with other foundation mod-
+els, namely the non-publicly available language
+models GPT-3 (Brown et al., 2020), Gopher (Rae
+et al., 2021), Chinchilla (Hoffmann et al., 2022)
+and PaLM (Chowdhery et al., 2022), as well as
+the open-sourced OPT models (Zhang et al., 2022),
+GPT-J (Wang and Komatsuzaki, 2021), and GPT-
+Neo (Black et al., 2022). In Section 4, we also
+briefly compare LLaMA with instruction-tuned
+models such as OPT-IML (Iyer et al., 2022) and
+Flan-PaLM (Chung et al., 2022).
+We evaluate LLaMA on free-form generation
+tasks and multiple choice tasks. In the multiple
+choice tasks, the objective is to select the most
+appropriate completion among a set of given op-
+tions, based on a provided context. We select the
+completion with the highest likelihood given the
+provided context. We follow Gao et al. (2021)
+and use the likelihood normalized by the number
+of characters in the completion, except for certain
+datasets (OpenBookQA, BoolQ), for which we fol-
+low Brown et al. (2020), and select a completion
+based on the likelihood normalized by the likeli-
+hood of the completion given “Answer:” as context:
+P (completion|context)/P (completion|“Answer:”).

@@ -1,0 +1,9 @@
+Our models are trained using the AdamW opti-
+mizer (Loshchilov and Hutter, 2017), with the fol-
+lowing hyper-parameters: β1 = 0.9, β2 = 0.95.
+We use a cosine learning rate schedule, such that
+the final learning rate is equal to 10% of the maxi-
+mal learning rate. We use a weight decay of 0.1 and
+gradient clipping of 1.0. We use 2, 000 warmup
+steps, and vary the learning rate and batch size with
+the size of the model (see Table 2 for details).

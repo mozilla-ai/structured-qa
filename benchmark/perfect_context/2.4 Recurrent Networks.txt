@@ -1,0 +1,59 @@
+As recurrent neural networks (RNNs) can be unrolled to
+feed-forward representation, RNNs can also be equivalently
+represented as decision trees. We study following recurrent
+neural network. Note that we simply omit the bias terms as
+they can be represented by concatenating a 1 value to input
+vectors.
+h(t) = σ(WT h(t−1) + UT x(t))
+o(t) = VT h(t) (12)
+Similar to previous analysis, one can rewrite h(t) as fol-
+lows.
+h(t) = a(t) (WT h(t−1) + UT x(t)) (13)
+Eq. 13 can be rewritten follows.
+h(t) = a(t) (
+1∏
+j=(t−1)
+(WT a(j)))WT h(0)
++a(t)
+t∑
+i=1
+(
+i∏
+j=(t−1)
+(WT a(j)))UT x(i)
+(14)
+Note that in Eq. 14, the product operator stands for ma-
+trix multiplication, its steps are −1 and we consider the out-
+put of product operator to be 1 when i = t. One can rewrite
+Eq. 14 by introducing cj ˆWj as follows.
+h(t) = a(t) c1 ˆW1WT h(0) + a(t)
+t∑
+i=1
+ci ˆWiUT x(i)
+ci ˆWT
+i =
+i∏
+j=(t−1)
+(WT a(j)
+Combining Eq. 15 and Eq. 12, one can write o(t) as
+follows.
+o(t) = a(t) ˆVT
+c1 ˆW1WT h(0) +a(t) ˆVT t∑
+i=1
+ci ˆWiUT x(i) (16)
+Eq. 16 can be further simplified to the following.
+o(t) = c1 ˆZT
+1 WT h(0) +
+t∑
+i=1
+ci ˆZiUT x(i) (17)
+In Eq. 17, ci ˆZT
+i = a(t) ˆVT
+ci ˆWi .As one can observe from
+Eq. 17, the RNN output only depends on the categoriza-
+tion vector ci, which enables the tree equivalence -similar
+to previous analysis.
+Note that for RNNs, a popular choice for σ in Eq. 12
+is tanh. As mentioned in Section 2.3, in order to provide
+finite trees, one might consider using a piece-wise linear
+approximation of tanh.

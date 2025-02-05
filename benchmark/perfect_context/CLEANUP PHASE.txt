@@ -1,0 +1,14 @@
+NOTE: Skip the Cleanup phase in the final round.
+In this phase:
+> Players take all Workers from their Clan tile back to their
+supply.
+> Players unexhaust all cards (rotate them to their initial position)
+in front of them.
+> Players take back their Clan action pawns from Action tiles.
+> Discard any remaining, face-up Island cards and reveal new ones.
+> Pass the First player marker to the next player in clockwise order.
+> If no one has reached or passed the 25 on the scoreboard
+during the Action phase, begin a new round. If anyone reached
+25 or more during the Expedition phase, the next round will
+be the last one.
+IMPORTANT: Goods are never discarded at the end of the round

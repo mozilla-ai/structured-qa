@@ -1,0 +1,12 @@
+This action allows a player to Raid an opponent’s Action Location
+card to immediately exhaust it so that the opponent cannot use its
+ability until unexhausted.
+A player can only use this action if he has a Raze token. Only Action
+Locations may be Raided. Remember that you cannot Raid opponent
+that has already passed
+TO RAID AN OPPONENT’S LOCATION:
+> Choose an opponent and any one of their unexhausted Action
+Locations.
+> Discard 1 token.
+> Exhaust the opponent’s Location (Rotate it 90 degrees to
+the right).

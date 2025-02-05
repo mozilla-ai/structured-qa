@@ -1,0 +1,21 @@
+Lazy Loading delays loading of CUDA modules and kernels from program initalization closer to kernels
+execution. If a program does not use every single kernel it has included, then some kernels will be
+loaded unneccesarily. This is very common, especially if you include any libraries. Most of the time,
+programs only use a small amount of kernels from libraries they include.
+Thanks to Lazy Loading, programs are able to only load kernels they are actually going to use, saving
+time on initialization. This reduces memory overhead, both on GPU memory and host memory.
+Lazy Loading is enabled by setting the CUDA_MODULE_LOADING environment variable to LAZY.
+Firstly, CUDA Runtime will no longer load all modules during program initialization, with the exception
+of modules containing managed variables. Each module will be loaded on first usage of a variable or
+a kernel from that module. This optimization is only relevant to CUDA Runtime users, CUDA Driver
+users who use cuModuleLoad are unaffected. This optimization shipped in CUDA 11.8. The behavior
+for CUDA Driver users who use cuLibraryLoad to load module data into memory can be changed by
+setting the CUDA_MODULE_DATA_LOADING environment variable.
+Secondly, loading a module (cuModuleLoad*() family of functions) will not be loading kernels immedi-
+ately, instead it will delay loading of a kernel until cuModuleGetFunction() is called. There are certain
+exceptions here, some kernels have to be loaded during cuModuleLoad*(), such as kernels of which
+pointers are stored in global variables. This optimization is relevant to both CUDA Runtime and CUDA
+Driver users. CUDA Runtime will only call cuModuleGetFunction() when a kernel is used/referenced
+for the first time. This optimization shipped in CUDA 11.7.
+Both of these optimizations are designed to be invisible to the user, assuming CUDA Programming
+Model is followed.

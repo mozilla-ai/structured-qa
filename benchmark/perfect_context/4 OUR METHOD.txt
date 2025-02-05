@@ -1,0 +1,3 @@
+We describe the simple design of LoRA and its practical benefits. The principles outlined here apply
+to any dense layers in deep learning models, though we only focus on certain weights in Transformer
+language models in our experiments as the motivating use case.

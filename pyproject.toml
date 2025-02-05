@@ -16,6 +16,7 @@ dependencies = [
   "pydantic",
   "pymupdf4llm",
   "pyyaml",
+  "rapidfuzz",
   "streamlit",
 ]
 

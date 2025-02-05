@@ -1,0 +1,28 @@
+This is the main phase of the game in which players take
+their actions to build Locations, use their Clan action
+pawn to activate Action tiles, and use actions of different
+Locations.
+Starting with the First player and continuing clockwise,
+each player performs one action at a time. Each player can
+take any available action or pass.
+AVAILABLE ACTIONS:
+> Build a Location
+> Use a Clan action pawn
+> Raid an opponent
+> Use an action from a Location
+
+All actions are described in detail in a separate chapter
+(see pages 9-11).
+> Once a player passes in the Action phase they cannot
+perform any additional actions in the current round.
+Neither can they be targeted by the actions of other
+players. For example, a player who has passed cannot
+have any of his Locations Raided.
+> There is no limit to the number, type, or order of
+actions a player may take during the Action phase, so
+long as they perform them one action at a time.
+> The Action phase continues until all players have
+passed. If any player has reached or passed the 25
+during this phase, the last round is triggered and the
+game will end upon the completion of the Expedition
+phase of this round.

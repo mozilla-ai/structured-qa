@@ -1,0 +1,13 @@
+Operating safety
+A carbon monoxide (CO) detector must be installed in closed car parks (indoor or
+underground) in accordance with the following requirements:
+- the number of carbon monoxide detectors on each level must be sufficient to cover the
+entire area of the car park;
+- the system must allow automatic control of blower and/or extraction fans and audible and
+light indications, on the basis of thresholds stipulated by the Commission;
+- the carbon monoxide detection control panel must be fitted with a stand-alone power
+source in the form of an integrated battery (providing at least one hour of power).
+Maintenance and management
+Remote management
+he carbon monoxide detection control panel must be linked to the centralised technical
+management system GTC (control panel alarms and malfunctions).

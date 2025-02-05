@@ -1,0 +1,56 @@
+There are four different abilities that players will encounter on the Locations in
+the game:
+FIELDS
+These cards don’t have any keywords, only icons shown in the middle of the ability
+description box representing the Goods that may be Harvested from this Location.
+Fields give the player the depicted Goods immediately when the Field is built, and
+each time a Harvest action is declared on that Field.
+IMPORTANT: Some Field Locations work only as upgrades. These Fields have
+the Resources on the right side of the ability description box. Once built these
+Locations have to be attached to an existing Field in your Empire of the same
+Goods type. The card is slid underneath the existing Field with just the additional
+Good icons on the right visible. When the Field upgrade is built, the player
+gains ONLY the Goods provided by that upgrade card, not the entire Field it is
+upgrading. When the player Harvests a Field with one or more upgrades, then
+they gain Goods from this Field and all of its upgrades. Upgrade cards give 1
+at the end of the game just like any other Location
+FEATURE
+These cards can have various special abilities described on the cards. These card
+abilities may be triggered during any player’s turn, and in certain cases they can
+grant the player Goods after taking specific actions.
+INSTANT
+These cards’ ability is resolved immediately when they are played, and the card is
+discarded afterward.
+ACTION
+To use the Location’s ability a player has to exhaust the card by rotating it 90
+degrees to the right. They then must pay any cost described in the ability text.
+Once the card is exhausted, its ability is no longer available.
+IMPORTANT: Only Action Location cards are exhausted after use. Both Feature
+and Field location cards are not exhausted, even if a player gained something
+from them multiple times, unless stated otherwise.
+OTE 1: Several Locations can also
+have a Building Bonus which is an
+additional one-time ability that
+activates when such Location is
+placed in a player’s Empire.
+NOTE 2: Some abilities in the
+game have a ‘/’ divider between
+presented choices. This should be
+treated as an ‘or.’ A player must
+choose one option when using that
+ability, for instance ‘Gain 1 / .’
+means that a player chooses either
+to gain 1 or 1
+NOTE 3: Some abilities allow players to Pillage
+or Conquer right away, before the Expedition
+phase, in such cases a Ship is still required to be
+on the Expedition board to use it, along with any
+appropriate Goods assigned to it. This ability allows
+the Ship to resolve the Pillage or Conquest outside
+of the Expedition phase and to gain the card/Goods
+in the current Action phase. The Ship is returned to
+the player’s supply, and any Raze token and/or Fish
+assigned to it is discarded as usual, even if it wasn’t
+used. A Ship that was returned in this manner may be
+used again during this round to Sail (described later
+in this section).

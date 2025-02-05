@@ -1,0 +1,92 @@
+In order to select an open access publisher, you will
+first need to know the range of open access publish-
+ers available to you. For authors of articles, a good
+place to start is the Directory of Open Access Journals
+(“DOAJ”), an online directory that screens and indexes
+over 10,000 peer-reviewed open access journals.41 You
+may also consult the Open Access Scholarly Publishers
+Association, whose membership includes both article
+and monograph open access publishers.42 From there,
+you should consider a number of factors to determine
+which publisher, if any, best suits your needs,
+including:
+The Impact (Factor) of the Journal
+Regardless of whether a journal is restricted or open
+access, authors may find it important to consider the
+journal’s “impact factor.” Generally, the impact factor
+measures the frequency with which the average article
+in a journal is cited over a particular period of time.
+Many academics, including tenure committees, use this
+metric as a proxy for the prestige, quality of scholar-
+ship, and competitiveness of a given journal.
+While impact factor comparisons currently favor
+well-established, conventional publishers, alternative
+metrics (sometimes referred to as “altmetrics”) have
+recently emerged as a way to incorporate new data
+sources—such as the number of downloads and page
+views, media coverage, or even social media dissemina-
+tion—to measure the impact of a journal or of a work in
+light of recent technological developments.43 Authors
+can use these alternative metrics to complement
+citation-based metrics as a signal of the wide and
+diverse impact of their works.44
+Authors may also be able to find an open access journal
+associated with a prominent conventional publisher in
+their field, allowing them to enjoy the benefits of both a
+well-respected brand and open access.
+Although the development of alternative metrics
+is promising, some authors may not want to put
+important employment decisions at risk if their insti-
+tutions heavily rely on journals’ impact factors. Authors
+with a particular concern about impact factors may
+alternatively consider publishing with a high-
+impact-factor, conventional journal and negotiating to
+retain the right to self-archive, as discussed in
+Chapter 6. Some conventional publishers also offer
+“hybrid” options whereby articles published in a
+subscription journal are also made openly accessible,
+typically in exchange for a fee.
+The Journal’s Reputation for
+Responsible Business Practices
+Some journals are better than others at editing man-
+uscripts, getting issues to press in a timely manner,
+and other aspects of providing service to authors and
+readers. Before you commit your work to a journal, you
+should be familiar with its recent publishing record. If
+72 Understanding Open Access
+you know other authors who have published there, you
+might ask them about their experience.
+The Open Access Licensing Terms Available
+Through the Publisher
+A given open access publisher may have only one type
+of license that it automatically applies to all the works
+it publishes. Thus, authors wishing to fine-tune the
+“openness” of their works (see Chapter 4) should
+research the licensing policies of the open access
+journals in which they are interested. The Directory of
+Open Access Journals (“DOAJ”) allows authors to search
+by licensing terms for easy comparison.
+The Technical Openness of the Publication
+Authors interested in making sure that their works are
+more technically open should consider the technical
+capabilities of different publishers. (See Chapter 4.)
+Whether The Publisher Charges Author-Side Fees
+and its Policy Regarding Exemptions
+As discussed above, some, but not all, open access pub-
+lishers charge publication fees. The DOAJ allows users
+to filter search results for journals that do not charge
+publication fees.
+Even if your desired journal charges a fee, you may
+not need to pay out-of-pocket. Consider the following
+alternate strategies to cover the fee:
+• Ask your institution or funding entity if it has
+earmarked funds available to pay for open access
+publication fees.46
+• Apply for grant funding specifically designated
+for open access publishing (for example, from a
+government agency, private foundation, or insti-
+tutional library).47
+• Partake in the journal’s fee assistance program48
+or institutional discount.49
+• Apply for a publication fee waiver if the journal
+offers one.

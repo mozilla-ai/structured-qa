@@ -1,0 +1,28 @@
+Commercial agreements
+AI is an emerging market. As well as rapidly evolving technology, there are ongoing changes
+in the supply base and the products and services it offers. DPSs offer flexibility for new
+suppliers to join, which often complement these dynamics well for buyers.
+Any public sector buyers interested in shaping CCS’s longer term commercial agreement
+portfolio should express their interest via info@crowncommercial.gov.uk
+Regulation and policy
+Regulation and policy will also evolve to keep pace. However, there are already a number of
+legal and regulatory provisions which are relevant to the use of AI technologies.
+• UK data protection law: regulation around automated decision making, processing
+personal data, processing for the purpose of developing and training AI technologies. In
+November 2022, a new Procurement Policy Note was published to provide an update to
+this: PPN 03/22 Updated guidance on data protection legislation.
+• Online Safety Act: provisions concerning design and use of algorithms are to be
+included in a new set of laws to protect children and adults online. It will make social
+media companies more responsible for their users’ safety on their platforms.
+• A pro-innovation approach to AI regulation: this white paper published in March 2023,
+sets out early steps towards establishing a regulatory regime for AI. The white paper
+outlines a proportionate pro-innovation framework, including five principles to guide
+responsible AI innovation in all sectors.
+• Centre for Data Ethics and Innovation (CDEI) AI assurance techniques: the portfolio
+of AI assurance techniques has been developed by the CDEI, initially in collaboration with
+techUK. The portfolio is useful for anybody involved in designing, developing, deploying
+or procuring AI-enabled systems. It shows examples of AI assurance techniques being
+used in the real-world to support the development of trustworthy AI.
+Further guidance is also available from the Information Commissioner’s Office, Equality
+and Human Rights Commission, Medicines and Healthcare products Regulation
+Authority and the Health and Safety Executive.

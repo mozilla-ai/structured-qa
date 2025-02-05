@@ -1,0 +1,91 @@
+First, we make a toy experiment where we fit a neural
+network to: y = x2 equation. The neural network has 3
+dense layers with 2 filters each, except for last layer which
+has 1 filter. The network uses leaky-ReLU activations after
+fully connected layers, except for the last layer which has
+no post-activation. We have used negative slope of 0.3 for
+leaky-ReLU which is the default value in Tensorflow [1].
+The network was trained with 5000 (x, y) pairs where x was
+regularly sampled from [−2.5, 2.5] interval. Fig. 2 shows
+the decision tree corresponding to the neural network. In the
+tree, every black rectangle box indicates a rule, left child
+from the box means the rule does not hold, and the right
+child means the rule holds. For better visualization, the
+rules are obtained via converting wT x + β > 0 to direct
+inequalities acting on x. This can be done for the partic-
+ular regression y = x2, since x is a scalar. In every leaf,
+the network applies a linear function -indicated by a red
+rectangle- based on the decisions so far. We have avoided
+writing these functions explicitly due to limited space. At
+first glance, the tree representation of a neural network in
+this example seems large due to the 2∑n−2
+i mi = 24 = 16
+categorizations. However, we notice that a lot of the rules
+in the decision tree is redundant, and hence some paths in
+the decision tree becomes invalid. An example to redundant
+rule is checking x < 0.32 after x < −1.16 rule holds. This
+directly creates the invalid left child for this node. Hence,
+the tree can be cleaned via removing the left child in this
+case, and merging the categorization rule to the stricter one :
+x < −1.16 in the particular case. Via cleaning the decision
+tree in Fig. 2, we obtain the simpler tree in Fig. 3a, which
+only consists of 5 categories instead of 16. The 5 categories
+are directly visible also from the model response in Fig. 3b.
+The interpretation of the neural network is thus straightfor-
+ward: for each region whose boundaries are determined via
+the decision tree representation, the network approximates
+the non-linear y = x2 equation by a linear equation. One
+can clearly interpret and moreover make deduction from the
+decision tree, some of which are as follows. The neural
+network is unable to grasp the symmetrical nature of the
+regression problem which is evident from the fact that the
+decision boundaries are asymmetrical. The region in below
+−1.16 and above 1 is unbounded and thus neural decisions
+lose accuracy as x goes beyond these boundaries.
+
+y = x2 Half-Moon
+Param. Comp. Mult./Add. Param. Comp. Mult./Add.
+Tree 14 2.6 2 39 4.1 8.2
+NN 13 4 16 15 5 25
+Table 1. Computation and memory analysis of toy problems
+
+Next, we investigate another toy problem of classifying
+half-moons and analyse the decision tree produced by a neu-
+ral network. We train a fully connected neural network with
+3 layers with leaky-ReLU activations, except for last layer
+which has sigmoid activation. Each layer has 2 filters ex-
+cept for the last layer which has 1. The cleaned decision
+tree induced by the trained network is shown in Fig. 4. The
+decision tree finds many categories whose boundaries are
+determined by the rules in the tree, where each category
+is assigned a single class. In order to better visualize the
+categories, we illustrate them with different colors in Fig.
+5. One can make several deductions from the decision tree
+such as some regions are very well-defined, bounded and
+the classifications they make are perfectly in line with the
+training data, thus these regions are very reliable. There are
+unbounded categories which help obtaining accurate classi-
+fication boundaries, yet fail to provide a compact represen-
+tation of the training data, these may correspond to inaccu-
+rate extrapolations made by neural decisions. There are also
+some categories that emerged although none of the training
+data falls to them.
+Besides the interpretability aspect, the decision tree rep-
+resentation also provides some computational advantages.
+In Table 1, we compare the number of parameters, float-
+point comparisons and multiplication or addition operations
+of the neural network and the tree induced by it. Note that
+the comparisons, multiplications and additions in the tree
+representation are given as expected values, since per each
+category depth of the tree is different. As the induced tree
+is an unfolding of the neural network, it covers all possi-
+ble routes and keeps all possible effective filters in mem-
+ory. Thus, as expected, the number of parameters in the tree
+representation of a neural network is larger than that of the
+network. In the induced tree, in every layer i, a maximum
+of mi filters are applied directly on the input, whereas in the
+neural network always mi filters are applied on the previous
+feature, which is usually much larger than the input in the
+feature dimension. Thus, computation-wise, the tree repre-
+sentation is advantageous compared to the neural network
+one.
