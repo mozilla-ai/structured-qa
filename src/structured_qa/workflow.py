@@ -62,7 +62,7 @@ def find_retrieve_answer(
         max_sections_to_check = min(20, len(sections_names))
 
     sections_checked = []
-    while len(sections_checked) < max_sections_to_check:
+    while len(sections_checked) <= max_sections_to_check:
         logger.debug(f"Current information available: {current_info}")
         if not current_info:
             logger.debug("Finding section")

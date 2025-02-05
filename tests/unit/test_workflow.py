@@ -8,15 +8,15 @@ def test_find_retrieve_answer_multi_sections(tmp_path, mocker):
     def side_effect(messages):
         if FIND_PROMPT[:10] in messages[0]["content"]:
             if "section_1" in messages[0]["content"]:
-                return {"choices": [{"message": {"content": "section_1"}}]}
+                return "section_1"
             else:
-                return {"choices": [{"message": {"content": "section_2"}}]}
+                return "section_2"
         elif "Section 1" in messages[0]["content"]:
-            return {"choices": [{"message": {"content": "I need more info."}}]}
+            return "I need more info."
         elif "Section 2" in messages[0]["content"]:
-            return {"choices": [{"message": {"content": "Answer in Section 2"}}]}
+            return "Answer in Section 2"
 
-    model.create_chat_completion.side_effect = side_effect
+    model.get_response.side_effect = side_effect
 
     sections_dir = tmp_path / "sections"
     sections_dir.mkdir()
@@ -36,14 +36,16 @@ def test_find_retrieve_answer_multi_sections(tmp_path, mocker):
     assert sections_checked == ["section_1", "section_2"]
 
 
-def test_find_retrieve_answer_unkown_section(tmp_path, mocker):
+def test_find_retrieve_answer_mispelled_section(tmp_path, mocker):
     model = mocker.MagicMock()
 
     def side_effect(messages):
         if FIND_PROMPT[:10] in messages[0]["content"]:
-            return {"choices": [{"message": {"content": "section_x"}}]}
+            return "SecTION 1"
+        else:
+            return "I need more info."
 
-    model.create_chat_completion.side_effect = side_effect
+    model.get_response.side_effect = side_effect
 
     sections_dir = tmp_path / "sections"
     sections_dir.mkdir()
@@ -58,5 +60,5 @@ def test_find_retrieve_answer_unkown_section(tmp_path, mocker):
         answer_prompt=ANSWER_PROMPT,
     )
 
-    assert answer is None
-    assert sections_checked == []
+    assert answer == "NOT FOUND"
+    assert sections_checked == ["section_1"]
