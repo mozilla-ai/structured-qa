@@ -17,17 +17,7 @@ def split_markdown_by_headings(
         heading_patterns (str, optional): A list of regex patterns representing heading markers
             in the markdown document.
             Defaults to None.
-            If None, the default patterns are used:
-
-            ```python
-            [
-                r"^#\s+(.+)$",
-                r"^##\s+(.+)$",
-                r"^###\s+(.+)$",
-                r"^\*\*[\d\.]+\.\*\*\s*\*\*(.+)\*\*$",
-                r"^\*\*[\d\.]+\.\*\*\s+(.+)$"
-            ]
-            ```
+            If None, the default patterns are used.
 
     Returns:
         dict[str, str]: A dictionary where the keys are the section names and the values are the section contents.

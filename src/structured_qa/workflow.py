@@ -3,6 +3,8 @@ from pathlib import Path
 from loguru import logger
 from rapidfuzz import process
 
+from structured_qa.model_loaders import LlamaModel
+
 
 def get_matching_section(response, section_names):
     """
@@ -13,7 +15,7 @@ def get_matching_section(response, section_names):
 
 def find_retrieve_answer(
     question: str,
-    model,
+    model: LlamaModel,
     sections_dir: str,
     find_prompt: str,
     answer_prompt: str,
@@ -24,7 +26,7 @@ def find_retrieve_answer(
 
     Args:
         question (str): The question to answer.
-        model: The model to use for generating completions.
+        model (LlamaModel): The model to use for generating completions.
         sections_dir (str): The directory containing the sections.
             See [`document_to_sections_dir`][structured_qa.preprocessing.document_to_sections_dir].
             Structure of the sections directory:
