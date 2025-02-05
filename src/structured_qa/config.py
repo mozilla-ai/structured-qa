@@ -27,20 +27,19 @@ Now, based on the following question, return the single most relevant `section_n
 
 ANSWER_PROMPT = """
 You are a rigorous assistant answering questions.
-You only answer based on the current information available.
-
-The current information available is:
+You must only answer based on the current information available which is:
 
 ```
 {CURRENT_INFO}
 ```
 
 If the current information available not enough to answer the question,
-you must return the following message and nothing else:
+you must return "I need more info" and nothing else.
 
-```
-I need more info.
-```
+If the current information is enough to answer, you must return one of the following formats:
+- YES/NO (for boolean questions)
+- Number (for numeric questions)
+- Single letter (for multiple-choice questions)
 """
 
 
