@@ -13,11 +13,9 @@
 
 This specialized fork demonstrates how to use open-source models and a simple LLM workflow to analyze academic papers and research documents. Key features include:
 
-- 📚 Optimized for academic paper analysis
-- 🔍 Intelligent section parsing and navigation
-- 📊 Preservation of mathematical notation and citations
-- 🎯 Focused on technical precision and academic rigor
-- 🤖 Using Qwen 7B model for improved comprehension
+- 📚 Intelligent parsing and analysis of academic papers with section navigation
+- 📊 Preservation of technical content, mathematical notation, and citations
+- 🤖 Enhanced comprehension using the Qwen 7B model
 
 A lightweight, open-source solution for answering questions about structured documents using simple LLM workflows, designed as an efficient alternative to complex RAG systems.
 
