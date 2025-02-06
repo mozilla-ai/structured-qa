@@ -77,7 +77,7 @@ def structured_qa(
     answer, sections_checked = find_retrieve_answer(
         model=model,
         sections_dir=config.output_dir,
-        question=question,
+        question=config.question,
         find_prompt=config.find_prompt,
         answer_prompt=config.answer_prompt,
     )
