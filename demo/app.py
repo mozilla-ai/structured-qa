@@ -27,12 +27,7 @@ def convert_to_sections(uploaded_file, output_dir):
 
 st.title("📚 Academic Paper Analysis")
 st.markdown("""
-This tool helps you analyze academic papers by:
-- Breaking down papers into logical sections
-- Finding relevant sections for your questions
-- Extracting precise technical information
-- Preserving mathematical notation and citations
-- Maintaining academic rigor in responses
+A tool that helps you analyze academic papers by breaking them down into sections and answering your questions while preserving technical details and academic rigor.
 """)
 
 st.header("📄 Upload Your Paper")

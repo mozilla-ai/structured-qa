@@ -15,6 +15,12 @@ This specialized fork demonstrates how to use open-source models and a simple LL
 - 🎯 Focused on technical precision and academic rigor
 - 🤖 Using Qwen 7B model for improved comprehension
 
+A lightweight, open-source solution for answering questions about structured documents using simple LLM workflows, designed as an efficient alternative to complex RAG systems.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/alexmeckes/academic-paper-structured-qa/main/D3F5F717-26A9-4700-BCD7-9B020484523B.jpeg" width="800" alt="Structured QA App Interface"/>
+</p>
+
 <img src="./images/structured-qa-diagram.png" width="1200" alt="structure-qa Diagram" />
 
 📘 To explore this project further and discover other Blueprints, visit the [**Blueprints Hub**](https://developer-hub.mozilla.ai/blueprints/query-structured-documents-using-a-lightweight-llm-workflow).
