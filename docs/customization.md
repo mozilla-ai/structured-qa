@@ -6,6 +6,8 @@ This Blueprint is designed to be flexible and easily adaptable to your specific 
 
 ## 🖋️ **Customizable Parameters**
 
+-- **`question`**: The question to be answered.
+
 - **`input_file`**: The input file specifies the document to be processed. Supports the `pdf` format.
 
 - **`output_dir`**: Path to the output directory where the extracted sections will be saved.

@@ -51,7 +51,7 @@ pip install structured-qa
 structured-qa \
 --question "What optimizer was used to train the model?" \
 --input_file "example_data/1706.03762v7.pdf" \
---output_folder "example_outputs/1706.03762v7.pdf"
+--output_dir "example_outputs/1706.03762v7.pdf"
 ```
 
 ### Graphical Interface App

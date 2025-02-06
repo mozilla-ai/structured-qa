@@ -60,6 +60,7 @@ def answer_prompt(value):
 
 
 class Config(BaseModel):
+    question: str
     input_file: FilePath
     output_dir: DirectoryPath
     model: Annotated[str, AfterValidator(validate_model)]

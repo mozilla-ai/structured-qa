@@ -15,7 +15,7 @@ Or provide values to the arguments directly:
 structured-qa \
 --question "What learning rate was used?" \
 --input_file "example_data/1706.03762v7.pdf" \
---output_folder "example_outputs/1706.03762v7.pdf"
+--output_dir "example_outputs/1706.03762v7.pdf"
 ```
 
 ---

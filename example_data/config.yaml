@@ -1,3 +1,4 @@
+question: "What optimizer was used to train the model?"
 input_file: example_data/1706.03762v7.pdf
 output_dir: example_outputs/1706.03762v7.pdf
 model: "bartowski/Qwen2.5-3B-Instruct-GGUF/Qwen2.5-3B-Instruct-f16.gguf"
