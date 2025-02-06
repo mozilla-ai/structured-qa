@@ -1,6 +1,10 @@
-# Academic Paper Analysis: A Fork of Mozilla.ai's Structured-QA Blueprint
+<p align="center">
+  <img src="./images/Blueprint-logo-black.png" width="35%" alt="Blueprints Logo"/>
+</p>
 
-> This is a specialized fork of [Mozilla.ai's Structured-QA Blueprint](https://github.com/mozilla-ai/structured-qa), optimized for academic paper analysis.
+# Structured-QA: Academic Paper Analysis
+
+> A specialized fork of [Mozilla.ai's Structured-QA Blueprint](https://github.com/mozilla-ai/structured-qa) optimized for analyzing academic papers and research documents.
 
 [![](https://dcbadge.limes.pink/api/server/YuMNeuKStr?style=flat)](https://discord.gg/YuMNeuKStr)
 [![Docs](https://github.com/mozilla-ai/structured-qa/actions/workflows/docs.yaml/badge.svg)](https://github.com/mozilla-ai/structured-qa/actions/workflows/docs.yaml/)
@@ -23,7 +27,7 @@ A lightweight, open-source solution for answering questions about structured doc
 
 <img src="./images/structured-qa-diagram.png" width="1200" alt="structure-qa Diagram" />
 
-📘 To explore this project further and discover other Blueprints, visit the [**Blueprints Hub**](https://developer-hub.mozilla.ai/blueprints/query-structured-documents-using-a-lightweight-llm-workflow).
+📘 To explore the original project and discover other Blueprints, visit the [**Blueprints Hub**](https://developer-hub.mozilla.ai/blueprints/query-structured-documents-using-a-lightweight-llm-workflow).
 
 
 ### 👉 📖 For more detailed guidance on using this project, please visit our [Docs here](https://mozilla-ai.github.io/structured-qa/).
