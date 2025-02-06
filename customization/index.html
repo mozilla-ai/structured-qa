@@ -406,29 +406,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#changing-the-model" class="md-nav__link">
+  <a href="#customizable-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Changing the Model
+      🖋️ Customizable Parameters
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modifying-the-system-prompt" class="md-nav__link">
+  <a href="#customizing-when-running-via-the-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      📝 Modifying the system Prompt
+      ⌨️ Customizing When Running via the CLI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⌨️ Customizing When Running via the CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-customize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Customize
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps to Customize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-changing-the-text-to-text-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Changing the Text-to-Text Model
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#other-customization-ideas" class="md-nav__link">
-    <span class="md-ellipsis">
-      💡 Other Customization Ideas
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -497,29 +518,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#changing-the-model" class="md-nav__link">
+  <a href="#customizable-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Changing the Model
+      🖋️ Customizable Parameters
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modifying-the-system-prompt" class="md-nav__link">
+  <a href="#customizing-when-running-via-the-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      📝 Modifying the system Prompt
+      ⌨️ Customizing When Running via the CLI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⌨️ Customizing When Running via the CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-customize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Customize
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps to Customize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-changing-the-text-to-text-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Changing the Text-to-Text Model
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#other-customization-ideas" class="md-nav__link">
-    <span class="md-ellipsis">
-      💡 Other Customization Ideas
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -554,9 +596,39 @@
 <h1 id="customization-guide">🎨 <strong>Customization Guide</strong></h1>
 <p>This Blueprint is designed to be flexible and easily adaptable to your specific needs. This guide will walk you through some key areas you can customize to make the Blueprint your own.</p>
 <hr />
-<h2 id="changing-the-model">🧠 <strong>Changing the Model</strong></h2>
-<h2 id="modifying-the-system-prompt">📝 <strong>Modifying the system Prompt</strong></h2>
-<h2 id="other-customization-ideas">💡 Other Customization Ideas</h2>
+<h2 id="customizable-parameters">🖋️ <strong>Customizable Parameters</strong></h2>
+<ul>
+<li>
+<p><strong><code>input_file</code></strong>: The input file specifies the document to be processed. Supports the <code>pdf</code> format.</p>
+</li>
+<li>
+<p><strong><code>output_dir</code></strong>: Path to the output directory where the extracted sections will be saved.</p>
+</li>
+<li>
+<p><strong><code>model</code></strong>: Any model that can be loaded by <a href="https://llama-cpp-python.readthedocs.io/en/latest/#pulling-models-from-hugging-face-hub"><code>LLama.from_pretrained</code></a> can be used here. Format is expected to be <code>{org}/{repo}/{filename}</code>. For example: <code>Qwen/Qwen2.5-1.5B-Instruct-GGUF/qwen2.5-1.5b-instruct-q8_0.gguf</code>.</p>
+</li>
+<li>
+<p><strong><code>find_prompt</code></strong>:The prompt for finding the section. See <a class="autorefs autorefs-internal" href="../api/#structured_qa.config.FIND_PROMPT"><code>FIND_PROMPT</code></a>.</p>
+</li>
+<li>
+<p><strong><code>answer_prompt</code></strong>: The prompt for answering the question.See <a class="autorefs autorefs-internal" href="../api/#structured_qa.config.ANSWER_PROMPT"><code>ANSWER_PROMPT</code></a>.</p>
+</li>
+</ul>
+<h2 id="customizing-when-running-via-the-cli">⌨️ <strong>Customizing When Running via the CLI</strong></h2>
+<p>If you’re running the pipeline from the command line, you can customize the parameters by modifying the <strong><code>example_data/config.yaml</code></strong> file.</p>
+<p>Running in the CLI:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>structured-qa<span class="w"> </span>--from_config<span class="w"> </span>example_data/config.yaml
+</span></code></pre></div></p>
+<h3 id="steps-to-customize">Steps to Customize</h3>
+<ol>
+<li>Open the <code>config.yaml</code> file.</li>
+<li>Locate the parameter you want to adjust.</li>
+<li>Update the value and save the file.</li>
+</ol>
+<h4 id="example-changing-the-text-to-text-model">Example: Changing the Text-to-Text Model</h4>
+<p>In <code>config.yaml</code>, modify the <code>model</code> entry:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Qwen/Qwen2.5-1.5B-Instruct-GGUF/qwen2.5-1.5b-instruct-q8_0.gguf&quot;</span>
+</span></code></pre></div>
 <h2 id="contributing-to-the-blueprint">🤝 <strong>Contributing to the Blueprint</strong></h2>
 <p>Want to help improve or extend this Blueprint? Check out the <strong><a href="../future-features-contributions/">Future Features &amp; Contributions Guide</a></strong> to see how you can contribute your ideas, code, or feedback to make this Blueprint even better!</p>
 
