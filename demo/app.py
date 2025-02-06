@@ -13,7 +13,7 @@ from structured_qa.workflow import find_retrieve_answer
 @st.cache_resource
 def load_model():
     return load_llama_cpp_model(
-        "bartowski/Qwen2.5-3B-Instruct-GGUF/Qwen2.5-3B-Instruct-f16.gguf"
+        "bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q8_0.gguf"
     )
 
 
@@ -25,29 +25,39 @@ def convert_to_sections(uploaded_file, output_dir):
     )
 
 
-st.title("Structured QA")
+st.title("📚 Academic Paper Analysis")
+st.markdown("""
+This tool helps you analyze academic papers by:
+- Breaking down papers into logical sections
+- Finding relevant sections for your questions
+- Extracting precise technical information
+- Preserving mathematical notation and citations
+- Maintaining academic rigor in responses
+""")
 
-st.header("Uploading Data")
+st.header("📄 Upload Your Paper")
 
 uploaded_file = st.file_uploader(
-    "Choose a file", type=["pdf", "html", "txt", "docx", "md"]
+    "Upload an academic paper (PDF format recommended for best results)", 
+    type=["pdf", "html", "txt", "docx", "md"]
 )
 
 if uploaded_file is not None:
     st.divider()
-    st.header("Loading and converting to sections")
-    st.markdown("[Docs for this Step]()")
+    st.header("🔍 Paper Structure Analysis")
+    st.markdown("Analyzing the paper's structure and extracting sections...")
     st.divider()
 
     convert_to_sections(uploaded_file, f"example_outputs/{uploaded_file.name}")
 
     sections = [f.stem for f in Path(f"example_outputs/{uploaded_file.name}").iterdir()]
+    st.subheader("📑 Extracted Sections")
     st.json(sections)
 
     model = load_model()
-    question = st.text_input("Enter a question:")
+    question = st.text_input("🤔 What would you like to know about this paper?")
     if question:
-        with st.spinner("Answering..."):
+        with st.spinner("Analyzing the paper..."):
             answer, sections_checked = find_retrieve_answer(
                 model=model,
                 sections_dir=f"example_outputs/{uploaded_file.name}",
@@ -55,7 +65,7 @@ if uploaded_file is not None:
                 find_prompt=FIND_PROMPT,
                 answer_prompt=ANSWER_PROMPT,
             )
-            st.text("Sections checked:")
+            st.subheader("🔎 Sections Referenced")
             st.json(sections_checked)
-            st.text("Answer:")
-            st.text(answer)
+            st.subheader("💡 Answer")
+            st.markdown(answer)
