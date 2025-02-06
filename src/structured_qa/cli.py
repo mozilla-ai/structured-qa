@@ -16,7 +16,7 @@ def structured_qa(
     input_file: str | None = None,
     output_dir: str | None = None,
     model: str
-    | None = "bartowski/Qwen2.5-3B-Instruct-GGUF/Qwen2.5-3B-Instruct-f16.gguf",
+    | None = "bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q8_0.gguf",
     find_prompt: str = FIND_PROMPT,
     answer_prompt: str = ANSWER_PROMPT,
     from_config: str | None = None,
@@ -39,6 +39,7 @@ def structured_qa(
             ```
         model: Model identifier formatted as `owner/repo/file`.
             Must be hosted at the HuggingFace Hub in GGUF format.
+            Defaults to bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q8_0.gguf.
         question: The question to answer.
         find_prompt: The prompt for finding the section.
 
