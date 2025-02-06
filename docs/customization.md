@@ -4,16 +4,38 @@ This Blueprint is designed to be flexible and easily adaptable to your specific 
 
 ---
 
-## 🧠 **Changing the Model**
+## 🖋️ **Customizable Parameters**
 
+- **`input_file`**: The input file specifies the document to be processed. Supports the `pdf` format.
 
+- **`output_dir`**: Path to the output directory where the extracted sections will be saved.
 
-## 📝 **Modifying the system Prompt**
+- **`model`**: Any model that can be loaded by [`LLama.from_pretrained`](https://llama-cpp-python.readthedocs.io/en/latest/#pulling-models-from-hugging-face-hub) can be used here. Format is expected to be `{org}/{repo}/{filename}`. For example: `Qwen/Qwen2.5-1.5B-Instruct-GGUF/qwen2.5-1.5b-instruct-q8_0.gguf`.
 
+- **`find_prompt`**:The prompt for finding the section. See [`FIND_PROMPT`][structured_qa.config.FIND_PROMPT].
 
+- **`answer_prompt`**: The prompt for answering the question.See [`ANSWER_PROMPT`][structured_qa.config.ANSWER_PROMPT].
 
-## 💡 Other Customization Ideas
+## ⌨️ **Customizing When Running via the CLI**
 
+If you’re running the pipeline from the command line, you can customize the parameters by modifying the **`example_data/config.yaml`** file.
+
+Running in the CLI:
+```bash
+structured-qa --from_config example_data/config.yaml
+```
+
+### Steps to Customize
+1. Open the `config.yaml` file.
+2. Locate the parameter you want to adjust.
+3. Update the value and save the file.
+
+#### Example: Changing the Text-to-Text Model
+In `config.yaml`, modify the `model` entry:
+
+```yaml
+model: "Qwen/Qwen2.5-1.5B-Instruct-GGUF/qwen2.5-1.5b-instruct-q8_0.gguf"
+```
 
 
 ## 🤝 **Contributing to the Blueprint**
