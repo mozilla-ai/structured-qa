@@ -12,7 +12,7 @@ from structured_qa.workflow import find_retrieve_answer
 
 @logger.catch(reraise=True)
 def structured_qa(
-    question: str,
+    question: str | None = None,
     input_file: str | None = None,
     output_dir: str | None = None,
     model: str
@@ -57,6 +57,7 @@ def structured_qa(
     else:
         Path(output_dir).mkdir(exist_ok=True, parents=True)
         config = Config(
+            question=question,
             input_file=input_file,
             output_dir=output_dir,
             model=model,
