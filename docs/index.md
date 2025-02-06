@@ -10,7 +10,8 @@ These docs are your companion to mastering the **Structured-QA Blueprint** a loc
 
 ### Built with
 - Python 3.10+
-- [Llama-cpp](https://github.com/abetlen/llama-cpp-python) (question answering)
+- [pymupdf4llm](https://pypi.org/project/pymupdf4llm/) (document preprocessing)
+- [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) (question answering)
 
 ---
 
