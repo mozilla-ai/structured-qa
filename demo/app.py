@@ -41,20 +41,32 @@ if uploaded_file is not None:
 
     try:
         with st.spinner("Converting document to sections..."):
-            section_names = convert_to_sections(uploaded_file, f"example_outputs/{uploaded_file.name}")
-            sections = [f.stem for f in Path(f"example_outputs/{uploaded_file.name}").iterdir()]
-            
+            section_names = convert_to_sections(
+                uploaded_file, f"example_outputs/{uploaded_file.name}"
+            )
+            sections = [
+                f.stem for f in Path(f"example_outputs/{uploaded_file.name}").iterdir()
+            ]
+
             # Provide feedback about segmentation
-            st.success(f"Successfully extracted {len(sections)} sections from the document.")
-            
+            st.success(
+                f"Successfully extracted {len(sections)} sections from the document."
+            )
+
             # Check for potential segmentation issues
             if len(sections) == 1:
-                st.warning("⚠️ Only one section was found. This might indicate that the document structure wasn't properly detected.")
+                st.warning(
+                    "⚠️ Only one section was found. This might indicate that the document structure wasn't properly detected."
+                )
             elif len(sections) == 0:
-                st.error("❌ No sections were found in the document. The document might not have a clear structure or might be in an unsupported format.")
+                st.error(
+                    "❌ No sections were found in the document. The document might not have a clear structure or might be in an unsupported format."
+                )
             elif "INTRO" in sections and len(sections) < 3:
-                st.warning("⚠️ Only found default sections. The document structure might not have been properly detected.")
-            
+                st.warning(
+                    "⚠️ Only found default sections. The document structure might not have been properly detected."
+                )
+
             # Show sections
             st.text("Detected Sections:")
             st.json(sections)
@@ -76,4 +88,6 @@ if uploaded_file is not None:
                     st.text(answer)
     except Exception as e:
         st.error(f"❌ Error processing document: {str(e)}")
-        st.info("💡 Try uploading a different document or check if the file is corrupted.")
+        st.info(
+            "💡 Try uploading a different document or check if the file is corrupted."
+        )
