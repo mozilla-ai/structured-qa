@@ -9,25 +9,31 @@
   </picture>
 </p>
 
-# Structured-QA: a Blueprint by Mozilla.ai for answering questions about structured documents.
+<div align="center">
 
-
-[![](https://dcbadge.limes.pink/api/server/YuMNeuKStr?style=flat)](https://discord.gg/YuMNeuKStr)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+[![llama.cpp](https://img.shields.io/badge/llama.cpp-E76F00?logo=cplusplus&logoColor=white&labelColor=1E1E1E)](https://github.com/ggml-org/llama.cpp)
+[![pymupdf4llm](https://img.shields.io/badge/pymupdf4llm-blue)](https://pymupdf.readthedocs.io/en/latest/pymupdf4llm/index.html)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![](https://dcbadge.limes.pink/api/server/YuMNeuKStr?style=flat)](https://discord.gg/YuMNeuKStr) <br>
 [![Docs](https://github.com/mozilla-ai/structured-qa/actions/workflows/docs.yaml/badge.svg)](https://github.com/mozilla-ai/structured-qa/actions/workflows/docs.yaml/)
 [![Tests](https://github.com/mozilla-ai/structured-qa/actions/workflows/tests.yaml/badge.svg)](https://github.com/mozilla-ai/structured-qa/actions/workflows/tests.yaml/)
 [![Ruff](https://github.com/mozilla-ai/structured-qa/actions/workflows/lint.yaml/badge.svg?label=Ruff)](https://github.com/mozilla-ai/structured-qa/actions/workflows/lint.yaml/)
 
+[Blueprints Hub](https://developer-hub.mozilla.ai/)
+| [Documentation](https://mozilla-ai.github.io/structured-qa/)
+| [Getting Started](https://mozilla-ai.github.io/structured-qa/getting-started/)
+| [Contributing](CONTRIBUTING.md)
+
+</div>
+
+# Structured-QA: a Blueprint by Mozilla.ai for answering questions about structured documents.
 
 This Blueprint demonstrates how to use open-source models and a simple LLM workflow to answer questions based on structured documents.
 
-It is designed to showcase a simpler alternative to more complex and/or resource demanding alternatives, such as RAG systems that rely on vectorDBs and/or long-context models with large token windows.
+It is designed to showcase a simpler alternative to more complex and/or resource-demanding alternatives, such as RAG systems that rely on vector databases and/or long-context models with large token windows.
 
-<img src="./images/structured-qa-diagram.png" width="1200" alt="structure-qa Diagram" />
-
-📘 To explore this project further and discover other Blueprints, visit the [**Blueprints Hub**](https://developer-hub.mozilla.ai/blueprints/query-structured-documents-using-a-lightweight-llm-workflow).
-
-
-### 👉 📖 For more detailed guidance on using this project, please visit our [Docs here](https://mozilla-ai.github.io/structured-qa/).
+<img src="./images/structured-qa-diagram.png" width="1200" alt="Structured QA Diagram" />
 
 
 ## Quick-start
